@@ -21,7 +21,7 @@
         <div class="main_photo_div" v-if="!form.success">
           <img
             class="main_photo"
-            :src="`https://img.voron.io/${auto.img}`"
+            :src="`https://cdn.voron.io/images/${auto.img}`"
             alt=""
           />
         </div>
@@ -83,13 +83,13 @@
           :poster="[
             auto.video
               ? ''
-              : `https://img.voron.io/gallery/${auto.tid}/${auto.photos[0]}@3x.jpg`,
+              : `https://cdn.voron.io/images/gallery/${auto.tid}/${auto.photos[0]}@3x.jpg`,
           ]"
           class="mainSection-video"
         >
           <source
             v-if="auto.video"
-            :src="`https://img.voron.io/videos/${auto.video}`"
+            :src="`https://cdn.voron.io/images/videos/${auto.video}`"
             type="video/mp4"
           />
         </video>
@@ -151,7 +151,7 @@
                 >
                 * Для отмены депозита необходимо совершить минимум 10 успешных поездок в сервисе. Поездка засчитывается, если вы находились в движении больше 30 минут, не нарушали правила ПДД, не нанесли ущерб автомобилю и оплата за аренду была успешным списанием с привязанной банковской карты, а не погашением задолженности или из страхового депозита. Подробнее тут → <a style="color: rgb(255, 204, 0);" target="_blank" href="https://voron.help/deposit/deposit" >voron.help</a>
                 </small
-              ></em 
+              ></em
             >
           </div>
         </div>
@@ -500,7 +500,7 @@ export default {
     },
   },
 };
-</script>  
+</script>
 
 <style scoped>
 .mainSection-title {

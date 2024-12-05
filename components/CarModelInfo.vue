@@ -5,7 +5,7 @@
         'carsList-itemImage',
         [carousel && car.photos.length > 1 ? 'opacity-0' : ''],
       ]"
-      :style="`background-image: url('https://img.voron.io/${car.side_img}')`"
+      :style="`background-image: url('https://cdn.voron.io/images/${car.side_img}')`"
     ></div>
 
     <!-- :options="{
@@ -56,12 +56,12 @@
       >
         <div v-for="(photo, key) in car.photos" :key="key" class="slide">
           <img
-            :src="`https://img.voron.io/gallery/${car.tid}/${photo}@3x.jpg`"
+            :src="`https://cdn.voron.io/images/gallery/${car.tid}/${photo}@3x.jpg`"
             alt=""
           />
           <!-- <div
             class="carousel-slide"
-            :style="`background-image: url('https://img.voron.io/gallery/${car.tid}/${photo}@3x.jpg')`"
+            :style="`background-image: url('https://cdn.voron.io/images/gallery/${car.tid}/${photo}@3x.jpg')`"
           ></div> -->
         </div>
 

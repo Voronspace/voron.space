@@ -3,7 +3,7 @@
     <a class="carsList-itemContent">
       <div
         class="carsList-itemImage"
-        :style="`background-image: url('https://img.voron.io/${car.side_img}')`"
+        :style="`background-image: url('https://cdn.voron.io/images/${car.side_img}')`"
       ></div>
       <div class="carsList-itemName">
         <div class="carsList-itemPreCaption">{{ car.brand.title }}</div>

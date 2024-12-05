@@ -133,7 +133,7 @@
           <BrandItem
             v-for="(b, key) in brands"
             :key="key"
-            :image="`https://img.voron.io/catalog/${b.icon}.png`"
+            :image="`https://cdn.voron.io/images/catalog/${b.icon}.png`"
             :name="b.title"
             :link="`/${b.slug}/`"
             :slug="b.slug"
@@ -161,7 +161,7 @@
                 не нанесли ущерб автомобилю и оплата за аренду производилась
                 успешным списанием с привязанной банковской карты, а не
                 погашением задолженности или из страхового депозита, подробнее тут → <a style="color: rgb(255, 204, 0);" target="_blank" href="https://voron.help/deposit/deposit" >voron.help</a></small
-              ></em 
+              ></em
             >
           </div>
         </div>
@@ -338,4 +338,4 @@ export default {
   },
   methods: {},
 };
-</script>  
+</script>

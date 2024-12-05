@@ -5,7 +5,7 @@
 
     <div class="mainSection mainSection-IndexPage">
       <div class="mainSection-background">
-        
+
         <video
           playsinline
           loop
@@ -146,7 +146,7 @@
           <BrandItem
             v-for="(brand, key) in brands"
             :key="key"
-            :image="`https://img.voron.io/catalog/${brand.icon}.png`"
+            :image="`https://cdn.voron.io/images/catalog/${brand.icon}.png`"
             :name="brand.title"
             :link="`/${brand.slug}/`"
             :slug="brand.slug"
