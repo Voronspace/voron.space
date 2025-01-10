@@ -332,9 +332,7 @@
                   >
                 </li>
                 <li>
-                  <nuxt-link to="https://voron.io" exact exact-active-class="active"
-                  >О компании</nuxt-link
-                  >
+                  <a href="https://voron.io">О компании</a>
                 </li>
 
                 <li>

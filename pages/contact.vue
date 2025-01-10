@@ -122,11 +122,22 @@
                     v-model="form.message"
                   ></textarea>
 
+                  <div class="customCheckbox">
+                    <input
+                      type="checkbox"
+                      id="agreeTerms"
+                      v-model="form.agreeTerms"
+                      required
+                    />
+                    <label for="agreeTerms">Даю согласие на <a href="https://voron.space/legal/personal-data/" target="_blank">обработку персональных данных</a></label>
+                  </div>
+
                   <input
                     type="submit"
                     class="contactsPage-formBtn"
                     value="Отправить"
                     name="submit"
+                    :disabled="!form.agreeTerms"
                   />
 
                   <div
@@ -192,6 +203,7 @@ export default {
         phone: "",
         email: "",
         success: false,
+        agreeTerms: false,
         errors: false,
       },
     };
@@ -206,7 +218,8 @@ export default {
         this.form.name != "" &&
         this.form.message != "" &&
         this.form.phone != "" &&
-        this.form.email != ""
+        this.form.email != "" &&
+        this.form.agreeTerms
       ) {
         // console.log("отправим");
 
@@ -265,5 +278,20 @@ export default {
     opacity: 0.4;
   }
 
- 
+  .customCheckbox {
+    margin-bottom: 15px;
+  }
+
+  .customCheckbox input[type="checkbox"] {
+    margin-right: 5px;
+    -webkit-appearance: auto !important;
+    appearance: auto !important;
+  }
+
+  .contactsPage-formBtn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+
 </style>
