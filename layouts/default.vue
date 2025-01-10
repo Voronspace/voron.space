@@ -13,7 +13,7 @@
         <div style="margin-bottom: 30px;">
           В данный момент мы в процессе работы над запуском нашего сервиса в <template v-if="city_modal == 'kzn'">Казани</template><template v-if="city_modal == 'spb'">Санкт-Петербурге</template><template v-if="city_modal == 'msc'">Москве</template><template v-if="city_modal == 'sochi'">Сочи</template><template v-if="city_modal == 'krd'">Краснодаре</template>.
           Если вы хотели бы воспользоваться сервисом в этом городе, то, пожалуйста, напишите нам об этом.
-          Если у вас есть автомобиль в этом городе, то оставьте заявку тут - 
+          Если у вас есть автомобиль в этом городе, то оставьте заявку тут -
           <a class="link-to-connect" target="_blank" :href="`https://voron.io/${$utm(true)}`" >Подключить автомобиль</a>
           <!-- <a class="link-to-connect" target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Авто как инвестиция</a> -->
           <!-- <span class="link-to-connect" @click="to_connect">Подключить автомобиль</span> -->
@@ -158,9 +158,14 @@
 
                         <a target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Авто как инвестиция</a>
                       </li>
-                      <li> 
-                        <a :href="`https://voron.io/${$utm(true)}`"
+                      <li>
+                        <a :href="`https://voron.io/eco/${$utm(true)}`"
                           ><span>Экосистема</span></a
+                        >
+                      </li>
+                      <li>
+                        <a :href="`https://voron.io/${$utm(true)}`"
+                        ><span>Платформа</span></a
                         >
                       </li>
                     </ul>
@@ -307,12 +312,12 @@
                     >Срочная доставка</nuxt-link
                   >
                 </li>
-                <!-- <li> 
+                <!-- <li>
                   <a :href="`https://voron.io/${$utm(true)}`"
                     ><span>Экосистема</span></a
                   >
                 </li> -->
-                
+
                 <li>
                   <a href="https://voron.help">База знаний и правил</a>
                 </li>
@@ -326,7 +331,12 @@
                     >О сервисе</nuxt-link
                   >
                 </li>
-                
+                <li>
+                  <nuxt-link to="https://voron.io" exact exact-active-class="active"
+                  >О компании</nuxt-link
+                  >
+                </li>
+
                 <li>
                   <nuxt-link to="/contact/" exact exact-active-class="active"
                     >Контакты</nuxt-link
@@ -344,7 +354,7 @@
                 <!-- <nuxt-link to="/connect/" exact exact-active-class="active"
                   >Подключить автомобиль</nuxt-link
                 > -->
-                  <a target="_blank" :href="`https://voron.io/${$utm(true)}`" >Подключить автомобиль</a>
+                  <a target="_blank" :href="`https://voron.io/eco/${$utm(true)}`" >Подключить автомобиль</a>
                 </li>
                 <li>
                   <a href="https://i.voron.io" target="_blank">Личный кабинет</a>
@@ -364,7 +374,7 @@
               </ul>
             </nav>
 
-              
+
             <div class="pageFooter-title" style="margin-top: 25px;">Поддержка</div>
             <div class="pageFooter-support">
               <a
@@ -421,7 +431,7 @@
               ></a>
             </div>
             <div class="pageFooter-publicLinks  footer-social-block__">
-              
+
               <a
                 class="pageFooter-publicLink pageFooter-publicLink-Instagram"
                 target="_blank"
@@ -431,13 +441,17 @@
 
               <a class="pageFooter-publicLink footer-social-icon" href="https://vk.com/voron.space" target="_blank" >
                 <i class="fab fa-vk"></i>
-              </a> 
+              </a>
 
-              <a
-                class="pageFooter-publicLink pageFooter-publicLink-FB"
-                target="_blank"
-                href="https://facebook.com/voron.space"
-              ></a>
+<!--              <a-->
+<!--                class="pageFooter-publicLink pageFooter-publicLink-FB"-->
+<!--                target="_blank"-->
+<!--                href="https://facebook.com/voron.space"-->
+<!--              ></a>-->
+
+              <a class="pageFooter-publicLink footer-social-icon" href="https://t.me/voron_space" target="_blank" >
+                <i class="fab fa-telegram"></i>
+              </a>
 
             </div>
           </div>
@@ -530,7 +544,7 @@ export default {
       if (city == 'krd') this.form.city = "Краснодар";
       if (city == 'sochi') this.form.city = "Сочи";
       if (city == 'kzn') this.form.city = "Казань";
-    },  
+    },
 
     async SendMessageCity() {
       if (
@@ -643,4 +657,4 @@ export default {
     text-decoration: none;
   }
 
-</style> 
+</style>
