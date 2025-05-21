@@ -1,11 +1,11 @@
 // import serveStatic from 'serve-static'
 
-// npm i cookie-universal-nuxt --legacy-peer-deps 
+// npm i cookie-universal-nuxt --legacy-peer-deps
 
-export default { 
+export default {
 
   ssr: true,
-  target: 'server', 
+  target: 'server',
 
   // ssr: false,
   // target: 'static',
@@ -42,6 +42,7 @@ export default {
     '~/plugins/filters',
     '~/plugins/vue-agile',
     '~/plugins/functions',
+    '~/plugins/device',
     // '~/plugins/facebook-pixel'
   ],
 
