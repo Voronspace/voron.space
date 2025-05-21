@@ -366,7 +366,7 @@ export default {
   methods: {
     // --- Методы для QR-кода ---
     generateQrUrl(targetUrl) {
-      return `http://qrcoder.ru/code/?${encodeURIComponent(targetUrl)}&8&2`;
+      return `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(targetUrl)}&size=230x230&qzone=1&format=png`;
     },
     appInstallUrlForOs(targetOs) {
       // targetOs здесь для единообразия, т.к. ссылка на voron.app общая
