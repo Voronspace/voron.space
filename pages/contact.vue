@@ -45,7 +45,7 @@
                     <span class="city-item city-no-active">Санкт-Петербург</span>
                     <span class="city-item">Сочи</span>
                     <span class="city-item city-no-active">Краснодар</span>
-                    <span class="city-item city-no-active">Казань</span>
+                    <span class="city-item city-no-active">Нижний Новгород</span>
 
                   </div>
                 </div>

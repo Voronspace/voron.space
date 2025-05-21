@@ -2,7 +2,7 @@
   <!-- PAGE -->
   <div class="page">
 
-    
+
     <!-- MAIN WRAPPER -->
     <div class="pageWrapper">
       <!-- HEADER -->
@@ -164,7 +164,7 @@
 
     </div>
     <!-- /MAIN WRAPPER -->
-   
+
   </div>
   <!-- /PAGE -->
 
@@ -230,8 +230,8 @@ export default {
       if (city == 'spb') this.form.city = "Санкт-Петербург";
       if (city == 'krd') this.form.city = "Краснодар";
       if (city == 'sochi') this.form.city = "Сочи";
-      if (city == 'kzn') this.form.city = "Казань";
-    },  
+      if (city == 'nn') this.form.city = "Нижний Новгород";
+    },
 
     async SendMessageCity() {
       if (
@@ -349,5 +349,5 @@ export default {
     position: absolute;
 
   } */
-  
-</style> 
+
+</style>

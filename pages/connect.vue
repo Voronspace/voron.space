@@ -548,7 +548,7 @@
             <option value="spb" >Санкт-Петербург</option>
             <option value="sochi" >Сочи</option>
             <option value="krd" >Краснодар</option>
-            <option value="kzn" >Казань</option>
+            <option value="nn" >Нижний Новгород</option>
           </select>
         </div>
 
@@ -776,7 +776,7 @@ export default {
 
         this.$yandexMetrika.reachGoal('submit_connect');
         // this.$fb.track('Lead')
-        
+
         var response = await this.$axios.$post(
           "/api/voron_black_mail/",
           // this.form

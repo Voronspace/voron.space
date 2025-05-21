@@ -11,12 +11,10 @@
       >
 
         <div style="margin-bottom: 30px;">
-          В данный момент мы в процессе работы над запуском нашего сервиса в <template v-if="city_modal == 'kzn'">Казани</template><template v-if="city_modal == 'spb'">Санкт-Петербурге</template><template v-if="city_modal == 'msc'">Москве</template><template v-if="city_modal == 'sochi'">Сочи</template><template v-if="city_modal == 'krd'">Краснодаре</template>.
+          В данный момент мы в процессе работы над запуском нашего сервиса в <template v-if="city_modal == 'nn'">Нижний Новгород</template><template v-if="city_modal == 'spb'">Санкт-Петербурге</template><template v-if="city_modal == 'msc'">Москве</template><template v-if="city_modal == 'sochi'">Сочи</template><template v-if="city_modal == 'krd'">Краснодаре</template>.
           Если вы хотели бы воспользоваться сервисом в этом городе, то, пожалуйста, напишите нам об этом.
           Если у вас есть автомобиль в этом городе, то оставьте заявку тут -
-          <a class="link-to-connect" target="_blank" :href="`https://voron.io/${$utm(true)}`" >Подключить автомобиль</a>
-          <!-- <a class="link-to-connect" target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Авто как инвестиция</a> -->
-          <!-- <span class="link-to-connect" @click="to_connect">Подключить автомобиль</span> -->
+          <a class="link-to-connect" target="_blank" :href="`https://voron.pro/${$utm(true)}`" >Подключить автомобиль</a>
         </div>
 
 
@@ -89,11 +87,21 @@
           />
         </div>
 
+        <div class="customCheckbox">
+          <input
+            type="checkbox"
+            id="agreeTerms"
+            v-model="form.agreeTerms"
+            required
+          />
+          <label for="agreeTerms">Даю согласие на <a href="https://voron.space/legal/personal-data/" target="_blank">обработку персональных данных</a></label>
+        </div>
+
         <button type="submit" class="btn btn-primary">Отправить</button>
       </form>
 
       <h3 slot="header">
-        <template v-if="city_modal == 'kzn'">Казань</template><template v-if="city_modal == 'spb'">Санкт-Петербург</template><template v-if="city_modal == 'msc'">Москва</template><template v-if="city_modal == 'sochi'">Сочи</template><template v-if="city_modal == 'krd'">Краснодар</template>
+        <template v-if="city_modal == 'nn'">Нижний Новгород</template><template v-if="city_modal == 'spb'">Санкт-Петербург</template><template v-if="city_modal == 'msc'">Москва</template><template v-if="city_modal == 'sochi'">Сочи</template><template v-if="city_modal == 'krd'">Краснодар</template>
       </h3>
     </Modal>
 
@@ -145,29 +153,31 @@
                       </li>
                       <li>
                         <nuxt-link to="/delivery/" exact-active-class="active"
-                          >Срочная доставка</nuxt-link
+                          >Доставка за 30 мин</nuxt-link
                         >
                       </li>
                       <li>
-                        <!-- <nuxt-link
-                          to="/connect/"
-                          exact
-                          exact-active-class="active"
-                          >Подключить автомобиль</nuxt-link
-                        > -->
-
-                        <a target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Авто как инвестиция</a>
+                        <a target="_blank" :href="`https://voron.plus/${$utm(true)}`" >Аренда с выкупом</a>
                       </li>
                       <li>
-                        <a :href="`https://voron.io/eco/${$utm(true)}`"
-                          ><span>Экосистема</span></a
-                        >
+                        <a target="_blank" :href="`https://voron.club/${$utm(true)}`" >Клуб автопрокатов</a>
                       </li>
                       <li>
-                        <a :href="`https://voron.io/${$utm(true)}`"
-                        ><span>Платформа</span></a
-                        >
+                        <a target="_blank" :href="`https://voron.black/${$utm(true)}`" >Поездки с водителем</a>
                       </li>
+                      <li>
+                        <a target="_blank" :href="`https://voron.capital/${$utm(true)}`" >Авто как инвестиция</a>
+                      </li>
+<!--                      <li>-->
+<!--                        <a :href="`https://voron.io/eco/${$utm(true)}`"-->
+<!--                          ><span>Экосистема</span></a-->
+<!--                        >-->
+<!--                      </li>-->
+<!--                      <li>-->
+<!--                        <a :href="`https://voron.io/${$utm(true)}`"-->
+<!--                        ><span>Платформа</span></a-->
+<!--                        >-->
+<!--                      </li>-->
                     </ul>
                   </nav>
                   <nav class="sidebarMenu-other">
@@ -254,16 +264,8 @@
                   ><span>Доставка</span></nuxt-link
                 >
               </li>
-              <!-- <li>
-                <a :href="`https://voron.io/${$utm(true)}`"
-                  ><span>Экосистема</span></a
-                >
-              </li> -->
               <li>
-                <!-- <nuxt-link to="/connect/" exact exact-active-class="active"
-                  ><span>Подключить авто</span></nuxt-link
-                > -->
-                <a target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Инвестиция в авто</a>
+                <a target="_blank" :href="`https://voron.capital/${$utm(true)}`" >Инвестиция в авто</a>
               </li>
             </ul>
           </nav>
@@ -291,7 +293,7 @@
             <a  @click="showModalCity('sochi')" >Сочи</a>
             <!-- class="city_active" -->
             <a @click="showModalCity('krd')">Краснодар</a>
-            <a @click="showModalCity('kzn')">Казань</a>
+            <a @click="showModalCity('nn')">Нижний Новгород</a>
           </div>
         </div>
 
@@ -309,7 +311,7 @@
 
                 <li>
                   <nuxt-link to="/delivery/" exact exact-active-class="active"
-                    >Срочная доставка</nuxt-link
+                    >Доставка за 30 мин</nuxt-link
                   >
                 </li>
                 <!-- <li>
@@ -349,10 +351,7 @@
             <nav class="pageFooter-menu">
               <ul>
                 <li>
-                <!-- <nuxt-link to="/connect/" exact exact-active-class="active"
-                  >Подключить автомобиль</nuxt-link
-                > -->
-                  <a target="_blank" :href="`https://voron.io/eco/${$utm(true)}`" >Подключить автомобиль</a>
+                  <a target="_blank" :href="`https://voron.pro/${$utm(true)}`" >Подключить автомобиль</a>
                 </li>
                 <li>
                   <a href="https://i.voron.io" target="_blank">Личный кабинет</a>
@@ -364,10 +363,7 @@
             <nav class="pageFooter-menu">
               <ul>
                 <li>
-                <!-- <nuxt-link to="/connect/" exact exact-active-class="active"
-                  >Подключить автомобиль</nuxt-link
-                > -->
-                  <a target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Авто как инвестиция</a>
+                  <a target="_blank" :href="`https://voron.capital/${$utm(true)}`" >Авто как инвестиция</a>
                 </li>
               </ul>
             </nav>
@@ -451,6 +447,10 @@
                 <i class="fab fa-telegram"></i>
               </a>
 
+              <a class="pageFooter-publicLink footer-social-icon" href="https://www.youtube.com/@voronspace" target="_blank" >
+                <i class="fab fa-youtube"></i>
+              </a>
+
             </div>
           </div>
         </div>
@@ -464,12 +464,6 @@
             exact
             exact-active-class="active"
             >Обработка персональных данных</nuxt-link
-          >
-          <nuxt-link
-            to="/legal/privacy-policy/"
-            exact
-            exact-active-class="active"
-            >Политика конфиденциальности</nuxt-link
           >
           <nuxt-link to="/legal/sign-act/" exact exact-active-class="active"
             >Акт приема-передачи</nuxt-link
@@ -541,7 +535,7 @@ export default {
       if (city == 'spb') this.form.city = "Санкт-Петербург";
       if (city == 'krd') this.form.city = "Краснодар";
       if (city == 'sochi') this.form.city = "Сочи";
-      if (city == 'kzn') this.form.city = "Казань";
+      if (city == 'nn') this.form.city = "Нижний Новгород";
     },
 
     async SendMessageCity() {
@@ -550,7 +544,8 @@ export default {
         this.form.firstname != "" &&
         this.form.phone != "" &&
         this.form.email != "" &&
-        this.form.city != ""
+        this.form.city != "" &&
+        this.form.agreeTerms
       ) {
         // console.log("отправим");
 
@@ -558,7 +553,7 @@ export default {
           "/api/voron_black_mail_city/",
           // this.form
           {
-            token: "Voron.black_sfewta35",
+            token: "voron.space_sfewta35",
             lastname: this.form.lastname,
             firstname: this.form.firstname,
             phone: this.form.phone,
@@ -653,6 +648,16 @@ export default {
   .link-to-connect:active,
   .link-to-connect:focus {
     text-decoration: none;
+  }
+
+  .customCheckbox {
+    margin-bottom: 15px;
+  }
+
+  .customCheckbox input[type="checkbox"] {
+    margin-right: 5px;
+    -webkit-appearance: auto !important;
+    appearance: auto !important;
   }
 
 </style>

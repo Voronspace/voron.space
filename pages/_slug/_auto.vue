@@ -65,6 +65,16 @@
             />
           </div>
 
+          <div class="customCheckbox">
+            <input
+              type="checkbox"
+              id="agreeTerms"
+              v-model="form.agreeTerms"
+              required
+            />
+            <label for="agreeTerms">Даю согласие на <a href="https://voron.space/legal/personal-data/" target="_blank">обработку персональных данных</a></label>
+          </div>
+
           <button type="submit" class="btn btn-primary">Забронировать</button>
         </form>
       </div>
@@ -464,7 +474,8 @@ export default {
       if (
         this.form.lastname != "" &&
         this.form.firstname != "" &&
-        this.form.phone != ""
+        this.form.phone != "" &&
+        this.form.agreeTerms
       ) {
         // console.log("отправим");
 
@@ -525,5 +536,15 @@ export default {
 .main_photo {
   max-height: 150px;
   margin: 0 auto;
+}
+
+.customCheckbox {
+  margin-bottom: 15px;
+}
+
+.customCheckbox input[type="checkbox"] {
+  margin-right: 5px;
+  -webkit-appearance: auto !important;
+  appearance: auto !important;
 }
 </style>

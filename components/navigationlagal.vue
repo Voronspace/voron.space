@@ -12,11 +12,6 @@
         >
       </li>
       <li>
-        <nuxt-link to="/legal/privacy-policy/" exact exact-active-class="active"
-          >Политика конфиденциальности</nuxt-link
-        >
-      </li>
-      <li>
         <nuxt-link to="/legal/sign-act/" exact exact-active-class="active"
           >Акт приема-передачи</nuxt-link
         >
