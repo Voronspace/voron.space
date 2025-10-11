@@ -1,0 +1,93 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/home/user/projects/js/space/voron.space/pages/about.vue",
+    "chunkName": "pages/about",
+    "_name": "_2e684394"
+  },
+  {
+    "name": "connect",
+    "path": "/connect",
+    "component": "/home/user/projects/js/space/voron.space/pages/connect.vue",
+    "chunkName": "pages/connect",
+    "_name": "_c7973a9e"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/home/user/projects/js/space/voron.space/pages/contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_37e282e7"
+  },
+  {
+    "name": "delivery",
+    "path": "/delivery",
+    "component": "/home/user/projects/js/space/voron.space/pages/delivery.vue",
+    "chunkName": "pages/delivery",
+    "_name": "_b8ef0386"
+  },
+  {
+    "name": "deposit",
+    "path": "/deposit",
+    "component": "/home/user/projects/js/space/voron.space/pages/deposit.vue",
+    "chunkName": "pages/deposit",
+    "_name": "_25790665"
+  },
+  {
+    "name": "start",
+    "path": "/start",
+    "component": "/home/user/projects/js/space/voron.space/pages/start.vue",
+    "chunkName": "pages/start",
+    "_name": "_01511c2e"
+  },
+  {
+    "name": "legal-agreement",
+    "path": "/legal/agreement",
+    "component": "/home/user/projects/js/space/voron.space/pages/legal/agreement.vue",
+    "chunkName": "pages/legal/agreement",
+    "_name": "_c67c880a"
+  },
+  {
+    "name": "legal-personal-data",
+    "path": "/legal/personal-data",
+    "component": "/home/user/projects/js/space/voron.space/pages/legal/personal-data.vue",
+    "chunkName": "pages/legal/personal-data",
+    "_name": "_e6b7cbf0"
+  },
+  {
+    "name": "legal-privacy-policy",
+    "path": "/legal/privacy-policy",
+    "component": "/home/user/projects/js/space/voron.space/pages/legal/privacy-policy.vue",
+    "chunkName": "pages/legal/privacy-policy",
+    "_name": "_40e9b576"
+  },
+  {
+    "name": "legal-sign-act",
+    "path": "/legal/sign-act",
+    "component": "/home/user/projects/js/space/voron.space/pages/legal/sign-act.vue",
+    "chunkName": "pages/legal/sign-act",
+    "_name": "_9597eabe"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/user/projects/js/space/voron.space/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_4e201e59"
+  },
+  {
+    "name": "slug",
+    "path": "/:slug",
+    "component": "/home/user/projects/js/space/voron.space/pages/_slug/index.vue",
+    "chunkName": "pages/_slug/index",
+    "_name": "_c8a39a58"
+  },
+  {
+    "name": "slug-auto",
+    "path": "/:slug/:auto",
+    "component": "/home/user/projects/js/space/voron.space/pages/_slug/_auto.vue",
+    "chunkName": "pages/_slug/_auto",
+    "_name": "_26f66290"
+  }
+]

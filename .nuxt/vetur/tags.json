@@ -1,0 +1,32 @@
+{
+  "AdvantageItem": {
+    "description": "Auto imported from components/AdvantageItem.vue"
+  },
+  "AdvantagePartnerItem": {
+    "description": "Auto imported from components/AdvantagePartnerItem.vue"
+  },
+  "BrandItem": {
+    "description": "Auto imported from components/BrandItem.vue"
+  },
+  "CarInvest": {
+    "description": "Auto imported from components/CarInvest.vue"
+  },
+  "CarInvestOld": {
+    "description": "Auto imported from components/CarInvestOld.vue"
+  },
+  "CarModel": {
+    "description": "Auto imported from components/CarModel.vue"
+  },
+  "CarModelInfo": {
+    "description": "Auto imported from components/CarModelInfo.vue"
+  },
+  "Modal": {
+    "description": "Auto imported from components/Modal.vue"
+  },
+  "SchemeItem": {
+    "description": "Auto imported from components/SchemeItem.vue"
+  },
+  "Navigationlagal": {
+    "description": "Auto imported from components/navigationlagal.vue"
+  }
+}
