@@ -2,92 +2,92 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "/home/user/projects/js/space/voron.space/pages/about.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/about.vue",
     "chunkName": "pages/about",
-    "_name": "_2e684394"
+    "_name": "_ea7995c2"
   },
   {
     "name": "connect",
     "path": "/connect",
-    "component": "/home/user/projects/js/space/voron.space/pages/connect.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/connect.vue",
     "chunkName": "pages/connect",
-    "_name": "_c7973a9e"
+    "_name": "_4d991d7c"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "/home/user/projects/js/space/voron.space/pages/contact.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/contact.vue",
     "chunkName": "pages/contact",
-    "_name": "_37e282e7"
+    "_name": "_2d71849c"
   },
   {
     "name": "delivery",
     "path": "/delivery",
-    "component": "/home/user/projects/js/space/voron.space/pages/delivery.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/delivery.vue",
     "chunkName": "pages/delivery",
-    "_name": "_b8ef0386"
+    "_name": "_1ebb1cd2"
   },
   {
     "name": "deposit",
     "path": "/deposit",
-    "component": "/home/user/projects/js/space/voron.space/pages/deposit.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/deposit.vue",
     "chunkName": "pages/deposit",
-    "_name": "_25790665"
+    "_name": "_52447da0"
   },
   {
     "name": "start",
     "path": "/start",
-    "component": "/home/user/projects/js/space/voron.space/pages/start.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/start.vue",
     "chunkName": "pages/start",
-    "_name": "_01511c2e"
+    "_name": "_5bb26374"
   },
   {
     "name": "legal-agreement",
     "path": "/legal/agreement",
-    "component": "/home/user/projects/js/space/voron.space/pages/legal/agreement.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/legal/agreement.vue",
     "chunkName": "pages/legal/agreement",
-    "_name": "_c67c880a"
+    "_name": "_15df0874"
   },
   {
     "name": "legal-personal-data",
     "path": "/legal/personal-data",
-    "component": "/home/user/projects/js/space/voron.space/pages/legal/personal-data.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/legal/personal-data.vue",
     "chunkName": "pages/legal/personal-data",
-    "_name": "_e6b7cbf0"
+    "_name": "_c6b0075a"
   },
   {
     "name": "legal-privacy-policy",
     "path": "/legal/privacy-policy",
-    "component": "/home/user/projects/js/space/voron.space/pages/legal/privacy-policy.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/legal/privacy-policy.vue",
     "chunkName": "pages/legal/privacy-policy",
-    "_name": "_40e9b576"
+    "_name": "_31621c8b"
   },
   {
     "name": "legal-sign-act",
     "path": "/legal/sign-act",
-    "component": "/home/user/projects/js/space/voron.space/pages/legal/sign-act.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/legal/sign-act.vue",
     "chunkName": "pages/legal/sign-act",
-    "_name": "_9597eabe"
+    "_name": "_6578a576"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/user/projects/js/space/voron.space/pages/index.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_4e201e59"
+    "_name": "_ab09e038"
   },
   {
     "name": "slug",
     "path": "/:slug",
-    "component": "/home/user/projects/js/space/voron.space/pages/_slug/index.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/_slug/index.vue",
     "chunkName": "pages/_slug/index",
-    "_name": "_c8a39a58"
+    "_name": "_4352901f"
   },
   {
     "name": "slug-auto",
     "path": "/:slug/:auto",
-    "component": "/home/user/projects/js/space/voron.space/pages/_slug/_auto.vue",
+    "component": "/var/www/khramtsov/data/www/voron.space/pages/_slug/_auto.vue",
     "chunkName": "pages/_slug/_auto",
-    "_name": "_26f66290"
+    "_name": "_62ca804a"
   }
 ]

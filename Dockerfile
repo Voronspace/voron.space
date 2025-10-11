@@ -1,10 +1,11 @@
 # FROM node:11.13.0-alpine
 # FROM node:alpine
 # FROM node:17-alpine
-# FROM node:12.2.0-alpine
+
+FROM node:12.2.0-alpine
+
 # FROM node:12.2.0-alpine
 # FROM node:12
-FROM node:16-alpine
 
 # create destination directory
 RUN mkdir -p /usr/src/nuxt-app
@@ -16,7 +17,7 @@ RUN apk add git
 
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
-RUN npm install --legacy-peer-deps
+RUN npm install
 
 # build necessary, even if no static files are needed,
 # since it builds the server as well
