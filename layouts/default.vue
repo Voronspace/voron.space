@@ -1,6 +1,17 @@
 <template>
   <!-- PAGE -->
   <div class="page">
+    <!-- Top.Mail.Ru counter -->
+    <noscript
+    ><div>
+      <img
+          src="https://top-fwz1.mail.ru/counter?id=3707044;js=na"
+          style="position: absolute; left: -9999px"
+          alt="Top.Mail.Ru"
+      /></div
+    ></noscript>
+    <!-- /Top.Mail.Ru counter -->
+
     <!-- QR Code Modal -->
     <Modal v-if="showQrModal" @close="showQrModal = false">
       <h3 slot="header">Установите приложение VORON</h3>
@@ -510,32 +521,54 @@
 </template>
 
 <script>
-import { TheMask, mask } from "vue-the-mask";
-import Modal from "/components/Modal.vue"; // Импорт компонента Modal
+import { TheMask, mask } from 'vue-the-mask';
+import Modal from '/components/Modal.vue'; // Импорт компонента Modal
 
 export default {
   components: {
     TheMask,
     Modal, // Регистрация компонента Modal
   },
+  head() {
+    return {
+      script: [
+        {
+          hid: 'tmr-counter',
+          innerHTML: `
+            var _tmr = window._tmr || (window._tmr = []);
+            _tmr.push({id: "3707044", type: "pageView", start: (new Date()).getTime()});
+            (function (d, w, id) {
+              if (d.getElementById(id)) return;
+              var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+              ts.src = "https://top-fwz1.mail.ru/js/code.js";
+              var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+              if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+            })(document, window, "tmr-code");
+          `,
+          type: 'text/javascript',
+        },
+      ],
+      __dangerouslyDisableSanitizers: ['script'],
+    };
+  },
   data: () => ({
     menuOpen: false,
     showModalCityVisible: false,
     form: {
-      firstname: "",
-      lastname: "",
-      phone: "",
-      email: "",
-      comment: "",
-      city: "",
+      firstname: '',
+      lastname: '',
+      phone: '',
+      email: '',
+      comment: '',
+      city: '',
       agreeTerms: false,
       success: false,
       errors: false,
     },
-    city_modal: "msk",
+    city_modal: 'msk',
     showQrModal: false, // Для управления видимостью QR модального окна
-    qrCodeUrl: "", // URL для изображения QR-кода
-    appInstallUrl: "", // URL для установки приложения (для текста под QR)
+    qrCodeUrl: '', // URL для изображения QR-кода
+    appInstallUrl: '', // URL для установки приложения (для текста под QR)
   }),
   created() {
     this.$router.beforeEach((to, from, next) => {
@@ -546,49 +579,49 @@ export default {
   methods: {
     to_connect() {
       this.showModalCityVisible = false;
-      this.$router.push("/connect");
+      this.$router.push('/connect');
     },
     showModalCity(city) {
       this.showModalCityVisible = true;
       this.city_modal = city;
       this.form.agreeTerms = false; // Сбрасываем чекбокс при открытии
 
-      if (city == "msk") this.form.city = "Москва";
-      if (city == "spb") this.form.city = "Санкт-Петербург";
-      if (city == "krd") this.form.city = "Краснодар";
-      if (city == "sochi") this.form.city = "Сочи";
-      if (city == "nn") this.form.city = "Нижний Новгород";
+      if (city == 'msk') this.form.city = 'Москва';
+      if (city == 'spb') this.form.city = 'Санкт-Петербург';
+      if (city == 'krd') this.form.city = 'Краснодар';
+      if (city == 'sochi') this.form.city = 'Сочи';
+      if (city == 'nn') this.form.city = 'Нижний Новгород';
     },
     async SendMessageCity() {
       if (
-        this.form.lastname != "" &&
-        this.form.firstname != "" &&
-        this.form.phone != "" &&
-        this.form.email != "" &&
-        this.form.city != "" &&
-        this.form.agreeTerms
+          this.form.lastname != '' &&
+          this.form.firstname != '' &&
+          this.form.phone != '' &&
+          this.form.email != '' &&
+          this.form.city != '' &&
+          this.form.agreeTerms
       ) {
         var response = await this.$axios.$post(
-          "/api/voron_black_mail_city/",
-          {
-            token: "voron.space_sfewta35",
-            lastname: this.form.lastname,
-            firstname: this.form.firstname,
-            phone: this.form.phone,
-            email: this.form.email,
-            comment: this.form.comment,
-            city: this.form.city,
-            utm: this.$utm(false),
-          }
+            '/api/voron_black_mail_city/',
+            {
+              token: 'voron.space_sfewta35',
+              lastname: this.form.lastname,
+              firstname: this.form.firstname,
+              phone: this.form.phone,
+              email: this.form.email,
+              comment: this.form.comment,
+              city: this.form.city,
+              utm: this.$utm(false),
+            }
         );
         if (response.result) {
           this.form.success = true;
           this.form.errors = false;
-          this.form.lastname = "";
-          this.form.firstname = "";
-          this.form.phone = "";
-          this.form.email = "";
-          this.form.comment = "";
+          this.form.lastname = '';
+          this.form.firstname = '';
+          this.form.phone = '';
+          this.form.email = '';
+          this.form.comment = '';
           // this.form.city = ""; // Не сбрасываем город, если модалка еще открыта
           this.form.agreeTerms = false;
         } else {
@@ -663,7 +696,7 @@ export default {
 .customCheckbox {
   margin-bottom: 15px;
 }
-.customCheckbox input[type="checkbox"] {
+.customCheckbox input[type='checkbox'] {
   margin-right: 5px;
   -webkit-appearance: auto !important;
   appearance: auto !important;
