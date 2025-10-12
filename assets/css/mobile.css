@@ -1,0 +1,695 @@
+@media (min-width: 668px) and (max-width: 1024px) {
+	.orderForm-ticketInfo{padding:51px 30px;}
+
+	.carsList-itemContent.carsList-itemContent-agile {
+		height: 430px;
+	}
+}
+
+@media (max-width: 668px) {
+.pageFooter-appsLinks {
+	padding-right: 70px;
+}
+/* .pageFooter-publicLinks {
+	float: none !important;
+} */
+
+.pageFooter-publicLink:before, .pageFooter-publicLink:after {
+	width: 30px !important;
+    height: 30px !important;
+    font-size: 30px !important;
+    line-height: 30px !important;
+}
+
+.pageFooter-publicLink {
+	width: 30px !important;
+    height: 30px !important;
+	margin-right: 10px !important;
+}
+
+.pageFooter-publicLinks {
+	padding-top: 5px !important;
+}
+
+}
+
+@media (max-width: 1024px) {
+	.carsList > .carsList-itemSubCaption {
+		padding: 0;
+	}
+	.advantages-item {
+		width: 100%;
+	}
+	.pageWrapper { margin: 0; }
+	.titlePage-searchFormTitle { left: 20px; }
+	.titlePage-searchForm { padding: 0 20px; }
+	.titlePage-searchFormFixed { padding: 0 50px; }
+	.section-index-main .title { width: auto; font-size: 34px; line-height: 44px; padding:0 20px;}
+	.section-index-main .sub-title { font-size: 18px; line-height: 24px; padding:0 20px 80px; }
+	.pageHeader-phones { display: none; }
+	.pageHeader-auth { display: none; }
+	.pageHeader-menu { display: none; }
+	.pageHeader-lang { margin-right: -15px; }
+	.pageHeader-logo { position: absolute; top: 0; left:50%; margin-left: -65px; }
+	.popup.popup-WhiteBgd .popup-close { top: 10px; right: 10px; }
+	.popup,
+	.popup.popup-CloseAnimation{ animation: none; }
+	.sidebarMenu { width: 100%; }
+	.sidebarMenu-wrapper { width: 100%; }
+	.sidebarMenu-scroller { width: auto; }
+	.sidebarMenu-wrapper._baron .sidebarMenu-scrollerBar-wrapper { display: none; }
+	.sidebarMenu-authBtn { display: inline-block; }
+	.sidebarMenu-profile { display: block; }
+	.sidebarMenu-UnActive,
+	.sidebarMenu-Active { animation: none; }
+	.pageFooter-Protector { height: 102px; }
+	.pageFooter { padding: 30px 0; }
+	.pageFooter.pageFooter-MarginBottom { padding-bottom: 95px; }
+	.pageFooter-navi { margin: 0; height: 42px; } 
+	.pageFooter-naviCol { display: none; }
+	.pageFooter-naviCol:last-child { display: block; width: 100%; padding: 0; }
+	.pageFooter-title { display: none; }
+	.pageFooter-cities { display: none; }
+	.pageFooter-sites { display: none; }
+	.pageFooter-infoLinks { display: none; }
+	.pageFooter-publicLinks { height: 42px; float: left; margin: 0; }
+	.pageFooter-publicLink { width: 42px; height: 42px; margin-right: 20px; }
+	.pageFooter-publicLink:before,
+	.pageFooter-publicLink:after { width: 42px; height: 42px; font-size: 42px; line-height: 42px; }
+	.pageFooter-appsLink { margin: 0; /*display: none;*/ height: 42px; line-height: 42px; font-size: 16px; padding-left: 45px; width: 150px; }
+	.pageFooter-appsLink:before,
+	.pageFooter-appsLink:after{ left: 12px; margin-top: -12px; width: 24px; height: 24px; font-size: 24px; line-height: 24px; }
+	.pageFooter-appsLink-Current { display: block; }
+	.pageFooter-appsLinks { float: right; }
+	.carsList { margin: 0; }
+	.carsList-item { width: 100%; margin-bottom: 30px; }
+	.carsList-item-Last { margin: 0; }
+	.carsList-itemContent { margin: 0 0 30px; padding: 0; height: 310px; }
+
+	.carousel-agile .carsList-itemContent {
+		height: 560px !important;
+	  }
+
+	.carsList-item:last-child .carsList-itemContent { margin: 0; }
+	.carsList-itemImage { bottom: 0; top: -40px; }
+	.carsList-itemContent:before { bottom: 0; top: -40px; }
+	.carsList-itemName { left: 0; bottom: 20px; }
+	.carsList-itemPrice { right: 0; bottom: 20px; }
+	.carsList-itemIcons { 
+		/* display: none; */
+		top: 5px;
+	}
+	.carsList-itemHover { display: none; }
+	.carsList-itemDetails { display: block; }
+
+	.icon-auto {
+		margin-bottom: 4px;
+	}
+
+	.carsPresent-title { padding:50px 0 0; font-size: 24px; }
+	.carsPresent-subTitle { padding:50px 0 0; font-size: 24px; }
+	.carsPage-headerFilter { margin-top: 6px; margin-left: -10px; float: none; height: 40px; }
+	.carsPage-headerFilterContainer { padding: 0; margin-top: -10px; }
+	.carsPage-filterCount { float: left; margin-top: -2px; margin-left: -10px; }
+	.carsPage-headerCount { padding-right: 40px; height: 26px;}
+	.carsPage-headerFilterItems:last-child { margin-right: 10px; }
+	.carsPage-headerFilterDiv { display: none; }
+	.carsPage-headerTitle {  width:auto; }
+	.carsPage-headerFilterContainer { position: static; height: auto; }
+	.carsPage-headerFilter { float: none; height: auto; display: inline-block; margin-top: 0; }
+	.carsPage-headerFilterItems { float: none; height: auto; display: inline-block; margin-top: 0; }
+	.carsPage-filterCount { float: none; height: auto; display: inline-block; margin-top: 0; }
+	.autoComplete.autoComplete-City .autoCompleteInput { min-height: 43px; }
+	.autoComplete.autoComplete-City:after { margin-top: 14px; }
+	.carsPage-title { padding: 30px 0 0; font-size: 24px;}
+	.carsPage-title h2 { font-size: 24px; }
+	.carsPage-emptyFreeCars-text { font-size: 14px; line-height: 20px; }
+	.carsPageLongTerm-headerTitle { width: auto; }
+	.carsPageLongTerm-title { line-height: 30px; font-size: 24px; margin-bottom: 50px; }
+	.carsPageLongTerm-advantages { padding: 50px 0 30px; }
+	.carsPageLongTerm-advantages-title { font-size: 24px; letter-spacing: 0.2px; margin-bottom: 38px; }
+	.carsPageLongTerm-advantages-items { display: none; }
+	.carsPageLongTerm-advantages-items-Mobile { display: block; }
+	.carsPageLongTerm-advantages-item { width: auto; float: none; height: auto; }
+	.carsPageLongTerm-advantages-itemText { font-size: 16px; line-height: 25px; padding: 0; }
+
+	.carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-slider { margin-top: 25px; }
+	.carsPageLongTerm-sliderBlock { padding: 0 30px; }
+	.carsPageLongTerm-slider-inner { width: auto; }
+	.carsPageLongTerm-slider:after { width: 100%; border-radius: 3px; height: 3px; }
+	.carsPageLongTerm-slider:before,
+	.carsPageLongTerm-sliderText-2,
+	.carsPageLongTerm-sliderText-3 { display: none; }
+	.carsPageLongTerm-sliderText { bottom: -10px; }
+	.carsPageLongTerm-slider { margin-bottom: 23px; margin-top: 40px; }
+	.carsPageLongTerm-sliderBlock .carsPageLongTerm-title { font-size: 20px; line-height: 20px; margin-bottom: 0;  }
+	.carsPageLongTerm-slider.ui-slider.ui-slider-horizontal .ui-slider-range.ui-widget-header { height: 3px; }
+	.carsPageLongTerm-slider.ui-slider.ui-slider-horizontal .ui-slider-range.ui-widget-header.ui-corner-all { border-radius: 3px; }
+	.carsPageLongTerm-slider.ui-slider.ui-slider-horizontal .ui-slider-handle.ui-state-default { margin-top: 6px; }
+	.carsPageLongTerm-slider.ui-slider.ui-slider-horizontal .ui-slider-handle.ui-state-default:after { margin-left: -8px; margin-top: -7px; width: 16px; height: 16px; }
+	.carsPageLongTerm-slider-container { margin: 50px auto 0; width: auto; }
+	.carsPageLongTerm-sliderText,
+	.carsPageLongTerm-sliderHandleValue { font-size: 14px; }
+	.carsPageLongTerm-sliderHandleValue { top: -16px; }
+	.carsPageLongTerm-sliderHandleValue[data-value=min] { margin-left: 20px; text-align: left; }
+	.carsPageLongTerm-sliderHandleValue[data-value=max] { margin-left: -80px; text-align: right; }
+	.carsListLongTerm { margin: 0; }
+	.carsListLongTerm-item { width: 100%; }
+	.carsListLongTerm-itemContent { margin: 0 0 100px; padding: 0; height: 310px; overflow: inherit; }
+	.carsListLongTerm-itemImage { bottom: 0; top: -40px; width: 100%; height: 100%; background-position: center; }
+	.carsListLongTerm-itemContent:before { bottom: 0; top: -40px; width: 100%; height: 100%; background-position: center; z-index: 0; }
+	.carsListLongTerm-itemName { left: 0; bottom: 20px; }
+	.carsListLongTerm-itemPriceByMonth { right: 0; bottom: 20px; left: auto; }
+	.carsListLongTerm-itemPrice { right: 0; bottom: auto; top: 320px; z-index: 1; }
+	.carsListLongTerm-itemPriceCompare .carsListLongTerm-itemCaption { font-size: 20px; }
+	.carsListLongTerm-itemPrice .carsListLongTerm-itemCaption { font-size: 20px; }
+	.carsListLongTerm-itemPriceCompare { left: 0; bottom: auto; top: 320px; right: auto; width: 47%; text-align: left; z-index: 1; }
+	.carsListLongTerm-itemPriceCompare .carsListLongTerm-itemCaption:after { left: -10%; }
+	.carsListLongTerm-itemIcons { display: none; }
+	.carsListLongTerm-itemHover { display: none; }
+	.carsListLongTerm-itemDetails { display: block; }
+	.carsPageLongTerm-info { width: auto; }
+	.carsPresent .carsListDiscount { margin: 30px 0; }
+	.carsListDiscount-title { width: 100%; text-align: center; top: -42px; left: 0; color: #7F7F7F; font-size: 14px; line-height: 20px; font-weight: 600; text-transform: uppercase; }
+	.carsListDiscount-item { width: 100%; height: 480px; }
+	.carsListDiscount-itemContent { margin: 30px 0 100px; padding: 0; height: 310px; overflow: visible; }
+	.carsListDiscount-itemImage { bottom: 0; top: -40px; left: 0;width: 100%; height: 100%; background-position: center; }
+	.carsListDiscount-itemContent:before { bottom: 0; top: -40px; left: 0; width: 100%; height: 100%; background-position: center; z-index: 0; }
+	.carsListDiscount-item:before { background: linear-gradient(180deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,0) 30%); }
+	.carsListDiscount-itemName { left: 0; bottom: 20px; }
+	.carsListDiscount-itemPrice { right: 0; }
+	.carsListDiscount-itemTexts { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+	.carsListDiscount-itemText { position: absolute; top: -20px; padding: 0; left: 0; width: 100%; margin: 0; text-align: center; }
+	.carsListDiscount-itemText:before { position: static; display: inline-block; margin-right: 10px; margin-left: 0; width: 30px; margin-bottom: -3px; height: 30px; }
+	.carsListDiscount-itemTextLine1 { display: inline-block; }
+	.carsListDiscount-itemText:last-child { bottom: -70px; top: auto; }
+	.carsListDiscount-itemText:last-child:before { width: 25px; }
+	.howItWorks { min-height: initial; padding: 65px 0 30px; }
+	.howItWorks-title { font-size: 24px; letter-spacing: 0.2px; margin-bottom: 38px; }
+	.howItWorks-itemText { width: auto; }
+	.howItWorks-icon { margin: 75px auto 35px; }
+	.howItWorks-items { display: none; }
+	.howItWorks-items-Mobile { display: block; }
+	.howItWorks-numbers { display: none; }
+	.howItWorks-item { margin: 0; width: auto; padding: 0; float: none; position: relative; margin: 0 !important; }
+	.howItWorks-numberItem { margin-top: 0; margin-left: 0; left: auto; right: 0; }
+	.howItWorks-buttonContainer { position: static; margin: 50px auto 0; }
+	.howItWorks-doc { margin: 50px auto 0; width: auto; padding-bottom: 20px; }
+	.howItWorks-docLink { min-width: 100%; height: auto; font-size: 16px; line-height: 18px; }
+	.howItWorks-LongTerm .howItWorks-icon { margin: 0 auto 100px; }
+	.howItWorks-LongTerm .howItWorks-numberItem { margin-top: 127px; margin-left: -25px; left: 50%; right: auto; }
+	.advantages { padding: 30px 0; }
+	.advantages-title { font-size: 24px; letter-spacing: 0.2px; margin-bottom: 38px; }
+	.advantages-items { display: none; }
+	.advantages-items-Mobile, .advantages-items-Mobile .advantages-items { display: block; }
+	.advantages-item { width: auto; float: none; height: auto; }
+	.advantages-itemText { font-size: 16px; line-height: 25px; padding: 0; }
+	.advantages-switchers { margin-bottom: 20px; }
+	.advantages-switchersItem { font-size: 12px; padding: 0; text-align: left; float: left; width: 50%; }
+	.advantages-switchersItemText { word-wrap: normal; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	.advantages-switchersItem .advantages-switchersItemText { display: none; }
+	.advantages-switchersItem-active .advantages-switchersItemText { display: block; }
+	.advantages-switchersItem .advantages-switchersItemText-Mobile { display: block; }
+	.advantages-switchersItem-active .advantages-switchersItemText-Mobile { display: none; }
+	.advantages-switchersItem:last-child { float: right; text-align: right; }
+	.advantages-switchersItem-active:after { left: 0; bottom: 20px; }
+	.advantages-switchersItem:last-child.advantages-switchersItem-active:after { left: auto; right: 0; }
+	.mainSection { min-height: inherit; }
+	.mainSection-content { overflow: inherit; position: relative; padding: 140px 0 64px; min-height: auto; }
+	.mainSection-title { width: auto; font-size: 34px; line-height: 44px; padding: 0 20px; }
+	.mainSection-subTitle { font-size: 18px; line-height: 24px; padding: 0 20px 80px; margin: 0 !important; }
+	.searchFormBar-formMedialink { display: block; }
+	.searchFormBar-formFilterCell:first-child { width:100%; }
+	.searchFormBar-formFilterCell:not(:first-child) { display: none; }
+	.carsSearchBar-container { width: auto; padding: 20px 10px; }
+	.carsPage-carsSearchBar .carsSearchBar-container { width: auto; padding: 30px 30px; }
+	.carsPage-carsSearchBar .carsSearchBar-form-Fixed .carsSearchBar-container { padding: 50px 10px; }
+	.carsPage-carsSearchBar .carsSearchBar-protector { height: 115px; }
+	.carsSearchBar-formMediaLink { display: block; }
+	.carsSearchBar .carsSearchBar-container { background: none; height: auto; }
+	.carsSearchBar .carsSearchBar-line { display: none; }
+	.carsSearchBar .carsSearchBar-formLabel { display: none; }
+	.carsSearchBar .carsSearchBar-table { width: 100%; }
+	.carsSearchBar .carsSearchBar-tableCell { display: none; }
+	.carsSearchBar .carsSearchBar-tableCell-City { display: block; width: 100%; }
+	.carsSearchBar .autoComplete.autoComplete-City .autoCompleteInput { display: none; }
+	.carsSearchBar .autoComplete.autoComplete-City .autoCompleteInputPH { display: none; }
+	.carsSearchBar .autoComplete.autoComplete-City .autoCompleteInputPH-StepOne { position: relative; display: block; cursor: pointer; text-align: center; font-size: 30px; height: auto; line-height: 30px; width: 100%; border-bottom: 2px solid #ffcc00; padding-bottom: 15px; }
+	.thankPage { padding-top: 30px; }
+	.thankPage-leftCol { display: block; width: auto; padding: 0; }
+	.thankPage-rightCol { padding: 0; margin-top: 20px; display: block; width: auto; }
+	.langNotice-list li { width: 50%; }
+	.howItWorks-buttonContainer {
+		margin: 50px auto 50px;
+	}
+	.contactsPage-tableCell {
+		display: block;
+		padding-right: 0;
+		padding-bottom: 20px;
+	}
+	.contactsPage-tableCell:last-child {
+		padding-left: 0;
+		display: block;
+	}
+	.autoComplete.autoComplete-City .autoCompleteInput {
+		padding: 9px 35px 10px 10px;
+		min-height:37px
+	}
+
+	.autoComplete.autoComplete-City:after {
+		margin-top:11px
+	}
+
+	.pageWrapper {
+		margin-bottom:-6.5rem
+	}
+	.pageWrapper:after {
+		height:6.5rem
+	}
+	.pageContent {
+		min-height:inherit
+	}
+	.chat.chat-Visible, .chatBox-cont .chatBox-message, .chatBox-cont .chatBox-noMsgs:after {
+		width:100%
+	}
+
+	.chat {
+		width:78px
+	}
+
+	.chat .chat-openButton {
+		display:none
+	}
+
+	.chat.chat-Visible .chat-mobileClose {
+		display:block
+	}
+
+	.chat .chat-mobileClose {
+		height: 48px;
+		color: #fff;
+		background-color: #26272b;
+		padding-top: 15px;
+		padding-left: 15px;
+		font-size: 12px;
+		font-weight: 600;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index:4
+	}
+
+	.chat .chat-mobileClose:after {
+		content: "";
+		background-image: url(static/images/ico/chat-close-icon.png);
+		float: right;
+		margin-right: 15px;
+		display: block;
+		width: 18px;
+		height: 18px;
+		-moz-background-size: contain;
+		background-size:contain
+	}
+
+	.chat .sidebarChat {
+		height: 100% !important;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right:0
+	}
+
+	.chat .sidebarChat .chatBox-cont {
+		height: 100% !important;
+		width:100%
+	}
+
+	.chat .sidebarChat .chatBox-cont .chatBox-list {
+		height: 100% !important;
+		padding-top: 73px;
+		padding-bottom: 50px;
+		padding-right:8px
+	}
+
+	.chat .sidebarChat .chatBox-cont .chatBox-noMsgs {
+		width:250px
+	}
+
+	.chat .sidebarChat .chatBox-cont .chatBox-message {
+		display: inline-block;
+		padding-right:12px
+	}
+
+	.chat .sidebarChat .chatBox-cont .chatBox-messageTable {
+		max-width: 255px;
+		width:100%
+	}
+
+	.chat .sidebarChat .chatBox-cont .chatBox-messageText {
+		max-width:252px
+	}
+
+	.chat .sidebarChat .chatBox-cont .chatBox-message.chatBox-message-companion {
+		margin-left:-2px
+	}
+
+	.chat .sidebarChat .chatBox-cont .chatBox-tool {
+		position: fixed;
+		width: 100%;
+		bottom:0
+	}
+
+	.chat .sidebarChat .chatBox-cont .chatBox-messageSubmit {
+		outline:none
+	}
+
+	.chat .sidebarChat .chatBox-cont .chatBox-listWrap {
+		height:100%
+	}
+	.car-order-form .car-price-result .car-result-photo {
+		display:block
+	}
+	.car-order-form .car-price-result .car-result-car-name {
+		margin: 0 0 10px;
+		font-size:.875em
+	}
+	.car-order-form .car-price-result .car-result-body {
+		display: block;
+		margin-left: 0;
+		padding:0
+	}
+	.car-order-form .car-price-result .car-result-body p {
+		padding-bottom: 0;
+		margin-bottom:10px
+	}
+
+}
+
+
+
+
+
+
+@media (max-width: 667px) { /* body-MobileMode */
+	.block-icon-auto {
+		margin-right: 10px;
+	}
+	.tab-adv,
+	.tab-adv.tab-adv-active {
+		display: none;
+	}
+	.tab-adv-mobile {
+		display: none !important;
+	}
+	.tab-adv-mobile.tab-adv-mobile-active {
+		display: block !important;
+	}
+	.tabs__caption {
+		width: 100%;	
+		margin: 10px 0 50px; 		
+	}
+	
+	.dropdown-tab .dropdown-tab-content {
+		margin-left:0
+	}
+	.dropdown-tab .dropdown-tab-header .dropdown-tab-header-text {
+		width:65%
+	}
+	.ui-slider.ui-slider-horizontal {
+		width: 100%;
+		position: relative;
+		background-color: #fff;
+		height: 10px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		display:block
+	}
+	.ui-slider.ui-slider-horizontal .ui-slider-range.ui-widget-header {
+		height: 10px;
+		background-color: #02bbcf;
+		position: absolute;
+		display:block
+	}
+	.ui-slider.ui-slider-horizontal .ui-slider-range.ui-widget-header.ui-corner-all {
+		-moz-border-radius: 15px;
+		border-radius:15px
+	}
+	.ui-slider.ui-slider-horizontal .ui-slider-handle.ui-state-default {
+		height: 28px;
+		width: 28px;
+		background-color: #02bbcf;
+		display: block;
+		position: absolute;
+		margin-left: -14px;
+		margin-top: -9px;
+		outline:none
+	}
+	.ui-slider.ui-slider-horizontal .ui-slider-handle.ui-state-default.ui-corner-all {
+		-moz-border-radius: 50%;
+		border-radius:50%
+	}
+	.chatBox-cont .chatBox-messageSubmit {
+		padding-right:0
+	}
+	.chatBox-cont .chatBox-message.chatBox-message-companion .chatBox-messageUserAvatar {
+		display:none
+	}
+	.chatBox-cont .chatBox-message.chatBox-message-companion .chatBox-messageUserName {
+		margin-top: 0;
+		margin-left: 8px;
+		margin-bottom:5px
+	}
+	.chatBox-cont .chatBox-message.chatBox-message-companion .chatBox-messageText {
+		margin-top: 0;
+		margin-left:8px
+	}
+	.mobile-separator {
+		display: block
+	}
+	.loadWinBgd{background:#fff;}
+	.loadWin{box-shadow:none;}
+	#msgBar { width: auto; left: 10px; top:56px; }
+	#msgBar.msgBar-Fixed { top:10px; }
+	.msgBar-listItem { font-size: 14px; line-height: 18px; }
+	.orderForm-ticketInfo{padding:30px 10px;}
+	.order-popupRentAgreement{padding:40px 15px;}
+	.order-popupRentAgreement p{text-indent:20px;font-size:14px;line-height:19px;}
+	.order-popupRentAgreement h2{font-size:18px;line-height:22px;}
+	.cabinetHeaderBonus{display:none;}
+	.pageSection { padding: 20px 0; }
+	.pageSection-content { padding: 0 20px; }
+	.pageSection-title { font-size: 20px; line-height: 30px; display: block; margin: 0 0 20px; }
+	.pageSection-block { padding: 17px 20px; }
+	.titlePage-searchFormProtector { height: 97px; }
+	.titlePage-searchFormTitle { left: 0; }
+	.titlePage-searchForm { padding: 0; }
+	.titlePage-searchFormFixed { padding: 0 20px;}
+	.titlePage-searchFormTitle h2 { font-size: 0.875em; }
+	.section-index-main .title { font-size: 24px; line-height: 36px; }
+	.section-index-main .sub-title { font-size: 16px; line-height: 22px; }
+	.pageFloatHeader-content { padding: 20px; }
+	.pageFloatHeader-close { right: 4px; }
+	.pageHeader { height: 46px; }
+	.pageHeader-logo { height: 46px; top: 2px; }
+	.pageHeader-menuBtn { height: 46px; }
+	.pageHeader-menuBtnLine { margin: 0; }
+	.pageHeader-content { padding: 0 20px; }
+	.pageHeader-lang { margin-right: -5px; }
+	.pageHeader-langItem { height: 46px; line-height: 50px; padding: 0 5px; font-size: 12px; }
+	.pageHeader-langItem:after { display: none; }
+
+	.pageHeader-Transparent { background: rgba(10, 10, 10, 0.8); }
+	.pageHeader-Transparent .pageHeader-phonesList { background: rgba(10, 10, 10, 0.8); }
+	.pageHeader-Transparent .pageHeader-langItemList { background: rgba(10, 10, 10, 0.8); }
+	.pageHeader-Transparent .pageHeader-authMenu { background: rgba(10, 10, 10, 0.8); }
+	.popup.popup-BlackBgd .popup-form { padding: 0 20px 20px; }
+	.popup.popup-BlackBgd .popup-social { padding: 0 20px; }
+	.popup.popup-BlackBgd .popup-social .social-btn { margin: 0 10px 10px 0; }
+	.popup.popup-BlackBgd .popup-header { padding: 30px 20px; }
+	.popup.popup-BlackBgd .forgot-link { font-size: 12px; padding: 20px 0; }
+	.popup.popup-WhiteBgd { box-shadow: none; border-radius: 0; margin: 0; }
+	.popup.popup-WhiteBgd .carOptionPopupImg img { border-top-left-radius: 0; border-top-right-radius: 0; }
+	.popup.popup-WhiteBgd .carOptionPopupName { padding: 35px 40px 28px; font-size: 16px; line-height: 26px; }
+	.popup.popup-WhiteBgd .carOptionPopupDscr { font-size: 14px; line-height: 20px; }
+	.popup.popup-WhiteBgd .carOptionPopupArrowMobile:before { font-size: 25px; }
+	.popup.popup-WhiteBgd .carOptionPopupMobileLeft:before { content: '\e801'; right: 18px; }
+	.popup.popup-WhiteBgd .carOptionPopupMobileRight:before { content: '\e802'; left: 18px; }
+	.popup.popup-BlackBgd .popup-carsListRequest { padding: 0 20px; }
+	.sidebarMenu-content { margin-top: 0; padding: 50px 0 30px; }
+	.sidebarMenu-scroller:before { height: 46px; }
+	.sidebarMenu-main ul li a { font-size: 16px; line-height: 40px; }
+	.sidebarMenu-profile ul li a { font-size: 14px; line-height: 32px; }
+	.sidebarMenu-other ul li a { font-size: 14px; line-height: 32px; }
+	.sidebarMenu-phonesLink { font-size: 14px; line-height: 32px; }
+	.pageFooter-Protector { height: 140px; }
+	.pageFooter { padding: 20px 0; }
+	.pageFooter.pageFooter-MarginBottom { padding-bottom: 85px; }
+	.pageFooter-content { padding: 0 20px; }
+	.carsPresent-subTitle { padding:50px 0 0; font-size: 17px; color: #E9E9E9; line-height: 22px; font-weight:600; text-align: left; }
+	.carsList-itemContent { height: 300px; margin: 0; }
+
+	.carsList-itemContent.carsList-itemContent-agile {
+		height: 400px;
+	}
+
+	.carsList-itemImage { top:-18px; }
+	.carsList-itemContent:before { top:-18px; }
+	.carsList-itemName { bottom: 18px; }
+	.carsList-itemPrice { bottom: 18px; }
+	.carsList-itemPreCaption { font-size: 10px; line-height: 12px; }
+	.carsList-itemCaption { font-size: 24px; line-height: 36px; height: 36px; }
+	.carsList-itemSubCaption { font-size: 12px; line-height: 12px; }
+	.carsList-itemDetails { bottom:0; font-size: 10px; line-height: 10px; }
+	.carsPage-headerCount { font-size:14px; }
+	.carsPage-headerFilterHead { font-size:14px; padding:5px 30px 5px 10px; }
+	.carsPage-headerFilterHead:before { top: 8px; }
+	.carsPage-headerFilterContainer { margin-top: 0; }
+	.carsPage-filterCount { font-size:14px; padding:5px 30px 5px 10px; margin-top: 0; }
+	.carsPage-filterCount:before { top: 11px; }
+	.carsPage-unFreeCarsButton { padding: 0 20px; font-size: 12px; height: 44px; line-height: 44px;}
+	.carsPage-description { margin: 50px 0 0; }
+	.autoComplete.autoComplete-City .autoCompleteInput { min-height: 37px; }
+	.autoComplete.autoComplete-City:after { margin-top: 11px; }
+	.carsPage-headerTitle { padding:20px 0; font-size: 24px; line-height: 36px; }
+	.carsPageLongTerm-content { padding: 0 20px; }
+	.carsPageLongTerm-header { text-align: left; padding: 160px 0 0; background-size: 250%; background-position: 60% -2%; }
+	.carsPageLongTerm-headerContent { padding: 0 20px; }
+	.carsPageLongTerm-headerTitle { padding: 0; font-size: 24px; line-height: 34px; margin-bottom: 25px; }
+	.carsPageLongTerm-headerText { font-size: 16px; line-height: 24px; }
+	.carsPageLongTerm-advantages-itemText { font-size: 14px; line-height: 20px; }
+
+	.carsPageLongTerm-sliderBlock { padding: 0; }
+	.carsPageLongTerm-sliderBlock-Fixed { padding: 0 20px; }
+	.carsPageLongTerm-slider-container .carsPageLongTerm-title { font-size: 16px; }
+	.carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-sliderHandleValue { top: 26px; width: auto; background: #000; margin-left: 0px; white-space: nowrap; box-shadow: 0 0 7px 7px #000; }
+	.carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-slider { margin-top: 0; }
+	.carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-sliderHandleValue[data-value=min] { margin-left: 20px; }
+	.carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-sliderHandleValue[data-value=max] { margin-left: -25px; }
+
+	.carsPageLongTerm-table { display: block; }
+	.carsPageLongTerm-tableCell { display: block; margin-bottom: 20px; }
+	.carsPageLongTerm-tableCell:last-child { text-align: left; padding: 0; margin: 0; }
+	.carsPageLongTerm-infoText { padding-left: 25px; }
+	.carsPageLongTerm-infoText:before { position: absolute; left: 0; top: 5px; margin: 0; }
+
+	.carsListLongTerm-item { margin-bottom: 50px; }
+	.carsListLongTerm-itemContent { height: 270px; margin-bottom: 50px; }
+	.carsListLongTerm-itemPriceByMonth { bottom: 18px; }
+	.carsListLongTerm-itemPrice,
+	.carsListLongTerm-itemPriceCompare { top: 275px; width: 50%; }
+	.carsListLongTerm-itemPrice .carsListLongTerm-itemPreCaption { float: right; text-align: right; width: 60%; }
+	.carsListLongTerm-itemPrice .carsListLongTerm-itemCaption { display: inline-block; width: 100%; }
+	.carsListLongTerm-itemImage { top:-18px; }
+	.carsListLongTerm-itemContent:before { top:-18px; }
+	.carsListLongTerm-item:first-child .carsListLongTerm-itemContent {  }
+	.carsListLongTerm-itemName { bottom: 18px; }
+	.carsListLongTerm-itemPrice { bottom: 18px; }
+	.carsListLongTerm-itemPreCaption { font-size: 10px; line-height: 12px; }
+	.carsListLongTerm-itemCaption { font-size: 24px; line-height: 36px; height: 36px; }
+	.carsListLongTerm-itemSubCaption { font-size: 12px; line-height: 12px; }
+	.carsListDiscount-item { height: 425px; }
+	.carsListDiscount-itemContent { height: 270px; margin-bottom: 50px; }
+	.carsListDiscount-itemPrice .carsListDiscount-itemPreCaption { float: right; text-align: right; width: 60%; }
+	.carsListDiscount-itemPrice .carsListDiscount-itemCaption { display: inline-block; width: 100%; }
+	.carsListDiscount-itemImage { top:-18px; }
+	.carsListDiscount-itemContent:before { top:-18px; }
+	.carsListDiscount-itemName { bottom: 18px; }
+	.carsListDiscount-itemPrice { bottom: 18px; }
+	.carsListDiscount-itemPreCaption { font-size: 10px; line-height: 12px; }
+	.carsListDiscount-itemCaption { font-size: 24px; line-height: 36px; height: 36px; }
+	.carsListDiscount-itemSubCaption { font-size: 12px; line-height: 12px; }
+	.carsListDiscount-itemTextLine1 { font-size: 24px; }
+	.carsListDiscount-itemTextLine2 { font-size: 12px; }
+	.carsListDiscount-itemText:before { margin-bottom: -6px; }
+	.howItWorks-itemTitle {font-size: 18px;}
+	.howItWorks-itemText {font-size: 14px;}
+	.howItWorks-button {font-size: 14px;}
+	.advantages-itemText { font-size: 14px; line-height: 20px; }
+	.advantages-link  { padding: 14px 20px; font-size: 16px; }
+	.mainSection { margin-top: -46px; }
+	.mainSection-content { padding: 80px 0 40px; }
+	.mainSection-title { font-size: 24px; line-height: 36px; }
+	.mainSection-subTitle { font-size: 16px; line-height: 22px; padding: 0 20px 60px; }
+	.mainSection-subTitle-NoMobile { display: none; }
+	.searchFormBar-protector { height: 97px; }
+	.searchFormBar-form { padding: 50px 0 20px; }
+	.searchFormBar-title { font-size: 14px; line-height: 14px; }
+	.searchFormBar-form-Fixed { padding: 0 20px; }
+	.searchFormBar-form-Fixed .searchFormBar-container { padding: 50px 0 20px; }
+	.searchFormBar-button { min-height: 37px; padding: 10px 29px; }
+	.carsSearchBar { margin-top: 20px; }
+	.carsSearchBar-protector { height: 97px; }
+	.carsSearchBar-form { padding: 0 0 20px; }
+	.carsSearchBar-title { font-size: 14px; line-height: 14px; }
+	.carsSearchBar-form-Fixed { padding: 0 20px; }
+	.carsSearchBar-form-Fixed .carsSearchBar-container { padding: 20px 0; }
+	.carsSearchBar-button { min-height: 37px; padding: 10px 29px; }
+	.carsSearchBar-container { padding: 20px 0; }
+	.carsSearchBar .autoComplete.autoComplete-City .autoCompleteInputPH { font-size: 16px; line-height: 26px; height: 30px; padding-bottom: 10px; text-overflow: ellipsis; overflow: hidden; }
+	.carsPage-carsSearchBar .carsSearchBar { margin: 0; }
+	.carsPage-carsSearchBar .carsSearchBar-container { width: auto; padding: 20px; }
+	.carsPage-carsSearchBar .carsSearchBar-form { padding: 0; }
+	.carsPage-carsSearchBar .carsSearchBar-protector { height: 70px; }
+	.carsPage-carsSearchBar .carsSearchBar-form-Fixed .carsSearchBar-container { padding: 20px; }
+	.profileForm { padding: 0; }
+	.profileForm-table { display: block; width: auto; position: relative; }
+	.profileForm-tableCell { display: block; vertical-align: inherit; margin-bottom: 30px; }
+	.profileForm-tableCell-Last { position: absolute; top: 0; right: 0; }
+	.profileForm-tableCell-Medium { width: auto; }
+	.profileForm-tableCell-Min { width: auto; }
+
+	.profileForm .customTextInput { margin-right: 0; }
+	.profileForm .profileForm-customSelect { margin-right: 0; }
+	.profileForm-customSelectCountry { margin-right: 0; }
+	.profileForm .customRadio { margin-top: 40px; }
+	.profileForm-files { margin: 20px 0 0; }
+	.profileForm-filesItem { width: 100%; margin-bottom: 20px; padding: 0; }
+	.profileForm-files ul:last-child li { margin-bottom: 10px; }
+	.profileForm-customSelectCountry .customSelect-menuWrap { width: 100%; }
+
+	.profileForm .phoneInput.phoneInput-1 .phoneInput-table { position: relative; }
+	.profileForm .phoneInput.phoneInput-1 .phoneInput-tableNumber { position: absolute; left: 85px; top: 0; right: 0; }
+	.profileForm .customSelect-Phone1:after { right: auto; left: 72px; }
+	.profileForm .customSelect-Phone1 .customSelect-menuWrap { width: 100%; }
+	.thankPage-order { border-radius: inherit; }
+	.thankPage { padding-top: 0; }
+	.thankPage-content { padding: 0; }
+	.thankPage-caption { font-size: 20px; line-height: 24px; }
+	.thankPage-text,
+	.thankPage-text-Large { font-size: 16px; line-height: 20px; }
+	.thankPage-block { border-radius: inherit; padding: 20px; border-left: 0; border-right: 0; }
+
+	.thankPage-orderCaption { margin-bottom: 5px; }
+	.thankPage-orderCity { font-size: 20px; }
+	.thankPage-orderLine { margin: 20px 0; }
+	.thankPage-title { margin: 0 0 20px; font-size: 24px; letter-spacing: 0.2px; line-height: 30px; text-align: center; padding: 0 20px; }
+	.langNotice-list li { width: 100%; }
+	.popup.popup-BlackBgd .popup-header {
+		padding: 15px 20px;
+		height: 50px;
+	}
+
+	.brand-list .advantages-item {
+        width: 25%;
+        padding: 0;
+    }
+	
+	.brand-list .advantages-itemText {
+		font-size: 12px;
+	}
+	.brand-list .icon-adv {
+		line-height: 70px;
+		width: 70px;
+		height: 70px;
+		}
+	.brand-list .icon-adv:before, .brand-list .icon-adv:after {
+		font-size: 70px;
+		width: 70px;
+		height: 70px;
+		line-height: 70px;
+	}
+	.brand-list .icon-adv img {
+		max-width: 40px; 
+	}
+}

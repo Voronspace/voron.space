@@ -1,0 +1,4 @@
+[
+    { "from": "/partner", "to": "/connect/" },
+    { "from": "/partner/", "to": "/connect/" }
+]
