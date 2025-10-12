@@ -99,7 +99,7 @@
         >
           <source
             v-if="auto.video"
-            :src="`https://cdn.voron.io/images/videos/${auto.video}`"
+            :src="`https://cdn.voron.io/videos/cars/${auto.video}`"
             type="video/mp4"
           />
         </video>
