@@ -1,29 +1,33 @@
-FROM node:16-alpine
+FROM node:20-alpine AS builder
 
-# create destination directory
-RUN mkdir -p /usr/src/nuxt-app
-WORKDIR /usr/src/nuxt-app
+WORKDIR /usr/src/app
 
-# update and install dependency
-RUN apk update && apk upgrade
-RUN apk add git
+COPY package*.json ./
 
-# copy the app, note .dockerignore
-COPY . /usr/src/nuxt-app/
-RUN npm install
+RUN npm ci
 
-# build necessary, even if no static files are needed,
-# since it builds the server as well
-# RUN npm run generate
+COPY . .
+
 RUN npm run build
 
-# expose 5000 on container
+FROM node:20-alpine
+
+WORKDIR /usr/src/app
+
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
+
+COPY --chown=appuser:appgroup --from=builder /usr/src/app/node_modules ./node_modules
+COPY --chown=appuser:appgroup --from=builder /usr/src/app/.nuxt ./.nuxt
+COPY --chown=appuser:appgroup --from=builder /usr/src/app/static ./static
+COPY --chown=appuser:appgroup --from=builder /usr/src/app/nuxt.config.js ./
+COPY --chown=appuser:appgroup --from=builder /usr/src/app/package.json ./
+
+ENV NODE_ENV=production
+
 EXPOSE 5000
 
-# set app serving to permissive / assigned
 ENV NUXT_HOST=0.0.0.0
-# set app port
 ENV NUXT_PORT=5000
 
-# start the app
 CMD [ "npm", "start" ]

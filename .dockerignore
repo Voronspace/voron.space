@@ -1,0 +1,20 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Зависимости и артефакты сборки
+node_modules
+.nuxt
+.idea
+dist
+
+# Логи и системные файлы
+npm-debug.log
+*.log
+
+# Файлы окружения (их нужно передавать отдельно)
+.env
