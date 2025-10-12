@@ -22,6 +22,8 @@ COPY --chown=appuser:appgroup --from=builder /usr/src/app/.nuxt ./.nuxt
 COPY --chown=appuser:appgroup --from=builder /usr/src/app/static ./static
 COPY --chown=appuser:appgroup --from=builder /usr/src/app/nuxt.config.js ./
 COPY --chown=appuser:appgroup --from=builder /usr/src/app/package.json ./
+COPY --chown=appuser:appgroup --from=builder /usr/src/app/serverMiddleware ./serverMiddleware
+COPY --chown=appuser:appgroup --from=builder /usr/src/app/301.json ./
 
 ENV NODE_ENV=production
 
