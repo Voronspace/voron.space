@@ -7,7 +7,7 @@ set -e
 # Замените на ваши значения
 IMAGE_NAME="voron-space-app"
 CONTAINER_NAME="voron-space-container"
-GIT_BRANCH="main" # или "master"
+GIT_BRANCH="space" # или "master"
 
 # --- 1. GIT: Сохранение и выгрузка изменений ---
 echo ">>> 1. Сохранение и выгрузка изменений в Git..."
@@ -24,7 +24,7 @@ else
 fi
 
 # Выгружаем последние коммиты на GitHub (этот шаг теперь выполнится всегда)
-#git push origin $GIT_BRANCH
+git push origin $GIT_BRANCH
 
 echo ">>> Git: Локальные изменения синхронизированы с удаленным репозиторием."
 
