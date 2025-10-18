@@ -725,7 +725,7 @@ export default {
         auto: "",
         year: "",
         city: "msk",
-        source: "sale_space",
+        source: "sale_store",
         success: false,
         errors: false,
       },
@@ -789,7 +789,7 @@ export default {
             auto: this.form.auto,
             year: this.form.year,
             city: this.form.city,
-            source: 'sale_space',
+            source: 'sale_store',
             utm: this.$utm(),
           }
         );

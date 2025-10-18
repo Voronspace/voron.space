@@ -72,7 +72,7 @@
               v-model="form.agreeTerms"
               required
             />
-            <label for="agreeTerms">Даю согласие на <a href="https://voron.space/legal/personal-data/" target="_blank">обработку персональных данных</a></label>
+            <label for="agreeTerms">Даю согласие на <a href="https://voron.store/legal/personal-data/" target="_blank">обработку персональных данных</a></label>
           </div>
 
           <button type="submit" class="btn btn-primary">Забронировать</button>

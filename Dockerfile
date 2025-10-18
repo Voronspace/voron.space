@@ -27,9 +27,9 @@ COPY --chown=appuser:appgroup --from=builder /usr/src/app/301.json ./
 
 ENV NODE_ENV=production
 
-EXPOSE 5000
+EXPOSE 5003
 
 ENV NUXT_HOST=0.0.0.0
-ENV NUXT_PORT=5000
+ENV NUXT_PORT=5003
 
 CMD [ "npm", "start" ]
