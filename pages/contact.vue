@@ -131,7 +131,7 @@
                       v-model="form.agreeTerms"
                       required
                     />
-                    <label for="agreeTerms">Даю согласие на <a href="https://voron.space/legal/personal-data/" target="_blank">обработку персональных данных</a></label>
+                    <label for="agreeTerms">Даю согласие на <a href="https://voron.black/legal/personal-data/" target="_blank">обработку персональных данных</a></label>
                   </div>
 
                   <input

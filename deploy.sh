@@ -5,9 +5,9 @@ set -e
 
 # --- КОНФИГУРАЦИЯ ---
 # Замените на ваши значения
-IMAGE_NAME="voron-space-app"
-CONTAINER_NAME="voron-space-container"
-GIT_BRANCH="space" # или "master"
+IMAGE_NAME="voron-black-app"
+CONTAINER_NAME="voron-black-container"
+GIT_BRANCH="black" # или "master"
 
 # --- 1. GIT: Сохранение и выгрузка изменений ---
 echo ">>> 1. Сохранение и выгрузка изменений в Git..."
@@ -46,7 +46,7 @@ echo ">>> Docker: Старый контейнер остановлен и уда
 
 # Запускаем новый контейнер из нового образа
 docker run -d \
-  -p 5000:5000 \
+  -p 5001:5001 \
   --name $CONTAINER_NAME \
   --restart always \
   $IMAGE_NAME

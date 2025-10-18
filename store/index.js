@@ -1,5 +1,5 @@
 export const state = () => ({
-	source: 'space' // 'voron.black'
+	source: 'black' // 'voron.black'
 })
 
 export const mutations = {
