@@ -53,15 +53,14 @@
       <div class="mainSection-content">
         <div class="pageSection-content">
           <h1 class="mainSection-title">
-            Ваш личный автопарк
+            Аренда с правом выкупа
             <div class="mainSection-subTitle mainSection-subTitle-first">
               с доступом со смартфона по технологии каршеринга
             </div>
           </h1>
           <h2 class="mainSection-subTitle">
-            Бесконтактная аренда комфорт, бизнес и премиум автомобилей без
-            надписей<br />
-            <b>Доставка за 30-90 мин. в указанное место бесплатно</b>
+            Бесконтактная аренда с выкупом комфорт, бизнес и премиум автомобилей<br />
+            <b>Сначала можно протестировать, а потом оформлять выкуп</b>
           </h2>
           <div class="mainSection-subTitle-NoMobile"></div>
           <div class="advantages-link-container">
@@ -81,29 +80,29 @@
     <!-- BAR: ADVANTAGES -->
     <div id="advantages" class="advantages">
       <div class="pageSection-content">
-        <div class="advantages-title">Возможности</div>
+        <div class="advantages-title">Преимущества</div>
         <div
           class="advantages-items-container advantages-items-container-Active"
         >
           <div class="advantages-items">
             <AdvantageItem
-              text="Разнообразный ассортимент авто без надписей"
-              img="/images/app/phone01.png"
-            />
-            <AdvantageItem
-              text="На улицах города с доступом со смартфона"
-              img="/images/app/phone02.png"
-            />
-            <AdvantageItem
-              text="Поминутные, часовые и суточные тарифы"
-              img="/images/app/phone03.png"
-            />
-            <AdvantageItem
-              text="Бесплатная доставка для часовой поездки"
+              text="Разнообразный ассортимент авто для выкупа"
               img="/images/app/phone04.png"
             />
             <AdvantageItem
-              text="30-90 мин. и авто ждет вас в указанном месте"
+              text="Не в офисе, а на улицах города"
+              img="/images/app/phone02.png"
+            />
+            <AdvantageItem
+              text="Возможность поездить перед оформлением"
+              img="/images/app/phone03.png"
+            />
+            <AdvantageItem
+              text="Гибкая тарификация и автооплата"
+              img="/images/app/phone03.png"
+            />
+            <AdvantageItem
+              text="Не только смартфон, но и личный пульт управления"
               img="/images/app/phone05.png"
             />
             <div class="advantages-clear"></div>
@@ -118,31 +117,31 @@
               >
                 <div class="slide">
                   <AdvantageItem
-                    text="Разнообразный ассортимент авто без надписей"
-                    img="/images/app/phone01.png"
-                  />
-                </div>
-                <div class="slide">
-                  <AdvantageItem
-                    text="На улицах города с доступом со смартфона"
-                    img="/images/app/phone02.png"
-                  />
-                </div>
-                <div class="slide">
-                  <AdvantageItem
-                    text="Поминутные, часовые и суточные тарифы"
-                    img="/images/app/phone03.png"
-                  />
-                </div>
-                <div class="slide">
-                  <AdvantageItem
-                    text="Бесплатная доставка для часовой поездки"
+                    text="Разнообразный ассортимент авто для выкупа"
                     img="/images/app/phone04.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="30-90 мин. и авто ждет вас в указанном месте"
+                    text="Не в офисе, а на улицах города"
+                    img="/images/app/phone02.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Возможность поездить перед оформлением"
+                    img="/images/app/phone03.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Гибкая тарификация и автооплата"
+                    img="/images/app/phone03.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Не только смартфон, но и личный пульт управления"
                     img="/images/app/phone05.png"
                   />
                 </div>
@@ -180,16 +179,11 @@
           <div class="carsList-itemSubCaption">
             <em
             ><small
-            >* Для отмены депозита необходимо совершить минимум 10 успешных
-              поездок в сервисе. Поездка засчитывается, если вы находились в
-              движении больше 30 минут, не нарушали правила ПДД, не нанесли
-              ущерб автомобилю и оплата за аренду была успешным списанием с
-              привязанной банковской карты, а не погашением задолженности или
-              из страхового депозита. Подробнее тут →
+            >* В любой момент поездки вы можете запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут →
               <a
                 style="color: rgb(255, 204, 0)"
                 target="_blank"
-                href="https://voron.help/deposit/deposit"
+                href="https://voron.help/tariff/renttobuy"
               >voron.help</a
               ></small
             ></em
@@ -230,13 +224,13 @@
           <SchemeItem
             title="Поездка"
             icon="fal fa-car-alt"
-            text="На время аренды в мобильном приложении включается таймер для удобного контроля расходов"
+            text="Вы можете поездить на авто в обычной аренде и если он вам понравится, то в любой момент включить в приложении тариф с выкупом"
           />
           <SchemeItem
             title="Завершение"
             icon="fal fa-car-alt"
-            text="Зона завершения аренды подсвечена на карте зеленым цветом. После поездки можно вывести депозит нажатием «Вернуть депозит». Он будет отправлен на возврат в течение 48 часов"
-            decsription="Вы можете оставить депозит на своем балансе, чтобы использовать его для следующих поездок"
+            text="Когда вы запустите тариф аренды с выкупом, мы в течение недели подготовим договор с владельцем автомобиля и пригласим вас на подписание документов"
+            decsription="Второй раз вам потребуется приехать на подписание договора купли-продажи после завершения выкупа"
           />
         </div>
         <div class="advantages-items-Mobile howItWorks-items-Mobile_">
@@ -273,19 +267,19 @@
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Поездка"
+                  title="Выкуп"
                   icon="fal fa-car-alt"
                   number="4"
-                  text="На время аренды в мобильном приложении включается таймер для удобного контроля расходов"
+                  text="Вы можете поездить на авто в обычной аренде и если он вам понравится, то в любой момент включить в приложении тариф с выкупом"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Завершение"
+                  title="Подписание документов"
                   icon="fal fa-car-alt"
                   number="5"
-                  text="Зона завершения аренды подсвечена на карте зеленым цветом. После поездки можно вывести депозит нажатием «Вернуть депозит». Он будет отправлен на возврат в течение 48 часов"
-                  decsription="Вы можете оставить депозит на своем балансе, чтобы использовать его для следующих поездок"
+                  text="Когда вы запустите тариф аренды с выкупом, мы в течение недели подготовим договор с владельцем автомобиля и пригласим вас на подписание документов"
+                  decsription="Второй раз вам потребуется приехать на подписание договора купли-продажи после завершения выкупа"
                 />
               </div>
             </agile>
@@ -296,12 +290,11 @@
           style="position: static; margin-top: 50px"
         >
           <nuxt-link
-            to="/delivery/"
+            to="/renttobuy/"
             exact
             exact-active-class="active"
             class="howItWorks-button"
-          ><i style="margin-right: 10px" class="fal fa-route"></i>Как работает
-            доставка</nuxt-link
+          ><i style="margin-right: 10px" class="fal fa-route"></i>Подробнее о выкупе</nuxt-link
           >
         </div>
       </div>
@@ -321,19 +314,19 @@ import Modal from "/components/Modal.vue"; // Импорт компонента 
 export default {
   head: {
     title:
-      "VORON – Личный автомобиль по технологии каршеринга. Каршеринг без надписей",
+      "VORON – Технологичная аренда с выкупом. Сначала тест-драйв, потом выкуп",
     meta: [
       {
         hid: "keywords",
         name: "keywords",
         content:
-          "каршеринг, каршеринг бизнес-класса, каршеринг без надписей, каршеринг ворон, аренда авто, прокат авто, аренда авто представительского класса, прокат авто москва, аренда авто в россии",
+          "аренда с выкуом, с правом выкупа, аренда бизнес-класса, каршеринг ворон, аренда авто, прокат авто, аренда авто представительского класса, прокат авто москва, аренда авто в россии",
       },
       {
         hid: "description",
         name: "description",
         content:
-          "VORON – Личный автомобиль по технологии каршеринга. Каршеринг без надписей",
+          "VORON – Технологичная аренда с выкупом. Сначала тест-драйв, потом выкуп",
       },
     ],
   },
