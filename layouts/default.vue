@@ -343,7 +343,7 @@
               <ul>
                 <li>
                   <nuxt-link to="/" exact exact-active-class="active"
-                  >Каршеринг</nuxt-link
+                  >Аренда с выкупом</nuxt-link
                   >
                 </li>
                 <li>

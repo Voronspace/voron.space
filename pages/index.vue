@@ -59,7 +59,7 @@
             </div>
           </h1>
           <h2 class="mainSection-subTitle">
-            Покупка комфорт, бизнес и премиум автомобилей через аренду с выкупом<br />
+            Покупка автомобиля комфорт, бизнес и премиум класса через аренду с выкупом<br />
             <b>Сначала тест-драйв, а потом выкуп</b>
           </h2>
           <div class="mainSection-subTitle-NoMobile"></div>
@@ -90,7 +90,7 @@
               img="/images/app/phone04.png"
             />
             <AdvantageItem
-              text="Не в офисе, а на улицах города"
+              text="Автомобили не в офисе, а на улицах города"
               img="/images/app/phone02.png"
             />
             <AdvantageItem
@@ -123,7 +123,7 @@
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="Не в офисе, а на улицах города"
+                    text="Автомобили не в офисе, а на улицах города"
                     img="/images/app/phone02.png"
                   />
                 </div>
@@ -314,7 +314,7 @@ import Modal from "/components/Modal.vue"; // Импорт компонента 
 export default {
   head: {
     title:
-      "VORON – Технологичная аренда с выкупом. Сначала тест-драйв, потом выкуп",
+      "VORON – Покупка авто через аренду с выкупом. Сначала тест-драйв, потом выкуп",
     meta: [
       {
         hid: "keywords",
@@ -326,7 +326,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "VORON – Технологичная аренда с выкупом. Сначала тест-драйв, потом выкуп",
+          "VORON – Покупка авто через аренду с выкупом. Сначала тест-драйв, потом выкуп",
       },
     ],
   },
