@@ -505,7 +505,7 @@
       </div>
     </footer>
     <!-- /FOOTER -->
-    <img :src="trackingPixelUrl" width="1" height="1" alt="" />
+    <img :src="trackingPixelUrl" width="1" height="1" alt="" style="position: absolute; left: -9999px;" />
   </div>
   <!-- /PAGE -->
 </template>
