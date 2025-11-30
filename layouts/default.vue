@@ -505,6 +505,7 @@
       </div>
     </footer>
     <!-- /FOOTER -->
+    <img :src="trackingPixelUrl" width="1" height="1" alt="" />
   </div>
   <!-- /PAGE -->
 </template>
@@ -537,6 +538,12 @@ export default {
     qrCodeUrl: "", // URL для изображения QR-кода
     appInstallUrl: "", // URL для установки приложения (для текста под QR)
   }),
+  computed: {
+    trackingPixelUrl() {
+      const source = this.$utm(false);
+      return `https://voron.app/pixel.php?source=${source}`;
+    },
+  },
   created() {
     this.$router.beforeEach((to, from, next) => {
       this.menuOpen = false;

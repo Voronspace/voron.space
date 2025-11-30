@@ -37,7 +37,7 @@
                   </div>
                 </div>
 
-                <h2 class="contactsPage-h2">ГОРОДА</h2>
+                <h2 class="contactsPage-h2">ГОРОДА STORE</h2>
                 <div class="contactsPage-table">
                   <div
                     class="contactsPage-tableCell contactsPage-tableCell-NPB" style="padding-left: 0;"
