@@ -540,7 +540,7 @@ export default {
   }),
   computed: {
     trackingPixelUrl() {
-      const source = this.$utm(false);
+      const source = this.$route.query.source || this.$cookies.get('source') || '';
       return `https://voron.app/pixel.php?source=${source}`;
     },
   },
