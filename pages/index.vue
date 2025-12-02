@@ -152,7 +152,7 @@
     </div>
     <!-- /BAR: ADVANTAGES -->
     <!-- BAR: CITIES -->
-    <div class="advantages">
+    <div class="advantages cities-block">
       <div class="pageSection-content">
         <div class="advantages-title">Города</div>
         <div
@@ -423,3 +423,12 @@ export default {
   },
 };
 </script>
+<style scoped>
+.cities-block {
+  padding-bottom: 40px;
+}
+.tabs__caption {
+  justify-content: center;
+  gap: 40px;
+}
+</style>

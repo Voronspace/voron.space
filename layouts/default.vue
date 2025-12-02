@@ -194,28 +194,24 @@
                       </li>
                       <li>
                         <a
-                          target="_blank"
                           :href="`https://voron.store/${$utm(true)}`"
                         >Аренда с выкупом</a
                         >
                       </li>
                       <li>
                         <a
-                          target="_blank"
                           :href="`https://voron.club/${$utm(true)}`"
                         >Клуб автопрокатов</a
                         >
                       </li>
                       <li>
                         <a
-                          target="_blank"
                           :href="`https://voron.black/${$utm(true)}`"
                         >Поездки с водителем</a
                         >
                       </li>
                       <li>
                         <a
-                          target="_blank"
                           :href="`https://voron.capital/${$utm(true)}`"
                         >Авто как инвестиция</a
                         >
@@ -232,32 +228,28 @@
                           to="/deposit/"
                           exact
                           exact-active-class="active"
-                        >Страховой депозит</nuxt-link
-                        >
+                        >Страховой депозит</nuxt-link>
                       </li>
                       <li>
                         <nuxt-link
                           to="/about/"
                           exact
                           exact-active-class="active"
-                        >О сервисе</nuxt-link
-                        >
+                        >О сервисе</nuxt-link>
                       </li>
                       <li>
                         <nuxt-link
                           to="/legal/agreement/"
                           exact
                           exact-active-class="active"
-                        >Договор-оферта</nuxt-link
-                        >
+                        >Договор-оферта</nuxt-link>
                       </li>
                       <li>
                         <nuxt-link
                           to="/contact/"
                           exact
                           exact-active-class="active"
-                        >Контакты</nuxt-link
-                        >
+                        >Контакты</nuxt-link>
                       </li>
                     </ul>
                   </nav>
@@ -265,15 +257,13 @@
                     <a
                       href="tel:+7 800 555 06 79"
                       class="sidebarMenu-phonesLink sidebarMenu-phonesLink-RU"
-                    >8 800 555 06 79</a
-                    >
+                    >8 800 555 06 79</a>
                   </div>
                 </div>
                 <div class="sidebarMenu-scrollerBar-wrapper">
                   <div
                     class="sidebarMenu-scrollerBar"
-                    style="height: 0px"
-                  ></div>
+                    style="height: 0px"></div>
                 </div>
               </div>
             </div>
@@ -282,8 +272,7 @@
           <a href="/" class="pageHeader-logo"></a>
           <div class="pageHeader-phones">
             <a class="pageHeader-phonesLink" href="tel:+7 800 555 06 79"
-            >8 800 555 06 79</a
-            >
+            >8 800 555 06 79</a>
             <div class="pageHeader-phonesListContainer">
               <nav class="pageHeader-phonesList">
                 <ul>
@@ -296,20 +285,17 @@
             <ul>
               <li>
                 <nuxt-link to="/" exact exact-active-class="active"
-                ><span>Каршеринг</span></nuxt-link
-                >
+                ><span>Каршеринг</span></nuxt-link>
               </li>
               <li>
                 <nuxt-link to="/delivery/" exact exact-active-class="active"
-                ><span>Доставка</span></nuxt-link
-                >
+                ><span>Доставка</span></nuxt-link>
               </li>
               <li>
                 <a
                   target="_blank"
                   :href="`https://voron.capital/${$utm(true)}`"
-                >Инвестиция в авто</a
-                >
+                >Инвестиция в авто</a>
               </li>
             </ul>
           </nav>
