@@ -37,15 +37,15 @@
                   </div>
                 </div>
 
-                <h2 class="contactsPage-h2">ГОРОДА STORE</h2>
+                <h2 class="contactsPage-h2">ГОРОДА SPACE</h2>
                 <div class="contactsPage-table">
                   <div
                     class="contactsPage-tableCell contactsPage-tableCell-NPB" style="padding-left: 0;"
                   >
 
                     <span class="city-item">Москва</span>
-                    <span class="city-item city-no-active">Санкт-Петербург</span>
-                    <span class="city-item">Сочи</span>
+                    <span class="city-item">Санкт-Петербург</span>
+                    <span class="city-item city-no-active">Сочи</span>
                     <span class="city-item city-no-active">Краснодар</span>
                     <span class="city-item city-no-active">Нижний Новгород</span>
 

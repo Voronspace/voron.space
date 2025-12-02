@@ -195,7 +195,7 @@
                       <li>
                         <a
                           target="_blank"
-                          :href="`https://voron.plus/${$utm(true)}`"
+                          :href="`https://voron.store/${$utm(true)}`"
                         >Аренда с выкупом</a
                         >
                       </li>
@@ -326,10 +326,10 @@
     <footer class="pageFooter" itemscope itemtype="http://schema.org/WPFooter">
       <div class="pageFooter-content">
         <div class="">
-          <div class="pageFooter-title">Города</div>
+          <div class="pageFooter-title">Города SPACE</div>
           <div class="list_cities">
             <a class="city_active">Москва</a>
-            <a @click="showModalCity('spb')">Санкт-Петербург</a>
+            <a class="city_active">Санкт-Петербург</a>
             <a @click="showModalCity('sochi')">Сочи</a>
             <a @click="showModalCity('krd')">Краснодар</a>
             <a @click="showModalCity('nn')">Нижний Новгород</a>
