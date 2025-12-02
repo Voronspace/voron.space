@@ -425,10 +425,10 @@ export default {
 </script>
 <style scoped>
 .cities-block {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 .tabs__caption {
   justify-content: center;
-  gap: 40px;
+  gap: 25px;
 }
 </style>
