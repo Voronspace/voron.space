@@ -25,7 +25,6 @@
 <!--        </p>-->
       </div>
     </Modal>
-
     <!-- BAR: MAIN SECTION -->
     <div class="mainSection mainSection-IndexPage">
       <div class="mainSection-background">
@@ -77,34 +76,33 @@
       </div>
     </div>
     <!-- /BAR: MAIN SECTION -->
-
     <!-- BAR: ADVANTAGES -->
     <div id="advantages" class="advantages">
       <div class="pageSection-content">
         <div class="advantages-title">Возможности</div>
         <div
-          class="advantages-items-container advantages-items-container-Active"
+            class="advantages-items-container advantages-items-container-Active"
         >
           <div class="advantages-items">
             <AdvantageItem
-              text="Разнообразный ассортимент авто без надписей"
-              img="/images/app/phone01.png"
+                text="Разнообразный ассортимент авто без надписей"
+                img="/images/app/phone01.png"
             />
             <AdvantageItem
-              text="На улицах города с доступом со смартфона"
-              img="/images/app/phone02.png"
+                text="На улицах города с доступом со смартфона"
+                img="/images/app/phone02.png"
             />
             <AdvantageItem
-              text="Поминутные, часовые и суточные тарифы"
-              img="/images/app/phone03.png"
+                text="Поминутные, часовые и суточные тарифы"
+                img="/images/app/phone03.png"
             />
             <AdvantageItem
-              text="Бесплатная доставка для часовой поездки"
-              img="/images/app/phone04.png"
+                text="Бесплатная доставка для часовой поездки"
+                img="/images/app/phone04.png"
             />
             <AdvantageItem
-              text="30-90 мин. и авто ждет вас в указанном месте"
-              img="/images/app/phone05.png"
+                text="30-90 мин. и авто ждет вас в указанном месте"
+                img="/images/app/phone05.png"
             />
             <div class="advantages-clear"></div>
           </div>
@@ -118,32 +116,32 @@
               >
                 <div class="slide">
                   <AdvantageItem
-                    text="Разнообразный ассортимент авто без надписей"
-                    img="/images/app/phone01.png"
+                      text="Разнообразный ассортимент авто без надписей"
+                      img="/images/app/phone01.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="На улицах города с доступом со смартфона"
-                    img="/images/app/phone02.png"
+                      text="На улицах города с доступом со смартфона"
+                      img="/images/app/phone02.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="Поминутные, часовые и суточные тарифы"
-                    img="/images/app/phone03.png"
+                      text="Поминутные, часовые и суточные тарифы"
+                      img="/images/app/phone03.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="Бесплатная доставка для часовой поездки"
-                    img="/images/app/phone04.png"
+                      text="Бесплатная доставка для часовой поездки"
+                      img="/images/app/phone04.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="30-90 мин. и авто ждет вас в указанном месте"
-                    img="/images/app/phone05.png"
+                      text="30-90 мин. и авто ждет вас в указанном месте"
+                      img="/images/app/phone05.png"
                   />
                 </div>
               </agile>
@@ -153,7 +151,31 @@
       </div>
     </div>
     <!-- /BAR: ADVANTAGES -->
-
+    <!-- BAR: CITIES -->
+    <div class="advantages">
+      <div class="pageSection-content">
+        <div class="advantages-title">Города</div>
+        <div
+            class="advantages-items-container advantages-items-container-Active advantages-items-container2"
+        >
+          <ul class="tabs__caption">
+            <li
+                :class="[selectedRegion == '99' ? 'active' : '']"
+                @click="changeRegion('99')"
+            >
+              Москва
+            </li>
+            <li
+                :class="[selectedRegion == '98' ? 'active' : '']"
+                @click="changeRegion('98')"
+            >
+              Санкт-Петербург
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /BAR: CITIES -->
     <!-- BAR: CARS PRESENTATION -->
     <div class="carsPresent">
       <div class="pageSection-content">
@@ -199,7 +221,6 @@
       </div>
     </div>
     <!-- /BAR: CARS PRESENTATION -->
-
     <!-- BAR: HOT IT WORKS -->
     <div id="howItWorks" class="howItWorks">
       <div class="pageSection-content">
@@ -213,30 +234,30 @@
         </div>
         <div class="howItWorks-items">
           <SchemeItem
-            title="Регистрация"
-            icon="fal fa-address-card"
-            text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
+              title="Регистрация"
+              icon="fal fa-address-card"
+              text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
           />
           <SchemeItem
-            title="Подтверждение"
-            icon="fal fa-user-check"
-            text="Служба безопасности проверяет ваши документы и активирует аккаунт"
+              title="Подтверждение"
+              icon="fal fa-user-check"
+              text="Служба безопасности проверяет ваши документы и активирует аккаунт"
           />
           <SchemeItem
-            title="Доставка / Бронь"
-            icon="fal fa-route"
-            text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
+              title="Доставка / Бронь"
+              icon="fal fa-route"
+              text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
           />
           <SchemeItem
-            title="Поездка"
-            icon="fal fa-car-alt"
-            text="На время аренды в мобильном приложении включается таймер для удобного контроля расходов"
+              title="Поездка"
+              icon="fal fa-car-alt"
+              text="На время аренды в мобильном приложении включается таймер для удобного контроля расходов"
           />
           <SchemeItem
-            title="Завершение"
-            icon="fal fa-car-alt"
-            text="Зона завершения аренды подсвечена на карте зеленым цветом. После поездки можно вывести депозит нажатием «Вернуть депозит». Он будет отправлен на возврат в течение 48 часов"
-            decsription="Вы можете оставить депозит на своем балансе, чтобы использовать его для следующих поездок"
+              title="Завершение"
+              icon="fal fa-car-alt"
+              text="Зона завершения аренды подсвечена на карте зеленым цветом. После поездки можно вывести депозит нажатием «Вернуть депозит». Он будет отправлен на возврат в течение 48 часов"
+              decsription="Вы можете оставить депозит на своем балансе, чтобы использовать его для следующих поездок"
           />
         </div>
         <div class="advantages-items-Mobile howItWorks-items-Mobile_">
@@ -249,51 +270,51 @@
             >
               <div class="slide">
                 <SchemeItem
-                  title="Регистрация"
-                  icon="fal fa-address-card"
-                  number="1"
-                  text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
+                    title="Регистрация"
+                    icon="fal fa-address-card"
+                    number="1"
+                    text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Подтверждение"
-                  icon="fal fa-user-check"
-                  number="2"
-                  text="Служба безопасности проверяет ваши документы и активирует аккаунт"
+                    title="Подтверждение"
+                    icon="fal fa-user-check"
+                    number="2"
+                    text="Служба безопасности проверяет ваши документы и активирует аккаунт"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Доставка / Бронь"
-                  icon="fal fa-route"
-                  number="3"
-                  text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
+                    title="Доставка / Бронь"
+                    icon="fal fa-route"
+                    number="3"
+                    text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Поездка"
-                  icon="fal fa-car-alt"
-                  number="4"
-                  text="На время аренды в мобильном приложении включается таймер для удобного контроля расходов"
+                    title="Поездка"
+                    icon="fal fa-car-alt"
+                    number="4"
+                    text="На время аренды в мобильном приложении включается таймер для удобного контроля расходов"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Завершение"
-                  icon="fal fa-car-alt"
-                  number="5"
-                  text="Зона завершения аренды подсвечена на карте зеленым цветом. После поездки можно вывести депозит нажатием «Вернуть депозит». Он будет отправлен на возврат в течение 48 часов"
-                  decsription="Вы можете оставить депозит на своем балансе, чтобы использовать его для следующих поездок"
+                    title="Завершение"
+                    icon="fal fa-car-alt"
+                    number="5"
+                    text="Зона завершения аренды подсвечена на карте зеленым цветом. После поездки можно вывести депозит нажатием «Вернуть депозит». Он будет отправлен на возврат в течение 48 часов"
+                    decsription="Вы можете оставить депозит на своем балансе, чтобы использовать его для следующих поездок"
                 />
               </div>
             </agile>
           </client-only>
         </div>
         <div
-          class="howItWorks-buttonContainer"
-          style="position: static; margin-top: 50px"
+            class="howItWorks-buttonContainer"
+            style="position: static; margin-top: 50px"
         >
           <nuxt-link
             to="/delivery/"
@@ -310,30 +331,28 @@
   </main>
   <!-- /CONTENT -->
 </template>
-
 <script>
 import CarModel from "/components/CarModel.vue";
 import AdvantageItem from "/components/AdvantageItem.vue";
 import SchemeItem from "/components/SchemeItem.vue";
 import BrandItem from "/components/BrandItem.vue";
-import Modal from "/components/Modal.vue"; // Импорт компонента Modal
-
+import Modal from "/components/Modal.vue";
 export default {
   head: {
     title:
-      "VORON – Личный автомобиль по технологии каршеринга. Каршеринг без надписей",
+        "VORON – Личный автомобиль по технологии каршеринга. Каршеринг без надписей",
     meta: [
       {
         hid: "keywords",
         name: "keywords",
         content:
-          "каршеринг, каршеринг бизнес-класса, каршеринг без надписей, каршеринг ворон, аренда авто, прокат авто, аренда авто представительского класса, прокат авто москва, аренда авто в россии",
+            "каршеринг, каршеринг бизнес-класса, каршеринг без надписей, каршеринг ворон, аренда авто, прокат авто, аренда авто представительского класса, прокат авто москва, аренда авто в россии",
       },
       {
         hid: "description",
         name: "description",
         content:
-          "VORON – Личный автомобиль по технологии каршеринга. Каршеринг без надписей",
+            "VORON – Личный автомобиль по технологии каршеринга. Каршеринг без надписей",
       },
     ],
   },
@@ -342,29 +361,38 @@ export default {
     AdvantageItem,
     SchemeItem,
     BrandItem,
-    Modal, // Регистрация компонента Modal
+    Modal,
   },
   data() {
     return {
       cars: [],
       brands: [],
-      // swiperOptions: { // Если не используется, можно удалить
-      //   pagination: {
-      //     el: ".swiper-pagination",
-      //   },
-      // },
-      // sizeX: 0, // Если не используется, можно удалить
-      showQrModal: false, // Для управления видимостью QR модального окна
-      qrCodeUrl: "", // URL для изображения QR-кода
-      appInstallUrl: "", // URL для установки приложения (для текста под QR)
+      showQrModal: false,
+      qrCodeUrl: "",
+      appInstallUrl: "",
+      selectedRegion: '99',
     };
   },
   async asyncData({ context, $axios }) {
-    let response = await $axios.get(`/api/getauto`);
+    let response = await $axios.get(`/api/getautobyregion?region=99`);
     return { cars: response.data["cars"], brands: response.data["brands"] };
   },
   methods: {
-    // --- Методы для QR-кода ---
+    async changeRegion(regionId) {
+      if (this.selectedRegion === regionId) {
+        return;
+      }
+      this.selectedRegion = regionId;
+      try {
+        let response = await this.$axios.get(`/api/getautobyregion?region=${regionId}`);
+        this.cars = response.data["cars"];
+        this.brands = response.data["brands"];
+      } catch (error) {
+        console.error("Ошибка при загрузке данных для региона:", error);
+        this.cars = [];
+        this.brands = [];
+      }
+    },
     generateQrUrl(targetUrl) {
       return `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(targetUrl)}&size=330x330&qzone=1&format=png`;
     },
