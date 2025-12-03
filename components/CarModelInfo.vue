@@ -134,11 +134,11 @@
       <div class="carsList-itemCaption">
         <span class="carsList-item-ColorBlue"
           >от {{ car.min_daily_payment | number }}
-          <span class="icon icon-rouble-semibold">/сутки</span></span
+          <span class="icon icon-rouble-semibold"></span></span
         >
       </div>
       <div class="carsList-itemSubCaption">
-        от {{ car.max_daily_cost | number }} <span class="rouble">₽</span>/сутки
+        в сутки
       </div>
     </div>
   </div>
