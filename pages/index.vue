@@ -367,7 +367,7 @@ export default {
     };
   },
   async asyncData({ context, $axios }) {
-    let response = await $axios.get(`/api/getautobyregion?region=99`);
+    let response = await $axios.get(`/api/getautobuyout?region=99`);
     return { cars: response.data["cars"], brands: response.data["brands"] };
   },
   methods: {
@@ -377,7 +377,7 @@ export default {
       }
       this.selectedRegion = regionId;
       try {
-        let response = await this.$axios.get(`/api/getautobyregion?region=${regionId}`);
+        let response = await this.$axios.get(`/api/getautobuyout?region=${regionId}`);
         this.cars = response.data["cars"];
         this.brands = response.data["brands"];
       } catch (error) {
