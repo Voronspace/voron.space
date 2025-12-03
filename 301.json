@@ -1,4 +1,6 @@
 [
-    { "from": "/partner", "to": "/connect/" },
-    { "from": "/partner/", "to": "/connect/" }
+    { "from": "/partner", "to": "https://voron.capital/?source=voron_store" },
+    { "from": "/partner/", "to": "https://voron.capital/?source=voron_store" },
+    { "from": "/connect", "to": "https://voron.capital/?source=voron_store" },
+    { "from": "/connect/", "to": "https://voron.capital/?source=voron_store" }
 ]

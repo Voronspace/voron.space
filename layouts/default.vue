@@ -194,28 +194,24 @@
                       </li>
                       <li>
                         <a
-                          target="_blank"
-                          :href="`https://voron.plus/${$utm(true)}`"
+                          :href="`https://voron.store/${$utm(true)}`"
                         >Аренда с выкупом</a
                         >
                       </li>
                       <li>
                         <a
-                          target="_blank"
                           :href="`https://voron.club/${$utm(true)}`"
                         >Клуб автопрокатов</a
                         >
                       </li>
                       <li>
                         <a
-                          target="_blank"
                           :href="`https://voron.black/${$utm(true)}`"
                         >Поездки с водителем</a
                         >
                       </li>
                       <li>
                         <a
-                          target="_blank"
                           :href="`https://voron.capital/${$utm(true)}`"
                         >Авто как инвестиция</a
                         >
@@ -282,8 +278,7 @@
           <a href="/" class="pageHeader-logo"></a>
           <div class="pageHeader-phones">
             <a class="pageHeader-phonesLink" href="tel:+7 800 555 06 79"
-            >8 800 555 06 79</a
-            >
+            >8 800 555 06 79</a>
             <div class="pageHeader-phonesListContainer">
               <nav class="pageHeader-phonesList">
                 <ul>
@@ -296,13 +291,11 @@
             <ul>
               <li>
                 <nuxt-link to="/" exact exact-active-class="active"
-                ><span>Каршеринг</span></nuxt-link
-                >
+                ><span>Каршеринг</span></nuxt-link>
               </li>
               <li>
                 <nuxt-link to="/delivery/" exact exact-active-class="active"
-                ><span>Доставка</span></nuxt-link
-                >
+                ><span>Доставка</span></nuxt-link>
               </li>
               <li>
                 <a
@@ -326,10 +319,10 @@
     <footer class="pageFooter" itemscope itemtype="http://schema.org/WPFooter">
       <div class="pageFooter-content">
         <div class="">
-          <div class="pageFooter-title">Города</div>
+          <div class="pageFooter-title">Города STORE</div>
           <div class="list_cities">
             <a class="city_active">Москва</a>
-            <a @click="showModalCity('spb')">Санкт-Петербург</a>
+            <a class="city_active">Санкт-Петербург</a>
             <a @click="showModalCity('sochi')">Сочи</a>
             <a @click="showModalCity('krd')">Краснодар</a>
             <a @click="showModalCity('nn')">Нижний Новгород</a>
@@ -381,8 +374,8 @@
               <ul>
                 <li>
                   <a
-                    target="_blank"
-                    :href="`https://voron.pro/${$utm(true)}`"
+                      target="_blank"
+                      :href="`https://voron.pro/${$utm(true)}`"
                   >Подключить автомобиль</a
                   >
                 </li>
@@ -403,8 +396,7 @@
                   <a
                     target="_blank"
                     :href="`https://voron.capital/${$utm(true)}`"
-                  >Авто как инвестиция</a
-                  >
+                  >Авто как инвестиция</a>
                 </li>
               </ul>
             </nav>

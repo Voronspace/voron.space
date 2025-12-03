@@ -25,7 +25,6 @@
 <!--        </p>-->
       </div>
     </Modal>
-
     <!-- BAR: MAIN SECTION -->
     <div class="mainSection mainSection-IndexPage">
       <div class="mainSection-background">
@@ -76,7 +75,6 @@
       </div>
     </div>
     <!-- /BAR: MAIN SECTION -->
-
     <!-- BAR: ADVANTAGES -->
     <div id="advantages" class="advantages">
       <div class="pageSection-content">
@@ -152,7 +150,31 @@
       </div>
     </div>
     <!-- /BAR: ADVANTAGES -->
-
+    <!-- BAR: CITIES -->
+    <div class="advantages cities-block">
+      <div class="pageSection-content">
+        <div class="advantages-title">Города</div>
+        <div
+            class="advantages-items-container advantages-items-container-Active advantages-items-container2"
+        >
+          <ul class="tabs__caption">
+            <li
+                :class="[selectedRegion == '99' ? 'active' : '']"
+                @click="changeRegion('99')"
+            >
+              Москва
+            </li>
+            <li
+                :class="[selectedRegion == '98' ? 'active' : '']"
+                @click="changeRegion('98')"
+            >
+              Санкт-Петербург
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /BAR: CITIES -->
     <!-- BAR: CARS PRESENTATION -->
     <div class="carsPresent">
       <div class="pageSection-content">
@@ -193,7 +215,6 @@
       </div>
     </div>
     <!-- /BAR: CARS PRESENTATION -->
-
     <!-- BAR: HOT IT WORKS -->
     <div id="howItWorks" class="howItWorks">
       <div class="pageSection-content">
@@ -303,14 +324,12 @@
   </main>
   <!-- /CONTENT -->
 </template>
-
 <script>
 import CarModel from "/components/CarModel.vue";
 import AdvantageItem from "/components/AdvantageItem.vue";
 import SchemeItem from "/components/SchemeItem.vue";
 import BrandItem from "/components/BrandItem.vue";
-import Modal from "/components/Modal.vue"; // Импорт компонента Modal
-
+import Modal from "/components/Modal.vue";
 export default {
   head: {
     title:
@@ -335,29 +354,38 @@ export default {
     AdvantageItem,
     SchemeItem,
     BrandItem,
-    Modal, // Регистрация компонента Modal
+    Modal,
   },
   data() {
     return {
       cars: [],
       brands: [],
-      // swiperOptions: { // Если не используется, можно удалить
-      //   pagination: {
-      //     el: ".swiper-pagination",
-      //   },
-      // },
-      // sizeX: 0, // Если не используется, можно удалить
-      showQrModal: false, // Для управления видимостью QR модального окна
-      qrCodeUrl: "", // URL для изображения QR-кода
-      appInstallUrl: "", // URL для установки приложения (для текста под QR)
+      showQrModal: false,
+      qrCodeUrl: "",
+      appInstallUrl: "",
+      selectedRegion: '99',
     };
   },
   async asyncData({ context, $axios }) {
-    let response = await $axios.get(`/api/getauto`);
+    let response = await $axios.get(`/api/getautobyregion?region=99`);
     return { cars: response.data["cars"], brands: response.data["brands"] };
   },
   methods: {
-    // --- Методы для QR-кода ---
+    async changeRegion(regionId) {
+      if (this.selectedRegion === regionId) {
+        return;
+      }
+      this.selectedRegion = regionId;
+      try {
+        let response = await this.$axios.get(`/api/getautobyregion?region=${regionId}`);
+        this.cars = response.data["cars"];
+        this.brands = response.data["brands"];
+      } catch (error) {
+        console.error("Ошибка при загрузке данных для региона:", error);
+        this.cars = [];
+        this.brands = [];
+      }
+    },
     generateQrUrl(targetUrl) {
       return `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(targetUrl)}&size=330x330&qzone=1&format=png`;
     },
@@ -388,3 +416,12 @@ export default {
   },
 };
 </script>
+<style scoped>
+.cities-block {
+  padding-bottom: 10px;
+}
+.tabs__caption {
+  justify-content: center;
+  gap: 25px;
+}
+</style>
