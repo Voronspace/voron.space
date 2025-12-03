@@ -56,7 +56,7 @@
                       </li>
                       <li>
                         <nuxt-link
-                          to="/connect/"
+                          to="https://voron.capital"
                           exact
                           exact-active-class="active"
                           >Подключить автомобиль</nuxt-link
