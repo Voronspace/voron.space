@@ -458,7 +458,7 @@ export default {
   // }
   //   },
   async asyncData({ context, $axios, params }) {
-    let response = await $axios.get(`/api/getauto?slug=${params.auto}`);
+    let response = await $axios.get(`/api/getautobuyout?slug=${params.auto}`);
     return {
       cars: response.data["cars"],
       brands: response.data["brands"],
