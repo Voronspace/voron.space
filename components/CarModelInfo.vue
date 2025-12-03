@@ -119,12 +119,12 @@
         {{ car.body.title }}
         {{ car.model.title }}<br /><em
           ><small>
-            <template v-if="car.depositMax != 0" >
-              Депозит для новых клиентов {{ car.depositMax | number }}
+            <template v-if="car.initial_payment != 0" >
+              Первоначальный взнос {{ car.initial_payment | number }}
               <span class="rouble">₽</span> *
             </template>
             <span style="color: #ffcc00;" v-else >
-              Депозит не требуется
+              Взнос не требуется
             </span>
             </small></em>
       </div>
@@ -133,8 +133,8 @@
       <div class="carsList-itemPreCaption">стоимость</div>
       <div class="carsList-itemCaption">
         <span class="carsList-item-ColorBlue"
-          >{{ car.costPerHour | number }}
-          <span class="icon icon-rouble-semibold">/мин</span></span
+          >от {{ car.min_daily_payment | number }}
+          <span class="icon icon-rouble-semibold">/сутки</span></span
         >
       </div>
       <div class="carsList-itemSubCaption">
