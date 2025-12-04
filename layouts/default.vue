@@ -182,22 +182,29 @@
                 <div class="sidebarMenu-content">
                   <nav class="sidebarMenu-main">
                     <ul>
+                      
+                      
+                      <li>
+                        
+                        <a
+                          :href="`https://voron.space/${$utm(true)}`"
+                        >Каршеринг</a
+                        >
+                        
+              
+                      </li>
                       <li>
                         <a
-                          :href="`https://voron.store/${$utm(true)}`"
-                        >Аренда с выкупом</a
+                          :href="`https://voron.space/delivery/${$utm(true)}`"
+                        >Доставка за 30 мин</a
                         >
-                      </li>
-                      
-                      
-                      <li>
-                        <nuxt-link to="https://voron.space/${$utm(true)}" exact exact-active-class="active"
-                        >Каршеринг</nuxt-link
-                        >
+                        
+                  
                       </li>
                       <li>
-                        <nuxt-link to="https://voron.space/delivery/${$utm(true)}" exact-active-class="active"
-                        >Доставка за 30 мин</nuxt-link
+                        
+                        <nuxt-link to="/" exact-active-class="active"
+                        ></nuxt-link
                         >
                       </li>
                       

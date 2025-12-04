@@ -44,8 +44,8 @@
                   >
 
                     <span class="city-item">Москва</span>
-                    <span class="city-item city-no-active">Санкт-Петербург</span>
-                    <span class="city-item">Сочи</span>
+                    <span class="city-item">Санкт-Петербург</span>
+                    <span class="city-item city-no-active">Сочи</span>
                     <span class="city-item city-no-active">Краснодар</span>
                     <span class="city-item city-no-active">Нижний Новгород</span>
 
