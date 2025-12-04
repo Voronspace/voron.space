@@ -150,18 +150,16 @@
         </div>
         <div class="carsList2">
           <div class="carsList-itemSubCaption">
-            <em>
-              <small v-if="auto.depositMin > 0"
-                >* При наличии положительной истории поездок в серисе депозит
-                может быть снижен до {{ auto.depositMin | number }}
-                <span class="rouble">₽</span></small
-              >
-
-              <small v-else
-                >
-                * Для отмены депозита необходимо совершить минимум 10 успешных поездок в сервисе. Поездка засчитывается, если вы находились в движении больше 30 минут, не нарушали правила ПДД, не нанесли ущерб автомобилю и оплата за аренду была успешным списанием с привязанной банковской карты, а не погашением задолженности или из страхового депозита. Подробнее тут → <a style="color: rgb(255, 204, 0);" target="_blank" href="https://voron.help/deposit/deposit" >voron.help</a>
-                </small
-              ></em
+            <em
+            ><small
+            >* В любой момент поездки вы можете запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут →
+              <a
+                style="color: rgb(255, 204, 0)"
+                target="_blank"
+                href="https://voron.help/tariff/renttobuy"
+              >voron.help</a
+              ></small
+            ></em
             >
           </div>
         </div>
