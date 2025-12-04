@@ -291,11 +291,11 @@
             <ul>
               <li>
                 <nuxt-link to="/" exact exact-active-class="active"
-                ><span>Каршеринг</span></nuxt-link>
+                ><span>Выкуп</span></nuxt-link>
               </li>
               <li>
-                <nuxt-link to="/delivery/" exact exact-active-class="active"
-                ><span>Доставка</span></nuxt-link>
+                <nuxt-link to="/about/" exact exact-active-class="active"
+                ><span>О сервисе</span></nuxt-link>
               </li>
               <li>
                 <a

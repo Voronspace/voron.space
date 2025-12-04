@@ -44,41 +44,38 @@
     </div>
 
     <!-- /BAR: MAIN SECTION -->
-    <!-- BAR: ADVANTAGES -->
+<!-- BAR: ADVANTAGES -->
     <div id="advantages" class="advantages">
       <div class="pageSection-content">
-        <div class="advantages-title">Сервис</div>
-
+        <div class="advantages-title">Преимущества</div>
         <div
           class="advantages-items-container advantages-items-container-Active"
         >
           <div class="advantages-items">
             <AdvantageItem
-              text="Разнообразный ассортимент бизнес и премиум класса"
-              img="/images/app/phone01.png"
-            />
-            <AdvantageItem
-              text="Комфортные и статусные авто на улицах города с доступом со смартфона"
-              img="/images/app/phone02.png"
-            />
-            <AdvantageItem
-              text="Авто без надписей. Поминутные, часовые и суточные тарифы"
-              img="/images/app/phone03.png"
-            />
-            <AdvantageItem
-              text="Бесплатная доставка прямо к вам для часовой поездки"
+              text="Разнообразный ассортимент авто для выкупа"
               img="/images/app/phone04.png"
             />
             <AdvantageItem
-              text="Выбираете место на карте, и автомобиль через час ждет вас на парковке"
+              text="Автомобили не в офисе, а на улицах города"
+              img="/images/app/phone02.png"
+            />
+            <AdvantageItem
+              text="Возможность поездить перед оформлением"
+              img="/images/app/phone03.png"
+            />
+            <AdvantageItem
+              text="Гибкая тарификация и автооплата"
+              img="/images/app/phone03.png"
+            />
+            <AdvantageItem
+              text="Не только смартфон, но и личный пульт управления"
               img="/images/app/phone05.png"
             />
-
             <div class="advantages-clear"></div>
           </div>
-
           <div class="advantages-items-Mobile">
-            <client-only placeholder="Loading...">
+            <client-only placeholder="Загрузка...">
               <agile
                 :options="{
                   infinite: false,
@@ -87,31 +84,31 @@
               >
                 <div class="slide">
                   <AdvantageItem
-                    text="Разнообразный ассортимент бизнес и премиум класса"
-                    img="/images/app/phone01.png"
-                  />
-                </div>
-                <div class="slide">
-                  <AdvantageItem
-                    text="Комфортные и статусные авто на улицах города с доступом со смартфона"
-                    img="/images/app/phone02.png"
-                  />
-                </div>
-                <div class="slide">
-                  <AdvantageItem
-                    text="Авто без надписей. Поминутные, часовые и суточные тарифы"
-                    img="/images/app/phone03.png"
-                  />
-                </div>
-                <div class="slide">
-                  <AdvantageItem
-                    text="Бесплатная доставка прямо к вам для часовой поездки"
+                    text="Разнообразный ассортимент авто для выкупа"
                     img="/images/app/phone04.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="Выбираете место на карте, и автомобиль через час ждет вас на парковке"
+                    text="Автомобили не в офисе, а на улицах города"
+                    img="/images/app/phone02.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Возможность поездить перед оформлением"
+                    img="/images/app/phone03.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Гибкая тарификация и автооплата"
+                    img="/images/app/phone03.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Не только смартфон, но и личный пульт управления"
                     img="/images/app/phone05.png"
                   />
                 </div>
@@ -155,12 +152,7 @@
           <div class="carsList-itemSubCaption">
             <em
               ><small
-                >* Для отмены депозита необходимо совершить минимум 10 успешных
-                поездок в сервисе. Поездка зачитывается, при условии, что вы
-                находились в движении минимум 30 минут, не нарушали правила ПДД,
-                не нанесли ущерб автомобилю и оплата за аренду производилась
-                успешным списанием с привязанной банковской карты, а не
-                погашением задолженности или из страхового депозита, подробнее тут → <a style="color: rgb(255, 204, 0);" target="_blank" href="https://voron.help/deposit/deposit" >voron.help</a></small
+                >* В любой момент поездки вы можете запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут → <a style="color: rgb(255, 204, 0);" target="_blank" href="https://voron.help/tariff/renttobuy" >voron.help</a></small
               ></em
             >
           </div>
