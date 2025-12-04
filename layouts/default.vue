@@ -202,9 +202,8 @@
                   
                       </li>
                       <li>
-                        
-                        <nuxt-link to="/" exact-active-class="active"
-                        ></nuxt-link
+                        <nuxt-link to="/" exact exact-active-class="active"
+                        >Аренда с выкупом</nuxt-link
                         >
                       </li>
                       
