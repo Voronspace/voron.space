@@ -171,38 +171,36 @@
     <!-- BAR: ADVANTAGES -->
     <div id="advantages" class="advantages">
       <div class="pageSection-content">
-        <div class="advantages-title">ВОЗМОЖНОСТИ</div>
+        <div class="advantages-title">Преимущества</div>
 
         <div
           class="advantages-items-container advantages-items-container-Active"
         >
           <div class="advantages-items">
             <AdvantageItem
-              text="Разнообразный ассортимент авто без надписей"
-              img="/images/app/phone01.png"
-            />
-            <AdvantageItem
-              text="На улицах города с доступом со смартфона"
-              img="/images/app/phone02.png"
-            />
-            <AdvantageItem
-              text="Поминутные, часовые и суточные тарифы"
-              img="/images/app/phone03.png"
-            />
-            <AdvantageItem
-              text="Бесплатная доставка для часовой поездки"
+              text="Разнообразный ассортимент авто для выкупа"
               img="/images/app/phone04.png"
             />
             <AdvantageItem
-              text="30-90 мин. и авто ждет вас в указанном месте"
+              text="Автомобили не в офисе, а на улицах города"
+              img="/images/app/phone02.png"
+            />
+            <AdvantageItem
+              text="Возможность поездить перед оформлением"
+              img="/images/app/phone03.png"
+            />
+            <AdvantageItem
+              text="Гибкая тарификация и автооплата"
+              img="/images/app/phone03.png"
+            />
+            <AdvantageItem
+              text="Не только смартфон, но и личный пульт управления"
               img="/images/app/phone05.png"
             />
-
             <div class="advantages-clear"></div>
           </div>
-
           <div class="advantages-items-Mobile">
-            <client-only placeholder="Loading...">
+            <client-only placeholder="Загрузка...">
               <agile
                 :options="{
                   infinite: false,
@@ -211,31 +209,31 @@
               >
                 <div class="slide">
                   <AdvantageItem
-                    text="Разнообразный ассортимент авто без надписей"
-                    img="/images/app/phone01.png"
-                  />
-                </div>
-                <div class="slide">
-                  <AdvantageItem
-                    text="На улицах города с доступом со смартфона"
-                    img="/images/app/phone02.png"
-                  />
-                </div>
-                <div class="slide">
-                  <AdvantageItem
-                    text="Поминутные, часовые и суточные тарифы"
-                    img="/images/app/phone03.png"
-                  />
-                </div>
-                <div class="slide">
-                  <AdvantageItem
-                    text="Бесплатная доставка для часовой поездки"
+                    text="Разнообразный ассортимент авто для выкупа"
                     img="/images/app/phone04.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="30-90 мин. и авто ждет вас в указанном месте"
+                    text="Автомобили не в офисе, а на улицах города"
+                    img="/images/app/phone02.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Возможность поездить перед оформлением"
+                    img="/images/app/phone03.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Гибкая тарификация и автооплата"
+                    img="/images/app/phone03.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Не только смартфон, но и личный пульт управления"
                     img="/images/app/phone05.png"
                   />
                 </div>
