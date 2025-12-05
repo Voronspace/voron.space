@@ -52,7 +52,7 @@
       <div class="mainSection-content">
         <div class="pageSection-content">
           <h1 class="mainSection-title">
-            Аренда с правом выкупа
+            Аренда автомобиля с правом выкупа
             <div class="mainSection-subTitle mainSection-subTitle-first">
               с доступом со смартфона по технологии каршеринга
             </div>
@@ -201,7 +201,7 @@
           <div class="carsList-itemSubCaption">
             <em
             ><small
-            >* Можно взять автомобиль на тест-драйв и в любой момент поездки запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут →
+            >* Можно взять автомобиль на ТЕСТ-ДРАЙВ и в любой момент поездки запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут →
               <a
                 style="color: rgb(255, 204, 0)"
                 target="_blank"
