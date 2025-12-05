@@ -148,11 +148,11 @@
         <div class="carsList">
           <CarModel :car="auto" :link="false" :carousel="true" />
         </div>
-        <div class="carsList2">
+        <div class="carsList">
           <div class="carsList-itemSubCaption">
             <em
             ><small
-            >* В любой момент поездки вы можете запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут →
+            >* Можно взять автомобиль на тест-драйв и в любой момент поездки запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут →
               <a
                 style="color: rgb(255, 204, 0)"
                 target="_blank"
