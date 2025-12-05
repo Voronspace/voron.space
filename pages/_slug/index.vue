@@ -26,15 +26,15 @@
           </h1>
 
           <h2 class="mainSection-subTitle">
-            Бесконтактная аренда автомобилей бизнес-класса без надписей<br />
-            <b>Срочная бесплатная доставка в указанное место</b>
+            Покупка комфорт, бизнес и премиум автомобилей через аренду с выкупом<br />
+            <b>Сначала тест-драйв, потом выкуп</b>
           </h2>
 
           <div class="mainSection-subTitle-NoMobile"></div>
 
           <div class="advantages-link-container">
             <a
-              :href="`https://app.voron.io/${$utm()}`"
+              :href="`https://voron.app/${$utm()}`"
               class="toScroll_ advantages-link"
               >Установить приложение</a
             >
@@ -119,45 +119,68 @@
       </div>
     </div>
     <!-- /BAR: ADVANTAGES -->
+    <!-- BAR: CITIES -->
+    <div class="advantages cities-block">
+      <div class="pageSection-content">
+        <div class="advantages-title">Города</div>
+        <div
+            class="advantages-items-container advantages-items-container-Active advantages-items-container2"
+        >
+          <ul class="tabs__caption">
+            <li
+                :class="[selectedRegion == '99' ? 'active' : '']"
+                @click="changeRegion('99')"
+            >
+              Москва
+            </li>
+            <li
+                :class="[selectedRegion == '98' ? 'active' : '']"
+                @click="changeRegion('98')"
+            >
+              Санкт-Петербург
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /BAR: CITIES -->
     <!-- BAR: CARS PRESENTATION -->
     <div class="carsPresent">
       <div class="pageSection-content">
-        <h2 id="chooseBrand" class="carsPresent-title-brands">БРЕНДЫ</h2>
+        <h2 id="chooseBrand" class="carsPresent-title-brands">МАРКИ</h2>
       </div>
-
       <div class="pageSection-content">
         <div class="brand-list">
           <BrandItem
-            v-for="(b, key) in brands"
+            v-for="(brand, key) in brands"
             :key="key"
-            :image="`https://cdn.voron.io/images/catalog/${b.icon}.png`"
-            :name="b.title"
-            :link="`/${b.slug}/`"
-            :slug="b.slug"
+            :image="`https://cdn.voron.io/images/catalog/${brand.icon}.png`"
+            :name="brand.title"
+            :link="`/${brand.slug}/`"
+            :slug="brand.slug"
           />
-          <BrandItem icon="far fa-ellipsis-h" name="Все" link="/" slug="" />
         </div>
-
         <div class="pageSection-content">
           <h2 id="chooseCar" class="carsPresent-title-models">МОДЕЛИ</h2>
         </div>
-
-        <!-- CARS LIST BAR -->
         <div class="carsList">
-          <template v-for="(car, key) in cars" >
-            <CarModel :key="key" v-if="car.slug" :car="car" />
-          </template>
+          <CarModel v-for="(car, key) in cars" :key="key" :car="car" />
         </div>
         <div class="carsList">
           <div class="carsList-itemSubCaption">
             <em
-              ><small
-                >* В любой момент поездки вы можете запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут → <a style="color: rgb(255, 204, 0);" target="_blank" href="https://voron.help/tariff/renttobuy" >voron.help</a></small
-              ></em
+            ><small
+            >* Можно взять автомобиль на ТЕСТ-ДРАЙВ и в любой момент поездки запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут →
+              <a
+                style="color: rgb(255, 204, 0)"
+                target="_blank"
+                href="https://voron.help/tariff/renttobuy"
+              >voron.help</a
+              ></small
+            ></em
             >
           </div>
         </div>
-        <!-- /CARS LIST BAR -->
       </div>
     </div>
     <!-- /BAR: CARS PRESENTATION -->
@@ -178,33 +201,28 @@
             icon="fal fa-address-card"
             text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
           />
-
           <SchemeItem
             title="Подтверждение"
             icon="fal fa-user-check"
-            text="Служба безопасности проверит ваши документы и активирует ваш аккаунт"
+            text="Служба безопасности проверяет ваши документы и активирует аккаунт"
           />
-
           <SchemeItem
             title="Доставка / Бронь"
             icon="fal fa-route"
-            text="Вы выбираете авто, вносите страховой депозит с банковской карты и заказываете доставку. Через короткое время автомобиль будет ждать вас на парковке. Или бронируете и забираете самостоятельно"
+            text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
           />
-
           <SchemeItem
-            title="Аренда"
+            title="Поездка"
             icon="fal fa-car-alt"
-            text="На время аренды у вас включен таймер в мобильном приложении и вы можете контролировать расходы"
+            text="Вы можете поездить на авто в обычной аренде и если он вам понравится, то в любой момент включить в приложении тариф с выкупом"
           />
-
           <SchemeItem
             title="Завершение"
             icon="fal fa-car-alt"
-            text="Зона завершения аренды подсвечена в приложении зеленым цветом. После завершения можете нажать «Вернуть депозит», и в течение от 4 до 48 часов депозит будет автоматически возвращен"
-            decsription="При желании вы можете сразу не возвращать депозит, а использовать для следующих поездок"
+            text="Когда вы запустите тариф аренды с выкупом, мы в течение недели подготовим договор с владельцем автомобиля и пригласим вас на подписание документов"
+            decsription="Второй раз вам потребуется приехать на подписание договора купли-продажи после завершения выкупа"
           />
         </div>
-
         <div class="advantages-items-Mobile howItWorks-items-Mobile_">
           <client-only placeholder="Loading...">
             <agile
@@ -226,7 +244,7 @@
                   title="Подтверждение"
                   icon="fal fa-user-check"
                   number="2"
-                  text="Служба безопасности проверит ваши документы и активирует ваш аккаунт"
+                  text="Служба безопасности проверяет ваши документы и активирует аккаунт"
                 />
               </div>
               <div class="slide">
@@ -234,46 +252,43 @@
                   title="Доставка / Бронь"
                   icon="fal fa-route"
                   number="3"
-                  text="Вы выбираете авто, вносите страховой депозит с банковской карты и заказываете доставку. Через короткое время автомобиль будет ждать вас на парковке. Или бронируете и забираете самостоятельно"
+                  text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Аренда"
+                  title="Выкуп"
                   icon="fal fa-car-alt"
                   number="4"
-                  text="На время аренды у вас включен таймер в мобильном приложении и вы можете контролировать расходы"
+                  text="Вы можете поездить на авто в обычной аренде и если он вам понравится, то в любой момент включить в приложении тариф с выкупом"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Завершение"
+                  title="Подписание документов"
                   icon="fal fa-car-alt"
                   number="5"
-                  text="Зона завершения аренды подсвечена в приложении зеленым цветом. После завершения можете нажать «Вернуть депозит», и в течение от 4 до 48 часов депозит будет автоматически возвращен"
-                  decsription="При желании вы можете сразу не возвращать депозит, а использовать для следующих поездок"
+                  text="Когда вы запустите тариф аренды с выкупом, мы в течение недели подготовим договор с владельцем автомобиля и пригласим вас на подписание документов"
+                  decsription="Второй раз вам потребуется приехать на подписание договора купли-продажи после завершения выкупа"
                 />
               </div>
             </agile>
           </client-only>
         </div>
-
         <div
           class="howItWorks-buttonContainer"
           style="position: static; margin-top: 50px"
         >
           <nuxt-link
-            to="/delivery/"
+            to="/renttobuy/"
             exact
             exact-active-class="active"
             class="howItWorks-button"
-            ><i style="margin-right: 10px" class="fal fa-route"></i>Как работает
-            доставка</nuxt-link
+          ><i style="margin-right: 10px" class="fal fa-route"></i>Подробнее о выкупе</nuxt-link
           >
         </div>
       </div>
     </div>
-
     <!-- /BAR: HOT IT WORKS -->
   </main>
   <!-- /CONTENT -->
