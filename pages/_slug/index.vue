@@ -152,13 +152,14 @@
       <div class="pageSection-content">
         <div class="brand-list">
           <BrandItem
-            v-for="(brand, key) in brands"
+            v-for="(b, key) in brands"
             :key="key"
-            :image="`https://cdn.voron.io/images/catalog/${brand.icon}.png`"
-            :name="brand.title"
-            :link="`/${brand.slug}/`"
-            :slug="brand.slug"
+            :image="`https://cdn.voron.io/images/catalog/${b.icon}.png`"
+            :name="b.title"
+            :link="`/${b.slug}/`"
+            :slug="b.slug"
           />
+          <BrandItem icon="far fa-ellipsis-h" name="Все" link="/" slug="" />
         </div>
         <div class="pageSection-content">
           <h2 id="chooseCar" class="carsPresent-title-models">МОДЕЛИ</h2>
