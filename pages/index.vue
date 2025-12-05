@@ -59,7 +59,7 @@
           </h1>
           <h2 class="mainSection-subTitle">
             Покупка комфорт, бизнес и премиум автомобилей через аренду с выкупом<br />
-            <b>Сначала тест-драйв, а потом выкуп</b>
+            <b>Сначала тест-драйв, потом выкуп</b>
           </h2>
           <div class="mainSection-subTitle-NoMobile"></div>
           <div class="advantages-link-container">
