@@ -52,13 +52,13 @@
       <div class="mainSection-content">
         <div class="pageSection-content">
           <h1 class="mainSection-title">
-            Аренда автомобиля с правом выкупа
+            Аренда авто с правом выкупа
             <div class="mainSection-subTitle mainSection-subTitle-first">
               с доступом со смартфона по технологии каршеринга
             </div>
           </h1>
           <h2 class="mainSection-subTitle">
-            Покупка автомобиля комфорт, бизнес и премиум класса через аренду с выкупом<br />
+            Покупка комфорт, бизнес и премиум автомобилей через аренду с выкупом<br />
             <b>Сначала тест-драйв, а потом выкуп</b>
           </h2>
           <div class="mainSection-subTitle-NoMobile"></div>
