@@ -85,7 +85,7 @@
           <div class="advantages-items">
             <AdvantageItem
               text="Разнообразный ассортимент авто для выкупа"
-              img="/images/app/phone04.png"
+              img="/images/app/phone01.png"
             />
             <AdvantageItem
               text="Автомобили не в офисе, а на улицах города"
@@ -97,7 +97,7 @@
             />
             <AdvantageItem
               text="Гибкая тарификация и автооплата"
-              img="/images/app/phone03.png"
+              img="/images/app/phone04.png"
             />
             <AdvantageItem
               text="Не только смартфон, но и личный пульт управления"
@@ -116,7 +116,7 @@
                 <div class="slide">
                   <AdvantageItem
                     text="Разнообразный ассортимент авто для выкупа"
-                    img="/images/app/phone04.png"
+                    img="/images/app/phone01.png"
                   />
                 </div>
                 <div class="slide">
@@ -134,7 +134,7 @@
                 <div class="slide">
                   <AdvantageItem
                     text="Гибкая тарификация и автооплата"
-                    img="/images/app/phone03.png"
+                    img="/images/app/phone04.png"
                   />
                 </div>
                 <div class="slide">
