@@ -576,17 +576,18 @@ export default {
         this.form.agreeTerms
       ) {
         var response = await this.$axios.$post(
-          "/api/voron_black_mail_city/",
-          {
-            token: "voron.space_sfewta35",
-            lastname: this.form.lastname,
-            firstname: this.form.firstname,
-            phone: this.form.phone,
-            email: this.form.email,
-            comment: this.form.comment,
-            city: this.form.city,
-            utm: this.$utm(false),
-          }
+            "/api/voron_black_mail_city/",
+            {
+              token: "voron.space_sfewta35",
+              lastname: this.form.lastname,
+              firstname: this.form.firstname,
+              phone: this.form.phone,
+              email: this.form.email,
+              comment: this.form.comment,
+              city: this.form.city,
+              utm: this.$utm(false),
+              source: 'black',
+            }
         );
         if (response.result) {
           this.form.success = true;

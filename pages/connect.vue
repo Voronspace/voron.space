@@ -778,20 +778,20 @@ export default {
         // this.$fb.track('Lead')
 
         var response = await this.$axios.$post(
-          "/api/voron_black_mail/",
-          // this.form
-          {
-            token: "Voron.black_sfewta35",
-            lastname: this.form.lastname,
-            firstname: this.form.firstname,
-            phone: this.form.phone,
-            // email: this.form.email,
-            auto: this.form.auto,
-            year: this.form.year,
-            city: this.form.city,
-            source: 'sale_black',
-            utm: this.$utm(),
-          }
+            "/api/voron_black_mail/",
+            // this.form
+            {
+              token: "Voron.black_sfewta35",
+              lastname: this.form.lastname,
+              firstname: this.form.firstname,
+              phone: this.form.phone,
+              // email: this.form.email,
+              auto: this.form.auto,
+              year: this.form.year,
+              city: this.form.city,
+              source: 'black',
+              utm: this.$utm(false),
+            }
         );
 
         // console.log(this.form);
