@@ -244,21 +244,20 @@ export default {
         // console.log("отправим");
 
         var response = await this.$axios.$post(
-          "/api/voron_black_mail_city/",
-          // this.form
-          {
-            token: "Voron.black_sfewta35",
-            lastname: this.form.lastname,
-            firstname: this.form.firstname,
-            phone: this.form.phone,
-            email: this.form.email,
-            comment: this.form.comment,
-            city: this.form.city,
-          }
+            "/api/voron_black_mail_city/",
+            // this.form
+            {
+              token: "Voron.black_sfewta35",
+              lastname: this.form.lastname,
+              firstname: this.form.firstname,
+              phone: this.form.phone,
+              email: this.form.email,
+              comment: this.form.comment,
+              city: this.form.city,
+              source: 'space',
+              utm: this.$utm(false),
+            }
         );
-
-        // console.log(this.form);
-        // console.log(response);
 
         if (response.result) {
           this.form.success = true;
