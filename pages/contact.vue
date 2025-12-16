@@ -226,18 +226,17 @@ export default {
         // console.log("отправим");
 
         var response = await this.$axios.$post(
-          "/api/voron_black_contact_mail/",
-          // this.form
-          {
-            name: this.form.name,
-            message: this.form.message,
-            phone: this.form.phone,
-            email: this.form.email,
-          }
+            "/api/voron_black_contact_mail/",
+            // this.form
+            {
+              name: this.form.name,
+              message: this.form.message,
+              phone: this.form.phone,
+              email: this.form.email,
+              source: 'club',
+              utm: this.$utm(false),
+            }
         );
-
-        console.log(this.form);
-        console.log(response);
 
         if (response.result) {
           this.form.success = true;

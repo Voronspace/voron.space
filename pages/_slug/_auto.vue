@@ -485,7 +485,7 @@ export default {
           lastname: this.form.lastname,
           firstname: this.form.firstname,
           phone: this.form.phone,
-          source: this.$utm(),
+          source: this.$utm(false) || 'club',
         });
 
         // console.log(this.form);
