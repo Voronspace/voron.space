@@ -468,35 +468,49 @@ export default {
   methods: {
     async SendMessage() {
       if (
-        this.form.lastname != "" &&
-        this.form.firstname != "" &&
-        this.form.phone != "" &&
-        this.form.agreeTerms
+          this.form.lastname != "" &&
+          this.form.firstname != "" &&
+          this.form.phone != "" &&
+          this.form.agreeTerms
       ) {
-        // console.log("отправим");
+        try {
+          // Конфигурация запроса
+          const config = {
+            headers: {
+              'X-API-TOKEN': 'Vb_Booking_s7K9pL3jR1'
+            }
+          };
 
-        var response = await this.$axios.$post("/api/voron_black_booking/", {
-          token: "Voron.black_45dffaj5",
-          auto_slug: this.$route.params.auto,
-          lastname: this.form.lastname,
-          firstname: this.form.firstname,
-          phone: this.form.phone,
-          source: this.$utm(false) || 'store',
-        });
+          // Данные для отправки
+          const payload = {
+            auto_slug: this.$route.params.auto,
+            lastName: this.form.lastname,
+            firstName: this.form.firstname,
+            phone: this.form.phone,
+            source: this.$utm(false) || 'store',
+          };
 
-        // console.log(this.form);
-        //console.log(response);
+          // Отправляем POST-запрос на новый эндпоинт
+          const response = await this.$axios.$post("/api/booking_request", payload, config);
 
-        if (response.result) {
-          this.form.success = true;
-          this.form.errors = false;
-          this.form.lastname = "";
-          this.form.firstname = "";
-          this.form.phone = "";
-          this.form.email = "";
-          this.form.auto = "";
-          this.form.year = "";
-        } else {
+          if (response.success) {
+            this.form.success = true;
+            this.form.errors = false;
+            // Очистка формы
+            this.form.lastname = "";
+            this.form.firstname = "";
+            this.form.phone = "";
+            this.form.email = "";
+            this.form.auto = "";
+            this.form.year = "";
+          } else {
+            // Обработка случая, когда success = false (API вернет ошибку HTTP)
+            this.form.success = false;
+            this.form.errors = true;
+          }
+        } catch (error) {
+          // Обработка ошибок сети или API (например, 4xx, 5xx)
+          console.error("Booking request failed:", error);
           this.form.success = false;
           this.form.errors = true;
         }
