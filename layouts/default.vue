@@ -587,6 +587,7 @@ export default {
             comment: this.form.comment,
             city: this.form.city,
             utm: this.$utm(false),
+            source: 'store',
           }
         );
         if (response.result) {

@@ -233,11 +233,10 @@ export default {
             message: this.form.message,
             phone: this.form.phone,
             email: this.form.email,
+            source: 'store',
+            utm: this.$utm(false),
           }
         );
-
-        console.log(this.form);
-        console.log(response);
 
         if (response.result) {
           this.form.success = true;

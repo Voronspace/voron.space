@@ -481,11 +481,11 @@ export default {
           lastname: this.form.lastname,
           firstname: this.form.firstname,
           phone: this.form.phone,
-          source: this.$utm(),
+          source: this.$utm(false) || 'store',
         });
 
         // console.log(this.form);
-        console.log(response);
+        //console.log(response);
 
         if (response.result) {
           this.form.success = true;

@@ -254,6 +254,8 @@ export default {
             email: this.form.email,
             comment: this.form.comment,
             city: this.form.city,
+            source: 'store',
+            utm: this.$utm(false),
           }
         );
 
