@@ -297,7 +297,7 @@
               <div class="slide">
                 <SchemeItem
                   title="Подписание документов"
-                  icon="fa-regular fa-file-contract"
+                  icon="fal fa-file-contract"
                   number="5"
                   text="Когда вы запустите тариф аренды с выкупом, мы в течение недели подготовим договор с владельцем автомобиля и пригласим вас на подписание документов"
                   decsription="Второй раз вам потребуется приехать на подписание договора купли-продажи после завершения выкупа"
@@ -311,7 +311,7 @@
           style="position: static; margin-top: 50px"
         >
           <nuxt-link
-            to="/renttobuy/"
+            to="/about/"
             exact
             exact-active-class="active"
             class="howItWorks-button"
