@@ -54,7 +54,7 @@
           <h1 class="mainSection-title">
             Аренда авто с правом выкупа
             <div class="mainSection-subTitle mainSection-subTitle-first">
-              Пользуетесь уже сегодня, постепенно выплачивая стоимость
+              Пользуетесь уже сегодня, постепенно выплачивая стоимость автомобиля
             </div>
           </h1>
           <h2 class="mainSection-subTitle">
