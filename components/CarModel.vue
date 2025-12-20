@@ -11,7 +11,7 @@
       <CarModelInfo :car="car" :carousel="carousel" />
       <div class="carsList-itemHover" v-if="link">
         <div class="carsList-itemButtonContainer">
-          <div class="carsList-itemButton">Смотреть</div>
+          <div class="carsList-itemButton">Подробнее</div>
         </div>
       </div>
     </nuxt-link>

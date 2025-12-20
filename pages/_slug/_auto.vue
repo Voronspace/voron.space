@@ -75,11 +75,11 @@
             <label for="agreeTerms">Даю согласие на <a href="https://voron.store/legal/personal-data/" target="_blank">обработку персональных данных</a></label>
           </div>
 
-          <button type="submit" class="btn btn-primary">Забронировать</button>
+          <button type="submit" class="btn btn-primary">Заявка на выкуп</button>
         </form>
       </div>
 
-      <h3 slot="header">Забронировать {{ auto.title }}</h3>
+      <h3 slot="header">Заявка на {{ auto.title }}</h3>
     </Modal>
 
     <!-- BAR: MAIN SECTION -->
@@ -116,7 +116,7 @@
               >
             </template>
             <div class="mainSection-subTitle">
-              с доступом со смартфона по технологии каршеринга
+              пользуйтесь сегодня, постепенно выплачивая стоимость
             </div>
           </h1>
 
@@ -128,7 +128,7 @@
 
           <div class="advantages-link-container">
             <a @click="showModal = true" class="advantages-link"
-              >Забронировать</a
+              >Заявка на выкуп</a
             >
           </div>
         </div>
@@ -179,7 +179,7 @@
           <div class="advantages-items">
             <AdvantageItem
               text="Разнообразный ассортимент авто для выкупа"
-              img="/images/app/phone04.png"
+              img="/images/app/phone01.png"
             />
             <AdvantageItem
               text="Автомобили не в офисе, а на улицах города"
@@ -191,7 +191,7 @@
             />
             <AdvantageItem
               text="Гибкая тарификация и автооплата"
-              img="/images/app/phone03.png"
+              img="/images/app/phone04.png"
             />
             <AdvantageItem
               text="Не только смартфон, но и личный пульт управления"
@@ -210,7 +210,7 @@
                 <div class="slide">
                   <AdvantageItem
                     text="Разнообразный ассортимент авто для выкупа"
-                    img="/images/app/phone04.png"
+                    img="/images/app/phone01.png"
                   />
                 </div>
                 <div class="slide">
@@ -228,7 +228,7 @@
                 <div class="slide">
                   <AdvantageItem
                     text="Гибкая тарификация и автооплата"
-                    img="/images/app/phone03.png"
+                    img="/images/app/phone04.png"
                   />
                 </div>
                 <div class="slide">
