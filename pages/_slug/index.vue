@@ -13,7 +13,7 @@
           poster_=""
           class="mainSection-video"
         >
-          <source src="~static/video/techno.mp4" type="video/mp4" />
+          <source src="~static/video/voron_site_mobile.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="mainSection-content">
@@ -304,19 +304,19 @@ import BrandItem from "/components/BrandItem.vue";
 
 export default {
   head: {
-    title: "VORON – Личный автомобиль бизнес-класса по технологии каршеринга",
+    title: "VORON – Покупка авто через аренду с выкупом. Сначала тест-драйв, потом выкуп",
     meta: [
       {
         hid: "keywords",
         name: "keywords",
         content:
-          "каршеринг, каршеринг бизнес-класса, каршеринг без надписей, каршеринг ворон, аренда авто, прокат авто, аренда авто представительского класса, прокат авто москва, аренда авто в россии",
+          "аренда с выкупом, аренда с правом выкупа, каршеринг ворон,  VORON, аренда автотобиля, прокат автомобиля, аренда авто представительского класса, аренда авто в россии, кредит на автомобиль",
       },
       {
         hid: "description",
         name: "description",
         content:
-          "VORON – Личный автомобиль бизнес-класса по технологии каршеринга",
+          "VORON – Покупка авто через аренду с выкупом. Сначала тест-драйв, потом выкуп",
       },
     ],
   },
