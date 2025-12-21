@@ -158,8 +158,9 @@
               :name="b.title"
               :link="`/${b.slug}/`"
               :slug="b.slug"
+              :selectedRegion="selectedRegion"
           />
-          <BrandItem icon="far fa-ellipsis-h" name="Все" link="/" slug="" />
+          <BrandItem icon="far fa-ellipsis-h" name="Все" link="/" slug="" :selectedRegion="selectedRegion" />
         </div>
         <div class="pageSection-content">
           <h2 id="chooseCar" class="carsPresent-title-models">МОДЕЛИ</h2>
@@ -331,23 +332,35 @@ export default {
       cars: [],
       brands: [],
       brand_data: {},
+      selectedRegion: null,
     };
   },
 
 
   async asyncData({ $axios, params, query }) {
-    const region = query.region;
-    let apiUrl = `/api/getautobuyout?brand=${params.slug}`;
-    if (region) {
-      apiUrl += `&region=${region}`;
-    }
-    let response = await $axios.$get(apiUrl);
+    const region = query.region || '99';
+    const apiUrl = `/api/getautobuyout?brand=${params.slug}&region=${region}`;
+
+    const response = await $axios.$get(apiUrl);
+
     return {
       cars: response["cars"],
       brands: response["brands"],
       brand_data: response["brand"],
+      selectedRegion: region,
     };
   },
-  methods: {},
+  methods: {
+    changeRegion(regionId) {
+      if (this.selectedRegion === regionId) {
+        return;
+      }
+      this.$router.push({
+        path: this.$route.path,
+        query: { region: regionId },
+        hash: '#chooseCar'
+      });
+    },
+  },
 };
 </script>
