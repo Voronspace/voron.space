@@ -48,11 +48,11 @@ export default {
   },
   computed: {
     computedLink() {
-      let baseLink = `${this.link}#chooseCar`;
+      let baseLink = this.link;
       if (this.selectedRegion) {
-        return `${baseLink}?region=${this.selectedRegion}`;
+        baseLink += `?region=${this.selectedRegion}`;
       }
-      return baseLink;
+      return `${baseLink}#chooseCar`;
     },
   },
 };
