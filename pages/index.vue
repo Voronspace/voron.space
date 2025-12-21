@@ -189,6 +189,7 @@
             :name="brand.title"
             :link="`/${brand.slug}/`"
             :slug="brand.slug"
+            :selectedRegion="selectedRegion"
           />
         </div>
         <div class="pageSection-content">

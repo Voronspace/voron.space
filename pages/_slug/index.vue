@@ -6,12 +6,12 @@
     <div class="mainSection mainSection-IndexPage">
       <div class="mainSection-background">
         <video
-          playsinline
-          loop
-          muted
-          autoplay
-          poster_=""
-          class="mainSection-video"
+            playsinline
+            loop
+            muted
+            autoplay
+            poster_=""
+            class="mainSection-video"
         >
           <source src="~static/video/voron_site_mobile.mp4" type="video/mp4" />
         </video>
@@ -34,9 +34,9 @@
 
           <div class="advantages-link-container">
             <a
-              :href="`https://voron.app/${$utm()}`"
-              class="toScroll_ advantages-link"
-              >Установить приложение</a
+                :href="`https://voron.app/${$utm()}`"
+                class="toScroll_ advantages-link"
+            >Установить приложение</a
             >
           </div>
         </div>
@@ -44,72 +44,72 @@
     </div>
 
     <!-- /BAR: MAIN SECTION -->
-<!-- BAR: ADVANTAGES -->
+    <!-- BAR: ADVANTAGES -->
     <div id="advantages" class="advantages">
       <div class="pageSection-content">
         <div class="advantages-title">Преимущества</div>
         <div
-          class="advantages-items-container advantages-items-container-Active"
+            class="advantages-items-container advantages-items-container-Active"
         >
           <div class="advantages-items">
             <AdvantageItem
-              text="Разнообразный ассортимент авто для выкупа"
-              img="/images/app/phone01.png"
+                text="Разнообразный ассортимент авто для выкупа"
+                img="/images/app/phone01.png"
             />
             <AdvantageItem
-              text="Автомобили не в офисе, а на улицах города"
-              img="/images/app/phone02.png"
+                text="Автомобили не в офисе, а на улицах города"
+                img="/images/app/phone02.png"
             />
             <AdvantageItem
-              text="Возможность поездить перед оформлением"
-              img="/images/app/phone03.png"
+                text="Возможность поездить перед оформлением"
+                img="/images/app/phone03.png"
             />
             <AdvantageItem
-              text="Гибкая тарификация и автооплата"
-              img="/images/app/phone04.png"
+                text="Гибкая тарификация и автооплата"
+                img="/images/app/phone04.png"
             />
             <AdvantageItem
-              text="Не только смартфон, но и личный пульт управления"
-              img="/images/app/phone05.png"
+                text="Не только смартфон, но и личный пульт управления"
+                img="/images/app/phone05.png"
             />
             <div class="advantages-clear"></div>
           </div>
           <div class="advantages-items-Mobile">
             <client-only placeholder="Загрузка...">
               <agile
-                :options="{
+                  :options="{
                   infinite: false,
                   navButtons: false,
                 }"
               >
                 <div class="slide">
                   <AdvantageItem
-                    text="Разнообразный ассортимент авто для выкупа"
-                    img="/images/app/phone01.png"
+                      text="Разнообразный ассортимент авто для выкупа"
+                      img="/images/app/phone01.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="Автомобили не в офисе, а на улицах города"
-                    img="/images/app/phone02.png"
+                      text="Автомобили не в офисе, а на улицах города"
+                      img="/images/app/phone02.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="Возможность поездить перед оформлением"
-                    img="/images/app/phone03.png"
+                      text="Возможность поездить перед оформлением"
+                      img="/images/app/phone03.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="Гибкая тарификация и автооплата"
-                    img="/images/app/phone04.png"
+                      text="Гибкая тарификация и автооплата"
+                      img="/images/app/phone04.png"
                   />
                 </div>
                 <div class="slide">
                   <AdvantageItem
-                    text="Не только смартфон, но и личный пульт управления"
-                    img="/images/app/phone05.png"
+                      text="Не только смартфон, но и личный пульт управления"
+                      img="/images/app/phone05.png"
                   />
                 </div>
               </agile>
@@ -152,12 +152,12 @@
       <div class="pageSection-content">
         <div class="brand-list">
           <BrandItem
-            v-for="(b, key) in brands"
-            :key="key"
-            :image="`https://cdn.voron.io/images/catalog/${b.icon}.png`"
-            :name="b.title"
-            :link="`/${b.slug}/`"
-            :slug="b.slug"
+              v-for="(b, key) in brands"
+              :key="key"
+              :image="`https://cdn.voron.io/images/catalog/${b.icon}.png`"
+              :name="b.title"
+              :link="`/${b.slug}/`"
+              :slug="b.slug"
           />
           <BrandItem icon="far fa-ellipsis-h" name="Все" link="/" slug="" />
         </div>
@@ -173,9 +173,9 @@
             ><small
             >* Можно взять автомобиль на ТЕСТ-ДРАЙВ и в любой момент поездки запустить тариф выкупа, оплатив первоначальный взнос. Подробнее тут →
               <a
-                style="color: rgb(255, 204, 0)"
-                target="_blank"
-                href="https://voron.help/tariff/renttobuy"
+                  style="color: rgb(255, 204, 0)"
+                  target="_blank"
+                  href="https://voron.help/tariff/renttobuy"
               >voron.help</a
               ></small
             ></em
@@ -198,93 +198,93 @@
         </div>
         <div class="howItWorks-items">
           <SchemeItem
-            title="Заявка на сайте"
-            icon="fal fa-user-check"
-            text="Вы оставляете заявку, в вами связывается наш менеджер и подробно рассказывает об аренде с выкупом"
+              title="Заявка на сайте"
+              icon="fal fa-user-check"
+              text="Вы оставляете заявку, в вами связывается наш менеджер и подробно рассказывает об аренде с выкупом"
           />
           <SchemeItem
-            title="Регистрация"
-            icon="fal fa-address-card"
-            text="Устанавливаете мобильное приложение и проходите в нем регистрацию. Служба безопасности проверяет ваши документы и активирует аккаунт"
+              title="Регистрация"
+              icon="fal fa-address-card"
+              text="Устанавливаете мобильное приложение и проходите в нем регистрацию. Служба безопасности проверяет ваши документы и активирует аккаунт"
           />
           <SchemeItem
-            title="Доставка / Бронь"
-            icon="fal fa-route"
-            text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
+              title="Доставка / Бронь"
+              icon="fal fa-route"
+              text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
           />
-         <SchemeItem
-           title="Тест-драйв"
-           icon="fal fa-car-alt"
-           text="Вы можете поездить на авто в обычной аренде и если он вам понравится, то в любой момент включить в приложении тариф с выкупом"
-         />
-         <SchemeItem
-           title="Подписание документов"
-           icon="fal fa-file-alt"
-           text="Когда вы запустите тариф аренды с выкупом, мы в течение недели подготовим договор с владельцем автомобиля и пригласим вас на подписание документов"
-           decsription="Второй раз вам потребуется приехать на подписание договора купли-продажи после завершения выкупа"
-         />
+          <SchemeItem
+              title="Тест-драйв"
+              icon="fal fa-car-alt"
+              text="Вы можете поездить на авто в обычной аренде и если он вам понравится, то в любой момент включить в приложении тариф с выкупом"
+          />
+          <SchemeItem
+              title="Подписание документов"
+              icon="fal fa-file-alt"
+              text="Когда вы запустите тариф аренды с выкупом, мы в течение недели подготовим договор с владельцем автомобиля и пригласим вас на подписание документов"
+              decsription="Второй раз вам потребуется приехать на подписание договора купли-продажи после завершения выкупа"
+          />
         </div>
         <div class="advantages-items-Mobile howItWorks-items-Mobile_">
           <client-only placeholder="Loading...">
             <agile
-              :options="{
+                :options="{
                 infinite: false,
                 navButtons: false,
               }"
             >
               <div class="slide">
                 <SchemeItem
-                  title="Заявка на сайте"
-                  icon="fal fa-user-check"
-                  number="1"
-                  text="Вы оставляете заявку, в вами связывается наш менеджер и подробно рассказывает об аренде с выкупом"
+                    title="Заявка на сайте"
+                    icon="fal fa-user-check"
+                    number="1"
+                    text="Вы оставляете заявку, в вами связывается наш менеджер и подробно рассказывает об аренде с выкупом"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Регистрация"
-                  icon="fal fa-address-card"
-                  number="2"
-                  text="Устанавливаете мобильное приложение и проходите в нем регистрацию. Служба безопасности проверяет ваши документы и активирует аккаунт"
+                    title="Регистрация"
+                    icon="fal fa-address-card"
+                    number="2"
+                    text="Устанавливаете мобильное приложение и проходите в нем регистрацию. Служба безопасности проверяет ваши документы и активирует аккаунт"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Доставка / Бронь"
-                  icon="fal fa-route"
-                  number="3"
-                  text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
+                    title="Доставка / Бронь"
+                    icon="fal fa-route"
+                    number="3"
+                    text="Выбираете автомобиль, вносите страховой депозит и можете ехать. Или заказываете доставку, чтобы машину привезли к вам"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Тест-драйв"
-                  icon="fal fa-car-alt"
-                  number="4"
-                  text="Вы можете поездить на авто в обычной аренде и если он вам понравится, то в любой момент включить в приложении тариф с выкупом"
+                    title="Тест-драйв"
+                    icon="fal fa-car-alt"
+                    number="4"
+                    text="Вы можете поездить на авто в обычной аренде и если он вам понравится, то в любой момент включить в приложении тариф с выкупом"
                 />
               </div>
               <div class="slide">
                 <SchemeItem
-                  title="Подписание документов"
-                  icon="fal fa-file-alt"
-                  number="5"
-                  text="Когда вы запустите тариф аренды с выкупом, мы в течение недели подготовим договор с владельцем автомобиля и пригласим вас на подписание документов"
-                  decsription="Второй раз вам потребуется приехать на подписание договора купли-продажи после завершения выкупа"
+                    title="Подписание документов"
+                    icon="fal fa-file-alt"
+                    number="5"
+                    text="Когда вы запустите тариф аренды с выкупом, мы в течение недели подготовим договор с владельцем автомобиля и пригласим вас на подписание документов"
+                    decsription="Второй раз вам потребуется приехать на подписание договора купли-продажи после завершения выкупа"
                 />
               </div>
             </agile>
           </client-only>
         </div>
         <div
-          class="howItWorks-buttonContainer"
-          style="position: static; margin-top: 50px"
+            class="howItWorks-buttonContainer"
+            style="position: static; margin-top: 50px"
         >
           <nuxt-link
-            to="/renttobuy/"
-            exact
-            exact-active-class="active"
-            class="howItWorks-button"
+              to="/renttobuy/"
+              exact
+              exact-active-class="active"
+              class="howItWorks-button"
           ><i style="margin-right: 10px" class="fal fa-route"></i>Подробнее о выкупе</nuxt-link
           >
         </div>
@@ -310,13 +310,13 @@ export default {
         hid: "keywords",
         name: "keywords",
         content:
-          "аренда с выкупом, аренда с правом выкупа, каршеринг ворон,  VORON, аренда автотобиля, прокат автомобиля, аренда авто представительского класса, аренда авто в россии, кредит на автомобиль",
+            "аренда с выкупом, аренда с правом выкупа, каршеринг ворон,  VORON, аренда автотобиля, прокат автомобиля, аренда авто представительского класса, аренда авто в россии, кредит на автомобиль",
       },
       {
         hid: "description",
         name: "description",
         content:
-          "VORON – Покупка авто через аренду с выкупом. Сначала тест-драйв, потом выкуп",
+            "VORON – Покупка авто через аренду с выкупом. Сначала тест-драйв, потом выкуп",
       },
     ],
   },
@@ -335,9 +335,13 @@ export default {
   },
 
 
-  async asyncData({ context, $axios, params }) {
-    let response = await $axios.$get(`/api/getauto?brand=${params.slug}`);
-    console.log(response["cars"])
+  async asyncData({ $axios, params, query }) {
+    const region = query.region;
+    let apiUrl = `/api/getautobuyout?brand=${params.slug}`;
+    if (region) {
+      apiUrl += `&region=${region}`;
+    }
+    let response = await $axios.$get(apiUrl);
     return {
       cars: response["cars"],
       brands: response["brands"],

@@ -87,7 +87,6 @@
       <div class="mainSection-background">
         <video
           playsinline
-          loop
           muted
           autoplay
           :poster="[
