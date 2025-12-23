@@ -384,15 +384,20 @@ export default {
     };
   },
   methods: {
-    changeRegion(regionId) {
+    async changeRegion(regionId) {
       if (this.selectedRegion === regionId) {
         return;
       }
-      this.$router.push({
-        path: this.$route.path,
-        query: { region: regionId },
-        hash: '#chooseCar'
-      });
+      this.selectedRegion = regionId;
+      try {
+        let response = await this.$axios.get(`/api/getautobyregion?region=${regionId}`);
+        this.cars = response.data["cars"];
+        this.brands = response.data["brands"];
+      } catch (error) {
+        console.error("Ошибка при загрузке данных для региона:", error);
+        this.cars = [];
+        this.brands = [];
+      }
     },
     generateQrUrl(targetUrl) {
       return `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(targetUrl)}&size=330x330&qzone=1&format=png`;

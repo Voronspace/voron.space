@@ -150,7 +150,7 @@
     <!-- BAR: CARS PRESENTATION -->
     <div class="carsPresent">
       <div class="pageSection-content">
-        <h2 id="chooseBrand" class="carsPresent-title-brands">БРЕНДЫ</h2>
+        <h2 id="chooseBrand" class="carsPresent-title-brands">МАРКИ</h2>
       </div>
 
       <div class="pageSection-content">
