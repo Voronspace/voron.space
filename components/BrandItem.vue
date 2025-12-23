@@ -1,21 +1,17 @@
 <template>
   <div
-    :class="[
+      :class="[
       'advantages-item',
-      [
-        slug == $route.params.slug || typeof $route.params.slug == 'underfined'
-          ? 'advantages-item-active'
-          : '',
-      ],
+      { 'advantages-item-active': slug === $route.params.slug },
     ]"
   >
-    <nuxt-link :to="`${link}#chooseCar`">
+    <nuxt-link :to="computedLink">
       <div class="icon-adv">
         <img v-if="image" :src="image" />
         <i
-          style="font-size: 35px; color: rgba(255, 255, 255, 0.9)"
-          v-if="icon"
-          :class="icon"
+            style="font-size: 35px; color: rgba(255, 255, 255, 0.9)"
+            v-if="icon"
+            :class="icon"
         />
       </div>
 
@@ -43,6 +39,20 @@ export default {
     },
     slug: {
       required: true,
+    },
+    selectedRegion: {
+      type: String,
+      required: false,
+      default: null,
+    },
+  },
+  computed: {
+    computedLink() {
+      let baseLink = this.link;
+      if (this.selectedRegion) {
+        baseLink += `?region=${this.selectedRegion}`;
+      }
+      return `${baseLink}#chooseCar`;
     },
   },
 };

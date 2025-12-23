@@ -10,41 +10,41 @@
           приложение:
         </p>
         <img
-          :src="qrCodeUrl"
-          alt="QR Code для установки приложения"
-          style="max-width: 200px; margin: 15px auto"
+            :src="qrCodeUrl"
+            alt="QR Code для установки приложения"
+            style="max-width: 200px; margin: 15px auto"
         />
-<!--        <p style="font-size: 12px; color: #777">-->
-<!--          Ссылка:-->
-<!--          <a-->
-<!--            :href="appInstallUrl"-->
-<!--            target="_blank"-->
-<!--            style="word-break: break-all"-->
-<!--          >{{ appInstallUrl }}</a-->
-<!--          >-->
-<!--        </p>-->
+        <!--        <p style="font-size: 12px; color: #777">-->
+        <!--          Ссылка:-->
+        <!--          <a-->
+        <!--            :href="appInstallUrl"-->
+        <!--            target="_blank"-->
+        <!--            style="word-break: break-all"-->
+        <!--          >{{ appInstallUrl }}</a-->
+        <!--          >-->
+        <!--        </p>-->
       </div>
     </Modal>
     <!-- BAR: MAIN SECTION -->
     <div class="mainSection mainSection-IndexPage">
       <div class="mainSection-background">
         <video
-          playsinline
-          loop
-          muted
-          autoplay
-          poster_=""
-          class="mainSection-video mainSection-video-home mainVideoMobile"
+            playsinline
+            loop
+            muted
+            autoplay
+            poster_=""
+            class="mainSection-video mainSection-video-home mainVideoMobile"
         >
           <source src="~static/video/voron_site_mobile.mp4" type="video/mp4" />
         </video>
         <video
-          playsinline
-          loop
-          muted
-          autoplay
-          poster_=""
-          class="mainSection-video mainSection-video-home mainVideoBig"
+            playsinline
+            loop
+            muted
+            autoplay
+            poster_=""
+            class="mainSection-video mainSection-video-home mainVideoBig"
         >
           <source src="~static/video/voron_site.mp4" type="video/mp4" />
         </video>
@@ -65,10 +65,10 @@
           <div class="mainSection-subTitle-NoMobile"></div>
           <div class="advantages-link-container">
             <a
-              @click.prevent="handleAppInstallClick('any')"
-              :href="appInstallUrlForOs('any')"
-              target="_blank"
-              class="toScroll_ advantages-link"
+                @click.prevent="handleAppInstallClick('any')"
+                :href="appInstallUrlForOs('any')"
+                target="_blank"
+                class="toScroll_ advantages-link"
             >Установить приложение</a
             >
           </div>
@@ -109,7 +109,7 @@
           <div class="advantages-items-Mobile">
             <client-only placeholder="Загрузка...">
               <agile
-                :options="{
+                  :options="{
                   infinite: false,
                   navButtons: false,
                 }"
@@ -184,12 +184,13 @@
       <div class="pageSection-content">
         <div class="brand-list">
           <BrandItem
-            v-for="(brand, key) in brands"
-            :key="key"
-            :image="`https://cdn.voron.io/images/catalog/${brand.icon}.png`"
-            :name="brand.title"
-            :link="`/${brand.slug}/`"
-            :slug="brand.slug"
+              v-for="(brand, key) in brands"
+              :key="key"
+              :image="`https://cdn.voron.io/images/catalog/${brand.icon}.png`"
+              :name="brand.title"
+              :link="`/${brand.slug}/`"
+              :slug="brand.slug"
+              :selectedRegion="selectedRegion"
           />
         </div>
         <div class="pageSection-content">
@@ -209,9 +210,9 @@
               привязанной банковской карты, а не погашением задолженности или
               из страхового депозита. Подробнее тут →
               <a
-                style="color: rgb(255, 204, 0)"
-                target="_blank"
-                href="https://voron.help/deposit/deposit"
+                  style="color: rgb(255, 204, 0)"
+                  target="_blank"
+                  href="https://voron.help/deposit/deposit"
               >voron.help</a
               ></small
             ></em
@@ -263,7 +264,7 @@
         <div class="advantages-items-Mobile howItWorks-items-Mobile_">
           <client-only placeholder="Loading...">
             <agile
-              :options="{
+                :options="{
                 infinite: false,
                 navButtons: false,
               }"
@@ -317,10 +318,10 @@
             style="position: static; margin-top: 50px"
         >
           <nuxt-link
-            to="/delivery/"
-            exact
-            exact-active-class="active"
-            class="howItWorks-button"
+              to="/delivery/"
+              exact
+              exact-active-class="active"
+              class="howItWorks-button"
           ><i style="margin-right: 10px" class="fal fa-route"></i>Как работает
             доставка</nuxt-link
           >
@@ -373,25 +374,25 @@ export default {
       selectedRegion: '99',
     };
   },
-  async asyncData({ context, $axios }) {
-    let response = await $axios.get(`/api/getautobyregion?region=99`);
-    return { cars: response.data["cars"], brands: response.data["brands"] };
+  async asyncData({ $axios, query }) {
+    const region = query.region || '99';
+    let response = await $axios.get(`/api/getautobyregion?region=${region}`);
+    return {
+      cars: response.data["cars"],
+      brands: response.data["brands"],
+      selectedRegion: region,
+    };
   },
   methods: {
-    async changeRegion(regionId) {
+    changeRegion(regionId) {
       if (this.selectedRegion === regionId) {
         return;
       }
-      this.selectedRegion = regionId;
-      try {
-        let response = await this.$axios.get(`/api/getautobyregion?region=${regionId}`);
-        this.cars = response.data["cars"];
-        this.brands = response.data["brands"];
-      } catch (error) {
-        console.error("Ошибка при загрузке данных для региона:", error);
-        this.cars = [];
-        this.brands = [];
-      }
+      this.$router.push({
+        path: this.$route.path,
+        query: { region: regionId },
+        hash: '#chooseCar'
+      });
     },
     generateQrUrl(targetUrl) {
       return `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(targetUrl)}&size=330x330&qzone=1&format=png`;
