@@ -94,6 +94,7 @@ export default {
 }
 
 @media (max-width: 768px) {
+
   .is-bought-out .carsList-itemHover {
     display: flex !important;
     align-items: center;
