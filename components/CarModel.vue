@@ -1,7 +1,7 @@
 <template>
   <div :class="['carsList-item', { 'is-bought-out': car.is_bought_out === 1 }]">
     <nuxt-link
-        v-if="link && car.is_bought_out !== 1"
+        v-if="link"
         :to="`/${car.brand.slug}/${car.slug}`"
         :class="[
         'carsList-itemContent',
@@ -11,11 +11,11 @@
       <CarModelInfo :car="car" :carousel="carousel" />
       <div class="carsList-itemHover">
         <div class="carsList-itemButtonContainer">
-          <div class="carsList-itemButton">Подробнее</div>
+          <div v-if="car.is_bought_out !== 1" class="carsList-itemButton">Подробнее</div>
+          <div v-else class="carsList-itemButton btn-bought-out">Выкуплено</div>
         </div>
       </div>
     </nuxt-link>
-
     <div
         v-else
         :class="[
@@ -24,7 +24,6 @@
       ]"
     >
       <CarModelInfo :car="car" :carousel="carousel" />
-
       <div class="carsList-itemHover" v-if="car.is_bought_out === 1">
         <div class="carsList-itemButtonContainer">
           <div class="carsList-itemButton btn-bought-out">Выкуплено</div>
@@ -72,7 +71,7 @@ export default {
 }
 
 .is-bought-out {
-  cursor: default;
+  /* cursor: default; */
 }
 
 .is-bought-out .carsList-itemHover {
@@ -85,7 +84,6 @@ export default {
   border-color: #888 !important;
   color: #888 !important;
   background: transparent !important;
-  pointer-events: none;
 }
 
 .carsList-itemContent:hover .carsList-itemHover {
@@ -94,7 +92,6 @@ export default {
 }
 
 @media (max-width: 768px) {
-
   .is-bought-out .carsList-itemHover {
     display: flex !important;
     align-items: center;

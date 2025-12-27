@@ -125,7 +125,7 @@
 
           <div class="mainSection-subTitle-NoMobile"></div>
 
-          <div class="advantages-link-container">
+          <div v-if="auto.is_bought_out !== 1" class="advantages-link-container">
             <a @click="showModal = true" class="advantages-link"
             >Заявка на выкуп</a
             >
@@ -347,15 +347,14 @@
         </div>
         <div
             class="howItWorks-buttonContainer"
-            style="position: static; margin-top: 50px"
+            style="position: static; margin-top: 50px; margin-bottom: 80px;"
         >
           <nuxt-link
               to="/delivery/"
               exact
               exact-active-class="active"
               class="howItWorks-button"
-          ><i style="margin-right: 10px" class="fal fa-car-alt"></i>Подробнее о выкупе</nuxt-link
-          >
+          ><i style="margin-right: 10px" class="fal fa-car-alt"></i>Подробнее о выкупе</nuxt-link>
         </div>
       </div>
     </div>

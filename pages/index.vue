@@ -309,7 +309,7 @@
         </div>
         <div
             class="howItWorks-buttonContainer"
-            style="position: static; margin-top: 50px"
+            style="position: static; margin-top: 50px; margin-bottom: 80px;"
         >
           <nuxt-link
               to="/about/"
