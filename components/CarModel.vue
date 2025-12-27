@@ -1,6 +1,5 @@
 <template>
   <div :class="['carsList-item', { 'is-bought-out': car.is_bought_out === 1 }]">
-    <!-- Ссылка активна только если машина НЕ выкуплена -->
     <nuxt-link
         v-if="link && car.is_bought_out !== 1"
         :to="`/${car.brand.slug}/${car.slug}`"
@@ -17,7 +16,6 @@
       </div>
     </nuxt-link>
 
-    <!-- Блок без ссылки: если машина выкуплена -->
     <div
         v-else
         :class="[
@@ -27,7 +25,6 @@
     >
       <CarModelInfo :car="car" :carousel="carousel" />
 
-      <!-- Слой оверлея, который для .is-bought-out будет виден всегда -->
       <div class="carsList-itemHover" v-if="car.is_bought_out === 1">
         <div class="carsList-itemButtonContainer">
           <div class="carsList-itemButton btn-bought-out">Выкуплено</div>
@@ -74,14 +71,16 @@ export default {
   height: 260px;
 }
 
-/* Принудительно показываем оверлей (как при ховере) для выкупленных авто */
-.is-bought-out .carsList-itemHover {
-  opacity: 1 !important;
-  visibility: visible !important;
-  cursor: default !important;
+.is-bought-out {
+  cursor: default;
 }
 
-/* Серая кнопка без заливки, один-в-один как оригинал */
+.is-bought-out .carsList-itemHover {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 .btn-bought-out {
   border-color: #888 !important;
   color: #888 !important;
@@ -89,9 +88,17 @@ export default {
   pointer-events: none;
 }
 
-/* Стандартное поведение ховера для активных карточек */
 .carsList-itemContent:hover .carsList-itemHover {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .is-bought-out .carsList-itemHover {
+    background: rgba(0, 0, 0, 0.4);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
 }
 </style>
