@@ -588,6 +588,10 @@ export default {
   color: #666;
 }
 
+::v-deep .is-bought-out .carsList-itemHover {
+  background: rgba(24, 24, 24, 0.5) !important;
+}
+
 @media (max-width: 1024px) {
   .buyout-tariff-card {
     flex: 1 1 calc(50% - 15px);
