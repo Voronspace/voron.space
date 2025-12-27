@@ -145,10 +145,10 @@
 
           <!-- Сетка тарифов выкупа -->
           <div v-if="auto.buyout_tariffs && auto.buyout_tariffs.length" class="buyout-tariffs-wrapper">
-            <div class="buyout-tariffs-title">Тарифы аренды с выкупом:</div>
+            <!-- <div class="buyout-tariffs-title">Тарифы аренды с выкупом:</div> -->
             <div class="buyout-tariffs-grid">
               <div v-for="(tariff, index) in auto.buyout_tariffs" :key="index" class="buyout-tariff-card">
-                <div class="tariff-label">Срок {{ tariff.label }}</div>
+                <div class="tariff-label">{{ tariff.label }}</div>
                 <div class="tariff-payment">
                   <span class="payment-value">{{ tariff.payment }}</span>
                   <span class="payment-period">/ день</span>
