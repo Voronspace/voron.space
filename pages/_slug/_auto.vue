@@ -523,7 +523,7 @@ export default {
 }
 
 .buyout-tariffs-wrapper {
-  min-width: 300px;
+  min-width: 350px;
   margin-top: 30px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.07);
