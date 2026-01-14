@@ -14,17 +14,75 @@
             alt="QR Code для установки приложения"
             style="max-width: 200px; margin: 15px auto"
         />
-        <!--        <p style="font-size: 12px; color: #777">-->
-        <!--          Ссылка:-->
-        <!--          <a-->
-        <!--            :href="appInstallUrl"-->
-        <!--            target="_blank"-->
-        <!--            style="word-break: break-all"-->
-        <!--          >{{ appInstallUrl }}</a-->
-        <!--          >-->
-        <!--        </p>-->
       </div>
     </Modal>
+
+    <Modal v-if="showBuyoutModal" @close="showBuyoutModal = false">
+      <div slot="body">
+        <div class="thanks-form alert-form" v-if="buyoutForm.success">
+          <div class="thanks-form-title">Спасибо!</div>
+          <div class="thanks-form-text">
+            Мы направили вам SMS-сообщение с ссылкой на завершение регистрации.
+          </div>
+        </div>
+        <div class="error-form alert-form" v-if="buyoutForm.errors">
+          <div class="thanks-form-title">Ошибка!</div>
+          <div class="thanks-form-text">
+            Попробуйте заполнить форму еще раз!
+          </div>
+        </div>
+
+        <form
+            v-if="!buyoutForm.success"
+            class="callback-form"
+            v-on:submit.prevent="sendBuyoutRequest()"
+        >
+          <div class="form-group">
+            <label>Имя</label>
+            <input
+                type="text"
+                name="firstname"
+                class="form-control"
+                required
+                v-model.trim="buyoutForm.firstname"
+            />
+          </div>
+          <div class="form-group">
+            <label>Фамилия</label>
+            <input
+                type="text"
+                name="lastname"
+                class="form-control"
+                required
+                v-model.trim="buyoutForm.lastname"
+            />
+          </div>
+          <div class="form-group">
+            <label>Телефон</label>
+            <the-mask
+                name="phone"
+                :mask="['+7 (###) ###-##-##']"
+                placeholder="+7 (999) 999-99-99"
+                class="phone_number form-control"
+                required
+                v-model="buyoutForm.phone"
+            />
+          </div>
+          <div class="customCheckbox">
+            <input
+                type="checkbox"
+                id="agreeTermsIndex"
+                v-model="buyoutForm.agreeTerms"
+                required
+            />
+            <label for="agreeTermsIndex">Даю согласие на <a href="https://voron.space/legal/personal-data/" target="_blank">обработку персональных данных</a></label>
+          </div>
+          <button type="submit" class="btn btn-primary">Отправить заявку</button>
+        </form>
+      </div>
+      <h3 slot="header">Заявка на выкуп</h3>
+    </Modal>
+
     <!-- BAR: MAIN SECTION -->
     <div class="mainSection mainSection-IndexPage">
       <div class="mainSection-background">
@@ -63,13 +121,18 @@
           </h2>
           <div class="mainSection-subTitle-NoMobile"></div>
           <div class="advantages-link-container">
-            <a
-                @click.prevent="handleAppInstallClick('any')"
-                :href="appInstallUrlForOs('any')"
-                target="_blank"
-                class="toScroll_ advantages-link"
+            <!-- <a
+              @click.prevent="handleAppInstallClick('any')"
+              :href="appInstallUrlForOs('any')"
+              target="_blank"
+              class="toScroll_ advantages-link"
             >Установить приложение</a
-            >
+            > -->
+            <a
+                @click.prevent="showBuyoutModal = true"
+                href="#"
+                class="toScroll_ advantages-link"
+            >Оставить заявку</a>
           </div>
         </div>
       </div>
@@ -331,6 +394,8 @@ import AdvantageItem from "/components/AdvantageItem.vue";
 import SchemeItem from "/components/SchemeItem.vue";
 import BrandItem from "/components/BrandItem.vue";
 import Modal from "/components/Modal.vue";
+import { TheMask, mask } from "vue-the-mask";
+
 export default {
   head: {
     title:
@@ -340,7 +405,7 @@ export default {
         hid: "keywords",
         name: "keywords",
         content:
-            "аренда с выкупом, аренда с правом выкупа, каршеринг ворон,  VORON, аренда автотобиля, прокат автомобиля, аренда авто представительского класса, аренда авто в россии, кредит на автомобиль",
+            "аренда с выкупом, аренда с правом выкупа, каршеринг ворон, VORON, аренда автотобиля, прокат автомобиля, аренда авто представительского класса, аренда авто в россии, кредит на автомобиль",
       },
       {
         hid: "description",
@@ -356,7 +421,9 @@ export default {
     SchemeItem,
     BrandItem,
     Modal,
+    TheMask,
   },
+  directives: { mask },
   data() {
     return {
       cars: [],
@@ -365,6 +432,17 @@ export default {
       qrCodeUrl: "",
       appInstallUrl: "",
       selectedRegion: '99',
+
+      // logic for Buyout Request
+      showBuyoutModal: false,
+      buyoutForm: {
+        firstname: "",
+        lastname: "",
+        phone: "",
+        agreeTerms: false,
+        success: false,
+        errors: false,
+      },
     };
   },
   async asyncData({ $axios, query }) {
@@ -390,6 +468,48 @@ export default {
         console.error("Ошибка при загрузке данных для региона:", error);
         this.cars = [];
         this.brands = [];
+      }
+    },
+    // logic for sending request
+    async sendBuyoutRequest() {
+      if (
+          this.buyoutForm.lastname != "" &&
+          this.buyoutForm.firstname != "" &&
+          this.buyoutForm.phone != "" &&
+          this.buyoutForm.agreeTerms
+      ) {
+        try {
+          const config = {
+            headers: {
+              'X-API-TOKEN': 'Vb_Booking_s7K9pL3jR1'
+            }
+          };
+          const payload = {
+            auto_slug: 'general_request', // slug
+            lastName: this.buyoutForm.lastname,
+            firstName: this.buyoutForm.firstname,
+            phone: this.buyoutForm.phone,
+            source: this.$utm(false) || 'store',
+          };
+          const response = await this.$axios.$post("/api/booking_request", payload, config);
+          if (response.success) {
+            this.buyoutForm.success = true;
+            this.buyoutForm.errors = false;
+            this.buyoutForm.lastname = "";
+            this.buyoutForm.firstname = "";
+            this.buyoutForm.phone = "";
+          } else {
+            this.buyoutForm.success = false;
+            this.buyoutForm.errors = true;
+          }
+        } catch (error) {
+          console.error("Buyout request failed:", error);
+          this.buyoutForm.success = false;
+          this.buyoutForm.errors = true;
+        }
+      } else {
+        this.buyoutForm.success = false;
+        this.buyoutForm.errors = true;
       }
     },
     generateQrUrl(targetUrl) {
@@ -429,5 +549,16 @@ export default {
 .tabs__caption {
   justify-content: center;
   gap: 25px;
+}
+.customCheckbox {
+  margin-bottom: 15px;
+}
+.customCheckbox input[type="checkbox"] {
+  margin-right: 5px;
+  -webkit-appearance: auto !important;
+  appearance: auto !important;
+}
+.advantages-link {
+  cursor: pointer;
 }
 </style>
