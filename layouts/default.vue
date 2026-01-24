@@ -429,8 +429,6 @@
             <div class="pageFooter-title">Приложение</div>
 
             <div class="footer-row-container">
-
-              <!-- 1. СНАЧАЛА Приложения (как было в оригинале на ПК) -->
               <client-only>
                 <div class="footer-app-btn-block">
                   <a
@@ -463,8 +461,6 @@
                   ></a>
                 </div>
               </client-only>
-
-              <!-- 2. ПОТОМ Соцсети -->
               <div class="pageFooter-publicLinks footer-social-block__ footer-social-reset">
                 <a
                     class="pageFooter-publicLink pageFooter-publicLink-Instagram"
@@ -627,7 +623,6 @@ export default {
       return `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(targetUrl)}&size=330x330&qzone=1&format=png`;
     },
     appInstallUrlForOs(targetOs) {
-      // targetOs здесь для единообразия, т.к. ссылка на voron.app общая
       return `https://voron.app/${this.$utm()}`;
     },
     handleAppInstallClick(targetOs) {
@@ -691,27 +686,23 @@ export default {
   cursor: not-allowed;
 }
 
-/* По умолчанию (Десктоп) - обычный блок */
 .footer-row-container {
   display: block;
 }
 
-/* Отступы для десктопа, чтобы соцсети не прилипали к кнопкам */
 .footer-app-btn-block {
   margin-bottom: 20px;
 }
 
-/* ТОЛЬКО ДЛЯ МОБИЛЬНЫХ */
 @media (max-width: 768px) {
   .footer-row-container {
-    display: flex; /* Включаем строку */
+    display: flex;
     align-items: center;
-    justify-content: flex-start; /* Выравнивание влево */
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 15px;
   }
 
-  /* Меняем порядок: Соцсети (1), Кнопка (2) */
   .footer-social-reset {
     order: 1;
     margin: 0 !important;
@@ -722,15 +713,12 @@ export default {
   .footer-app-btn-block {
     order: 2;
     margin: 0 !important;
-    display: flex; /* Чтобы кнопка внутри вела себя нормально */
+    display: flex;
   }
 
-  /* Убираем лишние отступы у самой ссылки кнопки на мобильном */
   .footer-app-btn-block a {
     margin-bottom: 0 !important;
   }
-
-  /* Уменьшаем отступы между иконками соцсетей для мобильного */
   .pageFooter-publicLink {
     margin-right: 12px !important;
   }
