@@ -414,6 +414,7 @@ export default {
       cars: [],
       brands: [],
       auto: {},
+      selectedDeviceId: null,
       showModal: false,
       form: {
         firstname: "",
@@ -427,10 +428,16 @@ export default {
   directives: { mask },
   async asyncData({ context, $axios, params }) {
     let response = await $axios.get(`/api/getautobuyout?slug=${params.auto}`);
+    const autoData = response.data["auto"];
+    let selectedId = null;
+    if (autoData.specific_devices && autoData.specific_devices.length > 0) {
+      selectedId = autoData.specific_devices[0].id;
+    }
     return {
       cars: response.data["cars"],
       brands: response.data["brands"],
-      auto: response.data["auto"],
+      auto: autoData,
+      selectedDeviceId: selectedId,
     };
   },
   created() {
@@ -452,6 +459,7 @@ export default {
 
           const payload = {
             auto_slug: this.$route.params.auto,
+            device_id: this.selectedDeviceId,
             lastName: this.form.lastname,
             firstName: this.form.firstname,
             phone: this.form.phone,
@@ -495,7 +503,7 @@ export default {
 .mainSection-subTitle {
   color: #fff;
   font-size: 17px;
-  line-height: 34x;
+  line-height: 34px;
 }
 
 .carsList-item {
