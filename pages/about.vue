@@ -36,7 +36,7 @@ export default {
     };
   },
   async asyncData({ context, $axios }) {
-    let response = await $axios.get(`/api/getpage?alias=about`);
+    let response = await $axios.get(`/api/getpage?alias=about_store`);
     return { content: response.data };
   },
 };
