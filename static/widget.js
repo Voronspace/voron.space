@@ -196,10 +196,7 @@
         if (isOpen) {
             container.classList.add('visible');
             btn.classList.add('opened');
-            // FIX 3: Lock body scroll on mobile
-            if (window.innerWidth <= 480) {
-                document.body.style.overflow = 'hidden';
-            }
+            
             // --- START/RESUME ASSISTANT LOGIC ---
             // Send a message to the React app to resume/connect
             // This ONLY happens when user clicks "Open", avoiding background execution.
@@ -209,9 +206,7 @@
         } else {
             container.classList.remove('visible');
             btn.classList.remove('opened');
-            // FIX 3: Unlock body scroll
-            document.body.style.overflow = '';
-
+            
             // --- STOP ASSISTANT LOGIC ---
             // Send a message to the React app to pause/disconnect
             if (iframe.contentWindow) {
