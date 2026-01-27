@@ -178,12 +178,8 @@
     const iframe = document.createElement('iframe');
     iframe.className = 'voron-iframe';
     iframe.title = "Voron AI Assistant";
-    
-    // ВАЖНО: Разрешения для микрофона, камеры и геолокации.
-    // UPDATED: Убраны проблемные атрибуты (clipboard-*), добавлены encrypted-media.
-    // Строгий формат: feature-name *; feature-name *; ...
-    iframe.allow = "camera *; microphone *; geolocation *; autoplay *; encrypted-media *; display-capture *; accelerometer *; gyroscope *; fullscreen *";
-    
+    // ВАЖНО: Разрешения для микрофона, камеры и геолокации
+    iframe.allow = "camera *; microphone *; geolocation *; autoplay *; clipboard-read; clipboard-write; display-capture *; screen-wake-lock *; accelerometer *; gyroscope *; fullscreen *";
     iframe.src = APP_URL;
 
     container.appendChild(iframe);
