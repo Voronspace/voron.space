@@ -179,7 +179,7 @@
     iframe.className = 'voron-iframe';
     iframe.title = "Voron AI Assistant";
     // ВАЖНО: Разрешения для микрофона, камеры и геолокации
-    iframe.allow = "microphone *; camera *; geolocation *; autoplay *; clipboard-read; clipboard-write";
+    iframe.allow = "camera *; microphone *; geolocation *; autoplay *; clipboard-read; clipboard-write; display-capture *; screen-wake-lock *; accelerometer *; gyroscope *; fullscreen *";
     iframe.src = APP_URL;
 
     container.appendChild(iframe);
@@ -199,6 +199,12 @@
             // FIX 3: Lock body scroll on mobile
             if (window.innerWidth <= 480) {
                 document.body.style.overflow = 'hidden';
+            }
+            // --- START/RESUME ASSISTANT LOGIC ---
+            // Send a message to the React app to resume/connect
+            // This ONLY happens when user clicks "Open", avoiding background execution.
+            if (iframe.contentWindow) {
+                iframe.contentWindow.postMessage({ type: 'RESUME_VORON_SESSION' }, '*');
             }
         } else {
             container.classList.remove('visible');
