@@ -113,34 +113,33 @@
         /* --- MOBILE STYLES --- */
         @media (max-width: 480px) {
             .voron-widget-container {
-                bottom: 0 !important;
-                right: 0 !important;
-                width: 100% !important;
+                bottom: 0;
+                right: 0;
+                width: 100%;
                 /* FIX 1: Use 100dvh for dynamic viewport height support */
-                height: 100dvh !important;
-                max-height: 100dvh !important;
-                border-radius: 0 !important;
+                height: 100dvh;
+                max-height: 100dvh;
+                border-radius: 0;
             }
             
             /* Стили для открытой кнопки на мобильном: 
                Уменьшаем размер и перемещаем наверх, чтобы не перекрывать нижнее меню 
-               FIX: Added !important to force override base styles
             */
             .voron-launcher-btn.opened {
-                bottom: auto !important; /* Убираем привязку к низу */
-                top: 15px !important;    /* Перемещаем наверх */
-                right: 15px !important;
-                width: 40px !important;  /* Уменьшаем размер */
-                height: 40px !important; /* Уменьшаем размер */
-                background: rgba(0, 0, 0, 0.6) !important; /* Полупрозрачный фон */
+                bottom: auto; /* Убираем привязку к низу */
+                top: 15px;    /* Перемещаем наверх */
+                right: 15px;
+                width: 40px;  /* Уменьшаем размер */
+                height: 40px; /* Уменьшаем размер */
+                background: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон */
                 backdrop-filter: blur(4px);
-                border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                border: 1px solid rgba(255, 255, 255, 0.2);
             }
 
             /* Уменьшаем иконку крестика внутри маленькой кнопки */
             .voron-launcher-btn.opened .voron-launcher-icon {
-                width: 20px !important;
-                height: 20px !important;
+                width: 20px;
+                height: 20px;
             }
         }
     `;
