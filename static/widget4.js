@@ -173,24 +173,18 @@
     const container = document.createElement('div');
     container.className = 'voron-widget-container';
 
-    // IFrame
+    // IFrame (создаем, но src не ставим сразу, чтобы не грузить ресурсы зря, или ставим сразу для прелоада)
+    // Лучше поставить сразу, чтобы было готово к открытию.
     const iframe = document.createElement('iframe');
     iframe.className = 'voron-iframe';
     iframe.title = "Voron AI Assistant";
     
     // ВАЖНО: Разрешения для микрофона, камеры и геолокации.
+    // UPDATED: Removed 'screen-wake-lock' as requested.
+    // Строгий формат: feature-name *; feature-name *; ...
     iframe.allow = "camera *; microphone *; geolocation *; autoplay *; encrypted-media *; display-capture *; accelerometer *; gyroscope *; fullscreen *";
     
-    // --- Добавление параметра source=widget ---
-    try {
-        const urlObj = new URL(APP_URL);
-        urlObj.searchParams.set('source', 'widget');
-        iframe.src = urlObj.toString();
-    } catch(e) {
-        // Fallback если APP_URL некорректный, просто клеим строку (хотя URL() надежнее)
-        const separator = APP_URL.includes('?') ? '&' : '?';
-        iframe.src = APP_URL + separator + "source=widget";
-    }
+    iframe.src = APP_URL;
 
     container.appendChild(iframe);
     wrapper.appendChild(container);
@@ -208,6 +202,8 @@
             btn.classList.add('opened');
             
             // --- START/RESUME ASSISTANT LOGIC ---
+            // Send a message to the React app to resume/connect
+            // This ONLY happens when user clicks "Open", avoiding background execution.
             if (iframe.contentWindow) {
                 iframe.contentWindow.postMessage({ type: 'RESUME_VORON_SESSION' }, '*');
             }
@@ -216,6 +212,7 @@
             btn.classList.remove('opened');
             
             // --- STOP ASSISTANT LOGIC ---
+            // Send a message to the React app to pause/disconnect
             if (iframe.contentWindow) {
                 iframe.contentWindow.postMessage({ type: 'PAUSE_VORON_SESSION' }, '*');
             }
@@ -224,8 +221,11 @@
 
     btn.addEventListener('click', toggleWidget);
 
-    // Слушаем сообщения из IFrame
+    // Слушаем сообщения из IFrame (на будущее, если захотите закрывать виджет кнопкой внутри аппа)
     window.addEventListener('message', (event) => {
+        // Проверка Origin для безопасности (раскомментируйте и настройте в продакшене)
+        // if (event.origin !== APP_URL) return;
+
         if (event.data === 'close_voron_widget') {
             if (isOpen) toggleWidget();
         }
