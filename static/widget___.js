@@ -180,9 +180,9 @@
     iframe.title = "Voron AI Assistant";
     
     // ВАЖНО: Разрешения для микрофона, камеры и геолокации.
-    // UPDATED: Removed 'screen-wake-lock' as requested.
+    // UPDATED: Убраны проблемные атрибуты (clipboard-*), добавлены encrypted-media, screen-wake-lock.
     // Строгий формат: feature-name *; feature-name *; ...
-    iframe.allow = "camera *; microphone *; geolocation *; autoplay *; encrypted-media *; display-capture *; accelerometer *; gyroscope *; fullscreen *";
+    iframe.allow = "camera *; microphone *; geolocation *; autoplay *; encrypted-media *; display-capture *; accelerometer *; gyroscope *; fullscreen *; screen-wake-lock *";
     
     iframe.src = APP_URL;
 
