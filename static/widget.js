@@ -108,8 +108,7 @@
             width: 100vw !important;
             height: 100vh !important;
             max-height: 100vh !important;
-            top: 0 !important;
-            left: 0 !important;
+            /* Removed top: 0 and left: 0 to enforce anchor at bottom-right */
             right: 0 !important;
             bottom: 0 !important;
             border-radius: 0 !important;
