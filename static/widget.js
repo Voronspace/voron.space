@@ -93,7 +93,7 @@
             opacity: 0;
             transform: translateY(20px) scale(0.95);
             pointer-events: none;
-            transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease, right 0.3s ease, bottom 0.3s ease, border-radius 0.3s ease;
             transform-origin: bottom right;
         }
 
@@ -103,11 +103,54 @@
             pointer-events: all;
         }
 
+        /* Expanded State (Full Screen) */
+        .voron-widget-container.expanded {
+            width: 100vw !important;
+            height: 100vh !important;
+            max-height: 100vh !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            border-radius: 0 !important;
+            transform: none !important;
+        }
+
         .voron-iframe {
             width: 100%;
             height: 100%;
             border: none;
             background: transparent;
+        }
+
+        /* Expand Button (PC Only) */
+        .voron-expand-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 32px;
+            height: 32px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.2s ease;
+        }
+        .voron-expand-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FACC15;
+            border-color: rgba(250, 204, 21, 0.3);
+        }
+        
+        .voron-expand-icon {
+            width: 18px;
+            height: 18px;
         }
 
         /* --- MOBILE STYLES --- */
@@ -142,6 +185,11 @@
                 width: 20px !important;
                 height: 20px !important;
             }
+
+            /* HIDE Expand button on mobile */
+            .voron-expand-btn {
+                display: none !important;
+            }
         }
     `;
 
@@ -173,6 +221,36 @@
     const container = document.createElement('div');
     container.className = 'voron-widget-container';
 
+    // Кнопка развертывания (Expand)
+    const expandBtn = document.createElement('div');
+    expandBtn.className = 'voron-expand-btn';
+    expandBtn.title = 'Развернуть на весь экран';
+    expandBtn.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="voron-expand-icon icon-expand">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="voron-expand-icon icon-compress" style="display: none;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5M15 15l5.25 5.25" />
+        </svg>
+    `;
+
+    let isExpanded = false;
+    expandBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        isExpanded = !isExpanded;
+        if (isExpanded) {
+            container.classList.add('expanded');
+            expandBtn.querySelector('.icon-expand').style.display = 'none';
+            expandBtn.querySelector('.icon-compress').style.display = 'block';
+            expandBtn.title = 'Свернуть';
+        } else {
+            container.classList.remove('expanded');
+            expandBtn.querySelector('.icon-expand').style.display = 'block';
+            expandBtn.querySelector('.icon-compress').style.display = 'none';
+            expandBtn.title = 'Развернуть на весь экран';
+        }
+    });
+
     // IFrame
     const iframe = document.createElement('iframe');
     iframe.className = 'voron-iframe';
@@ -192,6 +270,7 @@
         iframe.src = APP_URL + separator + "source=widget";
     }
 
+    container.appendChild(expandBtn); // Add expand button
     container.appendChild(iframe);
     wrapper.appendChild(container);
     wrapper.appendChild(btn);
@@ -215,6 +294,14 @@
             container.classList.remove('visible');
             btn.classList.remove('opened');
             
+            // Если свернули весь виджет - сбрасываем и "развернутость"
+            if (isExpanded) {
+                isExpanded = false;
+                container.classList.remove('expanded');
+                expandBtn.querySelector('.icon-expand').style.display = 'block';
+                expandBtn.querySelector('.icon-compress').style.display = 'none';
+            }
+
             // --- STOP ASSISTANT LOGIC ---
             if (iframe.contentWindow) {
                 iframe.contentWindow.postMessage({ type: 'PAUSE_VORON_SESSION' }, '*');
