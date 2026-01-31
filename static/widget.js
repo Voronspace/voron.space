@@ -93,8 +93,11 @@
             opacity: 0;
             transform: translateY(20px) scale(0.95);
             pointer-events: none;
-            transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease, right 0.3s ease, bottom 0.3s ease, border-radius 0.3s ease;
+            
+            /* SMOOTH ANIMATION SETTINGS */
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             transform-origin: bottom right;
+            will-change: width, height, transform, border-radius, top, left, right, bottom;
         }
 
         .voron-widget-container.visible {
