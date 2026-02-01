@@ -288,11 +288,6 @@
             container.classList.add('visible');
             btn.classList.add('opened');
             
-            // БЛОКИРОВКА СКРОЛЛА ОСНОВНОГО САЙТА (Только на мобильных)
-            if (window.innerWidth <= 480) {
-                document.body.style.overflow = 'hidden';
-            }
-            
             // --- START/RESUME ASSISTANT LOGIC ---
             if (iframe.contentWindow) {
                 iframe.contentWindow.postMessage({ type: 'RESUME_VORON_SESSION' }, '*');
@@ -300,9 +295,6 @@
         } else {
             container.classList.remove('visible');
             btn.classList.remove('opened');
-            
-            // РАЗБЛОКИРОВКА СКРОЛЛА
-            document.body.style.overflow = '';
             
             // Если свернули весь виджет - сбрасываем и "развернутость"
             if (isExpanded) {
