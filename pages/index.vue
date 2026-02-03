@@ -291,10 +291,7 @@
             </agile>
           </client-only>
         </div>
-        <div
-          class="howItWorks-buttonContainer"
-          style="position: static; margin-top: 50px"
-        >
+        <div class="howItWorks-buttonContainer centered-btn-fix">
           <nuxt-link
             to="/delivery/"
             exact
@@ -395,3 +392,32 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+/* Добавляем стили для центровки кнопки */
+.centered-btn-fix {
+  display: block;
+  text-align: center;
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 0;
+  clear: both;
+  z-index: 15;
+}
+@media (max-width: 768px) {
+  .centered-btn-fix {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    clear: both;
+    z-index: 15;
+  }
+}
+.howItWorks-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

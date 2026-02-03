@@ -426,64 +426,69 @@
           </div>
           <div id="appstore" class="pageFooter-naviCol">
             <div class="pageFooter-title">Приложение</div>
-            <div class="pageFooter-appsLinks">
-              <a
-                v-if="
-                  ($device && ($device.os === 'iOS' || $device.os === 'MacOS')) ||
-                  ($device && ($device.os === 'unknown' || $device.isDesktop))
-                "
-                style="color: #fff"
-                target="_blank"
-                :href="appInstallUrlForOs('iOS')"
-                @click.prevent="handleAppInstallClick('iOS')"
-                class="pageFooter-appsLink pageFooter-appsLink-Apple"
-              ><span class="pageFooter-appsLinkText"></span
-              ></a>
-              <a
-                v-if="
-                  ($device && $device.os === 'Android') ||
-                  ($device && ($device.os === 'unknown' || $device.isDesktop))
-                "
-                style="color: #fff"
-                target="_blank"
-                :href="appInstallUrlForOs('Android')"
-                @click.prevent="handleAppInstallClick('Android')"
-                class="
-                  pageFooter-appsLink
-                  pageFooter-appsLink-Google
-                  pageFooter-appsLink-Current
-                "
-              ><span class="pageFooter-appsLinkText"></span
-              ></a>
-            </div>
-            <div class="pageFooter-publicLinks footer-social-block__">
-              <a
-                class="pageFooter-publicLink pageFooter-publicLink-Instagram"
-                target="_blank"
-                href="https://instagram.com/voron.space"
-              >
-              </a>
-              <a
-                class="pageFooter-publicLink footer-social-icon"
-                href="https://vk.com/voron.space"
-                target="_blank"
-              >
-                <i class="fab fa-vk"></i>
-              </a>
-              <a
-                class="pageFooter-publicLink footer-social-icon"
-                href="https://t.me/voron_space"
-                target="_blank"
-              >
-                <i class="fab fa-telegram"></i>
-              </a>
-              <a
-                class="pageFooter-publicLink footer-social-icon"
-                href="https://www.youtube.com/@voronspace"
-                target="_blank"
-              >
-                <i class="fab fa-youtube"></i>
-              </a>
+
+            <div class="footer-row-container">
+              <client-only>
+                <div class="footer-app-btn-block">
+                  <a
+                      v-if="
+            ($device && ($device.os === 'iOS' || $device.os === 'MacOS')) ||
+            ($device && ($device.os === 'unknown' || $device.isDesktop))
+          "
+                      style="color: #fff"
+                      target="_blank"
+                      :href="appInstallUrlForOs('iOS')"
+                      @click.prevent="handleAppInstallClick('iOS')"
+                      class="pageFooter-appsLink pageFooter-appsLink-Apple"
+                  ><span class="pageFooter-appsLinkText"></span
+                  ></a>
+                  <a
+                      v-if="
+            ($device && $device.os === 'Android') ||
+            ($device && ($device.os === 'unknown' || $device.isDesktop))
+          "
+                      style="color: #fff"
+                      target="_blank"
+                      :href="appInstallUrlForOs('Android')"
+                      @click.prevent="handleAppInstallClick('Android')"
+                      class="
+            pageFooter-appsLink
+            pageFooter-appsLink-Google
+            pageFooter-appsLink-Current
+          "
+                  ><span class="pageFooter-appsLinkText"></span
+                  ></a>
+                </div>
+              </client-only>
+              <div class="pageFooter-publicLinks footer-social-block__ footer-social-reset">
+                <a
+                    class="pageFooter-publicLink pageFooter-publicLink-Instagram"
+                    target="_blank"
+                    href="https://instagram.com/voron.space/"
+                >
+                </a>
+                <a
+                    class="pageFooter-publicLink footer-social-icon"
+                    href="https://vk.com/voron.space"
+                    target="_blank"
+                >
+                  <i class="fab fa-vk"></i>
+                </a>
+                <a
+                    class="pageFooter-publicLink footer-social-icon"
+                    href="https://t.me/voron_space"
+                    target="_blank"
+                >
+                  <i class="fab fa-telegram"></i>
+                </a>
+                <a
+                    class="pageFooter-publicLink footer-social-icon"
+                    href="https://www.youtube.com/@voronspace"
+                    target="_blank"
+                >
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -679,5 +684,50 @@ export default {
 .btn-primary:disabled {
   opacity: 0.65;
   cursor: not-allowed;
+}
+
+/* По умолчанию (Десктоп) - обычный блок */
+.footer-row-container {
+  display: block;
+}
+
+/* Отступы для десктопа, чтобы соцсети не прилипали к кнопкам */
+.footer-app-btn-block {
+  margin-bottom: 20px;
+}
+
+/* ТОЛЬКО ДЛЯ МОБИЛЬНЫХ */
+@media (max-width: 768px) {
+  .footer-row-container {
+    display: flex; /* Включаем строку */
+    align-items: center;
+    justify-content: flex-start; /* Выравнивание влево */
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* Меняем порядок: Соцсети (1), Кнопка (2) */
+  .footer-social-reset {
+    order: 1;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-app-btn-block {
+    order: 2;
+    margin: 0 !important;
+    display: flex; /* Чтобы кнопка внутри вела себя нормально */
+  }
+
+  /* Убираем лишние отступы у самой ссылки кнопки на мобильном */
+  .footer-app-btn-block a {
+    margin-bottom: 0 !important;
+  }
+
+  /* Уменьшаем отступы между иконками соцсетей для мобильного */
+  .pageFooter-publicLink {
+    margin-right: 12px !important;
+  }
 }
 </style>
