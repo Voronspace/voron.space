@@ -261,9 +261,16 @@
     // ВАЖНО: Разрешения для микрофона, камеры и геолокации.
     iframe.allow = "camera *; microphone *; geolocation *; autoplay *; encrypted-media *; display-capture *; accelerometer *; gyroscope *; fullscreen *";
     
-    // --- LAZY LOADING: We DO NOT set iframe.src here ---
-    // This prevents the React app from loading in the background immediately.
-    // The src is set in toggleWidget() upon first open.
+    // --- Добавление параметра source=widget ---
+    try {
+        const urlObj = new URL(APP_URL);
+        urlObj.searchParams.set('source', 'widget');
+        iframe.src = urlObj.toString();
+    } catch(e) {
+        // Fallback если APP_URL некорректный, просто клеим строку (хотя URL() надежнее)
+        const separator = APP_URL.includes('?') ? '&' : '?';
+        iframe.src = APP_URL + separator + "source=widget";
+    }
 
     container.appendChild(expandBtn); // Add expand button
     container.appendChild(iframe);
@@ -273,26 +280,11 @@
 
     // 3. Логика открытия/закрытия
     let isOpen = false;
-    let isAppLoaded = false; // Flag to track if we've loaded the app
 
     function toggleWidget() {
         isOpen = !isOpen;
         
         if (isOpen) {
-            // --- LAZY LOAD LOGIC ---
-            if (!isAppLoaded) {
-                try {
-                    const urlObj = new URL(APP_URL);
-                    urlObj.searchParams.set('source', 'widget');
-                    iframe.src = urlObj.toString();
-                } catch(e) {
-                    const separator = APP_URL.includes('?') ? '&' : '?';
-                    iframe.src = APP_URL + separator + "source=widget";
-                }
-                isAppLoaded = true;
-            }
-            // -----------------------
-
             container.classList.add('visible');
             btn.classList.add('opened');
             
