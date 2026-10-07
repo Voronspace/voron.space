@@ -307,19 +307,19 @@
                 <a
                   target="_blank"
                   :href="`https://voron.pro/${$utm(true)}`"
-                >Подписка</a>
+                ><span>Подписка</span></a>
               </li>
               <li>
                 <a
                   target="_blank"
                   :href="`https://b2b.voron.pro/${$utm(true)}`"
-                >Бизнесу</a>
+                ><span>Бизнесу</span></a>
               </li>
               <li>
                 <a
                   target="_blank"
                   :href="`https://voron.capital/${$utm(true)}`"
-                >Инвестиция в авто</a>
+                ><span>Инвестиция в авто</span></a>
               </li>
             </ul>
           </nav>

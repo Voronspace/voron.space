@@ -61,7 +61,9 @@
 
                 <div class="contactsPage-table">
                   <div class="contactsPage-tableCell">
-                    <div class="contactsPage-text">Напишите на почту</div>
+                    <div class="contactsPage-text">
+                      По вопросам сервиса, сотрудничества и с предложениями напишите нам на почту
+                    </div>
                     <a class="contactsPage-link" href="mailto:i@voron.io">
                       i@voron.io
                     </a>
@@ -257,6 +259,10 @@ export default {
 
 
 <style scoped>
+  .pageSection {
+    padding-bottom: 120px;
+  }
+
   .contactsPage-h2 {
     margin-bottom: 8px;
   }
