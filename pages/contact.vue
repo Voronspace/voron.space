@@ -65,14 +65,11 @@
                     <a class="contactsPage-link" href="mailto:i@voron.io">
                       i@voron.io
                     </a>
-                    <div class="contactsPage-text">
-                      или заполните форму, и мы вам обязательно ответим
-                    </div>
                   </div>
                   <div class="contactsPage-tableCell"></div>
                 </div>
 
-                <form
+                <!-- <form
                   class="contactsPage-form"
                   v-on:submit.prevent="SendMessage()"
                 >
@@ -166,7 +163,7 @@
                       Проверьте, пожалуйста, правильность заполения всех полей.
                     </div>
                   </div>
-                </form>
+                </form> -->
               </div>
             </div>
           </div>

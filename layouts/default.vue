@@ -194,6 +194,18 @@
                       </li>
                       <li>
                         <a
+                          :href="`https://voron.pro/${$utm(true)}`"
+                        >Подписка на автопарк</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          :href="`https://b2b.voron.pro/${$utm(true)}`"
+                        >Для бизнеса</a
+                        >
+                      </li>
+                      <li>
+                        <a
                           :href="`https://voron.store/${$utm(true)}`"
                         >Аренда с выкупом</a
                         >
@@ -294,6 +306,18 @@
               <li>
                 <a
                   target="_blank"
+                  :href="`https://voron.pro/${$utm(true)}`"
+                >Подписка</a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  :href="`https://b2b.voron.pro/${$utm(true)}`"
+                >Бизнесу</a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
                   :href="`https://voron.capital/${$utm(true)}`"
                 >Инвестиция в авто</a>
               </li>
@@ -336,6 +360,9 @@
                   <nuxt-link to="/delivery/" exact exact-active-class="active"
                   >Доставка за 30 мин</nuxt-link
                   >
+                </li>
+                <li>
+                  <a :href="`https://voron.pro/${$utm(true)}`">Подписка на автопарк</a>
                 </li>
                 <li>
                   <a href="https://voron.help">База знаний и правил</a>
@@ -391,6 +418,17 @@
                     :href="`https://voron.capital/${$utm(true)}`"
                   >Авто как инвестиция</a
                   >
+                </li>
+              </ul>
+            </nav>
+
+            <div class="pageFooter-title" style="margin-top: 25px">
+              Бизнесу
+            </div>
+            <nav class="pageFooter-menu">
+              <ul>
+                <li>
+                  <a :href="`https://b2b.voron.pro/${$utm(true)}`">Для бизнеса</a>
                 </li>
               </ul>
             </nav>

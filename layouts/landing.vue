@@ -62,6 +62,12 @@
                           >Подключить автомобиль</nuxt-link
                         >
                       </li>
+                      <li>
+                        <a :href="`https://voron.pro/${$utm(true)}`">Подписка на автопарк</a>
+                      </li>
+                      <li>
+                        <a :href="`https://b2b.voron.pro/${$utm(true)}`">Для бизнеса</a>
+                      </li>
                     </ul>
                   </nav>
                   <nav class="sidebarMenu-other">
