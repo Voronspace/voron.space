@@ -329,7 +329,6 @@
 
       <Nuxt />
 
-      <div class="pageFooter-Protector"></div>
     </div>
     <!-- /MAIN WRAPPER -->
     <!-- FOOTER -->
@@ -395,7 +394,7 @@
                 <li>
                   <a
                     target="_blank"
-                    :href="`https://voron.pro/${$utm(true)}`"
+                    :href="`https://voron.io/eco${$utm(true)}`"
                   >Подключить автомобиль</a
                   >
                 </li>
@@ -667,6 +666,11 @@ export default {
 </script>
 
 <style scoped>
+/* Keep the footer below the content regardless of its height. */
+.pageFooter {
+  position: relative;
+}
+
 .list_cities {
   margin-bottom: 40px;
 }
